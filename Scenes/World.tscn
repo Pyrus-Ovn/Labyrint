@@ -1,28 +1,27 @@
 [gd_scene load_steps=7 format=3 uid="uid://daipgi48m6hnw"]
 
 [ext_resource type="Script" uid="uid://dkgtpkxwdkvgi" path="res://Scenes/world.gd" id="1_gjpho"]
-[ext_resource type="PackedScene" uid="uid://dd4t5num5s6nh" path="res://cave.tscn" id="3_5nsto"]
+[ext_resource type="PackedScene" uid="uid://dicmfgmljjae3" path="res://Scenes/Levels/hedge_level.tscn" id="3_5nsto"]
 [ext_resource type="PackedScene" uid="uid://de75r7nowaybb" path="res://Scenes/player.tscn" id="3_olspa"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8dv0v"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5nsto"]
+sky_horizon_color = Color(0.302864, 0.696161, 0.934014, 1)
 
-[sub_resource type="Sky" id="Sky_h5x4s"]
-sky_material = SubResource("ProceduralSkyMaterial_8dv0v")
+[sub_resource type="Sky" id="Sky_gjpho"]
+sky_material = SubResource("ProceduralSkyMaterial_5nsto")
 
 [sub_resource type="Environment" id="Environment_ft06c"]
 background_mode = 2
-sky = SubResource("Sky_h5x4s")
+sky = SubResource("Sky_gjpho")
 ambient_light_color = Color(0.023625, 0.10261, 0.140877, 1)
 ambient_light_sky_contribution = 0.0
 ambient_light_energy = 0.02
 tonemap_mode = 2
 glow_enabled = true
 fog_enabled = true
-fog_light_color = Color(0, 0.219608, 0.423529, 1)
+fog_light_color = Color(0.558871, 0.762331, 0.999995, 1)
 fog_light_energy = 0.2
-fog_density = 0.06
+fog_density = 0.0074
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_gjpho")
@@ -31,6 +30,6 @@ script = ExtResource("1_gjpho")
 environment = SubResource("Environment_ft06c")
 
 [node name="Player" parent="." instance=ExtResource("3_olspa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.634928, 2.57612, -8.39792)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.634928, 2.57612, -0.819943)
 
-[node name="klippeLabyrint_level01" parent="." instance=ExtResource("3_5nsto")]
+[node name="HedgeLevel" parent="." instance=ExtResource("3_5nsto")]
