@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dl0xup4yjaggf"]
+
+[ext_resource type="PackedScene" uid="uid://784v6he8can5" path="res://Assets/klippeLabyrint_level01.glb" id="1_gd8fu"]
+
+[node name="klippeLabyrint_level01" instance=ExtResource("1_gd8fu")]
