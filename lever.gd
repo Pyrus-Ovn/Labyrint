@@ -29,7 +29,6 @@ func _process(delta: float) -> void:
 		animation_progress = min(animation_progress, 1.0)  # Clamp to 1.0
 		
 		var target_progress = 1.0 if toggled else 0.0
-		print(target_progress)
 		var lerp_amount = ease_out_quad(animation_progress, target_progress)
 		
 		# Interpolate positions
@@ -40,7 +39,6 @@ func _process(delta: float) -> void:
 
 func interact():
 	toggled = !toggled
-	print("i am toggled")
 	animation_progress = 1.0 - animation_progress
 	toggle.emit(toggled)
 	
