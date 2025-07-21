@@ -62,7 +62,6 @@ offset_top = -33.0
 offset_right = 23.0
 offset_bottom = -2.0
 toggle_mode = true
-button_pressed = true
 shortcut = SubResource("Shortcut_ja0wl")
 text = "I
 "

@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dd8hu15op3nti"]
+[gd_scene load_steps=3 format=3 uid="uid://dd8hu15op3nti"]
 
+[ext_resource type="Script" uid="uid://bm1cnrf5vv2tf" path="res://Scenes/Player/hand.gd" id="1_6agg8"]
 [ext_resource type="PackedScene" uid="uid://b0um4eyx67afy" path="res://Assets/Geo/character/hands/right_hand_anim.glb" id="1_wnyb5"]
 
 [node name="Right_Hand" type="Node3D"]
+script = ExtResource("1_6agg8")
 
 [node name="right_hand_anim" parent="." instance=ExtResource("1_wnyb5")]
 

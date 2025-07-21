@@ -1,6 +1,4 @@
 extends Node3D
-const green = "ff0000"
-const red = "ff0000"
 @onready var lever_handle: MeshInstance3D = $lever_handle
 @onready var lever_base: MeshInstance3D = $lever_base
 
@@ -12,7 +10,7 @@ var open_position = Vector3(26,0,0)
 var closed_position = Vector3(-26,0,0)
 
 var animation_progress := 0.0
-var animation_speed := 1.5
+var animation_speed := 3.0
 
 signal toggle(state:bool)
 # Called when the node enters the scene tree for the first time.
@@ -31,16 +29,19 @@ func _process(delta: float) -> void:
 		animation_progress = min(animation_progress, 1.0)  # Clamp to 1.0
 		
 		var target_progress = 1.0 if toggled else 0.0
+		print(target_progress)
 		var lerp_amount = ease_out_quad(animation_progress, target_progress)
 		
 		# Interpolate positions
 		if toggled:
-			lever_handle.rotation = closed_position.lerp(open_position, lerp_amount)
+			lever_handle.rotation_degrees = closed_position.lerp(open_position, lerp_amount)
 		else:
-			lever_handle.rotation = open_position.lerp(closed_position, lerp_amount)
+			lever_handle.rotation_degrees = open_position.lerp(closed_position, lerp_amount)
 
 func interact():
 	toggled = !toggled
+	print("i am toggled")
+	animation_progress = 1.0 - animation_progress
 	toggle.emit(toggled)
 	
 	## Get the material of the mesh

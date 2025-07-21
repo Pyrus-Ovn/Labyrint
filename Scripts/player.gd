@@ -1,5 +1,6 @@
 extends CharacterBody3D
 @onready var left_hand: Node3D = $Head/Left_Hand
+@onready var right_hand: Node3D = $Head/Right_Hand
 
 var current_interactable = null
 var speed
@@ -42,14 +43,17 @@ func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		head.rotate_y(-event.relative.x * SENSITIVITY)
 		camera.rotate_x(-event.relative.y * SENSITIVITY)
-		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-40),deg_to_rad(60))
+		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-50),deg_to_rad(60))
 
 func _input(event):
-	if event.is_action_pressed("Interact") and current_interactable:
-		current_interactable.interact()
-		print("interacted")
+	if event.is_action_pressed("Interact"):
+		interact()
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		left_hand.play_grab()
+		interact()
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_RIGHT:
+		right_hand.play_grab()
+		interact()
 			#'var camera = $Head/Camera3D
 			#var from = camera.project_ray_origin(event.position)
 			#var to = from + camera.project_ray_normal(event.position) * 5.0  # Reduced range for more precise placement
@@ -65,6 +69,11 @@ func _input(event):
 			#if result and result.has("position") and result.has("normal"):
 			#	GraffitiSpawner.spawn_graffiti_at(result.position, result.normal)
 
+
+func interact():
+	if current_interactable:
+		current_interactable.interact()
+		print("interacted")
 
 func _physics_process(delta):
 	

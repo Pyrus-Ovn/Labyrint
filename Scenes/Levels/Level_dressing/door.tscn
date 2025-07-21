@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://borjakxyc1pnr"]
+
+[ext_resource type="Script" uid="uid://bcc6lga1bhqe8" path="res://door.gd" id="1_d4bew"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_c1rpg"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_erpu2"]
+points = PackedVector3Array(-0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5)
+
+[node name="Door" type="Node3D"]
+script = ExtResource("1_d4bew")
+
+[node name="Hinges" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Hinges"]
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 0.2, 0.5, 0, 0)
+mesh = SubResource("BoxMesh_c1rpg")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Hinges/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hinges/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_erpu2")

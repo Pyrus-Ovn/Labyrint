@@ -11,18 +11,18 @@ albedo_color = Color(1, 0, 0, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_fhlr4"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_fhlr4"]
-radius = 0.547276
+radius = 0.162623
 
 [node name="Lever" type="Node3D"]
 script = ExtResource("1_wv1st")
 
 [node name="lever_handle" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.1, 0, 0, 0, 0.915663, 0.0401948, 0, -0.401948, 0.0915663, 0, 0.194271, -0.00883922)
+transform = Transform3D(0.02, 0, 0, 0, 0.183133, 0.00803896, 0, -0.0803896, 0.0183133, 0, 0.0388888, 0.0122515)
 mesh = SubResource("BoxMesh_6kuia")
 surface_material_override/0 = SubResource("StandardMaterial3D_fhlr4")
 
 [node name="lever_base" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.3, 0, 0, 0, 0.4, 0, 0, 0, 0.5, 0, 0.0254207, 0.0123468)
+transform = Transform3D(0.06, 0, 0, 0, 0.08, 0, 0, 0, 0.1, 0, 0.000344697, 0.0123468)
 mesh = SubResource("BoxMesh_fhlr4")
 surface_material_override/0 = SubResource("StandardMaterial3D_fhlr4")
 
@@ -31,4 +31,5 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+transform = Transform3D(1.89603, 0, 0, 0, 1.89603, 0, 0, 0, 1.89603, 0, 0.0768258, 0)
 shape = SubResource("SphereShape3D_fhlr4")
