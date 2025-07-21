@@ -25,6 +25,7 @@ var lerp_speed = 10.0  # Adjust this value to control the speed of the transitio
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
+@onready var ray_cast_3d: RayCast3D = $Head/RayCast3D
 
 
 func _ready():

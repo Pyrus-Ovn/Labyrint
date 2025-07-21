@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d23lwktidcmj4"]
+
+[ext_resource type="Script" uid="uid://dcyk64wjtr51e" path="res://Scenes/HelperNodes/interaction_area.gd" id="1_tdqus"]
+
+[node name="InteractionArea" type="Area3D"]
+script = ExtResource("1_tdqus")
