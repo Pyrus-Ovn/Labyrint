@@ -2,8 +2,8 @@ extends CharacterBody3D
 
 var current_interactable = null
 var speed
-const WALK_SPEED = 5.0
-const SPRINT_SPEED = 8.0
+const WALK_SPEED = 1.5
+const SPRINT_SPEED = 3.0
 const JUMP_VELOCITY = 40.5
 const SENSITIVITY = 0.005
 
@@ -98,7 +98,7 @@ func _physics_process(delta):
 		target_scale = stand_scale
 
 	# Handle sprint
-	if Input.is_action_just_pressed("sprint"):
+	if Input.is_action_pressed("sprint"):
 		speed = SPRINT_SPEED
 	else:
 		speed = WALK_SPEED

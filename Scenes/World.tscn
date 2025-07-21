@@ -20,6 +20,6 @@ shadow_enabled = true
 sky_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("3_olspa")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.634928, 2.57612, -0.819943)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.634928, 2.57612, -0.819943)
 
 [node name="HedgeLevel" parent="." instance=ExtResource("3_5nsto")]
