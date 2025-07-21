@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bcc6lga1bhqe8" path="res://door.gd" id="1_d4bew"]
 [ext_resource type="PackedScene" uid="uid://7od1k63wydks" path="res://Assets/Geo/door.glb" id="2_c1rpg"]
+[ext_resource type="AudioStream" uid="uid://ds2wka11bmf2t" path="res://Audio/SFX/Door Open.wav" id="2_erpu2"]
+[ext_resource type="AudioStream" uid="uid://djoqql7kb2wr4" path="res://Audio/SFX/Door Close.wav" id="3_ewwbe"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_c1rpg"]
 
@@ -26,3 +28,13 @@ skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hinges/MeshInstance3D/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_erpu2")
+
+[node name="OpenSFX" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_erpu2")
+volume_db = -5.0
+unit_size = 5.0
+
+[node name="CloseSFX" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_ewwbe")
+volume_db = -5.0
+unit_size = 5.0

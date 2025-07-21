@@ -1,5 +1,7 @@
 extends Node3D
 @onready var hinges: Node3D = $Hinges
+@onready var open_sfx: AudioStreamPlayer3D = $OpenSFX
+@onready var close_sfx: AudioStreamPlayer3D = $CloseSFX
 
 @export var open : bool = false
 
@@ -38,3 +40,7 @@ func _process(delta: float) -> void:
 func _on_lever_toggle(state: bool) -> void:
 	open = state
 	animation_progress = 1.0 - animation_progress
+	if open:
+		open_sfx.play()
+	else:
+		close_sfx.play()
