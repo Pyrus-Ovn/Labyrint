@@ -41,15 +41,15 @@ collide_with_bodies = false
 debug_shape_custom_color = Color(1, 0, 0, 1)
 debug_shape_thickness = 4
 
+[node name="Right_Hand" parent="Head" instance=ExtResource("2_6t5aa")]
+transform = Transform3D(0.0100656, 0.0647186, 0.271371, 0.0723063, 0.201086, -0.0799441, -0.176502, 0.0860693, -0.0172754, 0.337378, -0.547648, -0.158015)
+
+[node name="Left_Hand" parent="Head" instance=ExtResource("3_vgqql")]
+transform = Transform3D(-0.0092033, -0.0535977, 0.235909, 0.0506411, 0.238447, 0.0526074, -0.248749, 0.0505258, 0.00198216, -0.405382, -0.478796, 0.00696655)
+
 [node name="Footstep_Manager" type="Node3D" parent="." node_paths=PackedStringArray("ground_pos")]
 script = ExtResource("4_f1ek2")
 footstep_sounds = Array[AudioStreamWAV]([ExtResource("5_tx1dd"), ExtResource("6_gymyn"), ExtResource("7_pu2lt"), ExtResource("8_ukyrk"), ExtResource("9_7dp3o")])
 ground_pos = NodePath("../Marker3D")
 
 [node name="Marker3D" type="Marker3D" parent="."]
-
-[node name="Right_Hand" parent="Head" instance=ExtResource("2_6t5aa")]
-transform = Transform3D(0.0100656, 0.0647186, 0.271371, 0.0723063, 0.201086, -0.0799441, -0.176502, 0.0860693, -0.0172754, 0.337378, -0.547648, -0.158015)
-
-[node name="Left_Hand" parent="Head" instance=ExtResource("3_vgqql")]
-transform = Transform3D(-0.0092033, -0.0535977, 0.235909, 0.0506411, 0.238447, 0.0526074, -0.248749, 0.0505258, 0.00198216, -0.405382, -0.478796, 0.00696655)
