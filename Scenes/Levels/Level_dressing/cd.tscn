@@ -1,0 +1,128 @@
+[gd_scene load_steps=7 format=3 uid="uid://dk2500jb0eebu"]
+
+[ext_resource type="Script" uid="uid://bnlm8vj0meugq" path="res://cd.gd" id="1_6slgw"]
+[ext_resource type="PackedScene" uid="uid://k6jav1tv45ai" path="res://Assets/Geo/CD.glb" id="2_qgsdv"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_qx16b"]
+radius = 0.921769
+
+[sub_resource type="Animation" id="Animation_s0xln"]
+resource_name = "idle"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scaler:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scaler/OmniLight3D:light_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.0, 1.831, 1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Scaler/OmniLight3D2:light_energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.51, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [2.0, 0.4, 2.0]
+}
+
+[sub_resource type="Animation" id="Animation_pqkdt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scaler:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scaler/OmniLight3D:light_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Scaler/OmniLight3D2:light_energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kitp1"]
+_data = {
+&"RESET": SubResource("Animation_pqkdt"),
+&"idle": SubResource("Animation_s0xln")
+}
+
+[node name="CD" type="Node3D"]
+script = ExtResource("1_6slgw")
+
+[node name="Scaler" type="Node3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="CD2" parent="Scaler" instance=ExtResource("2_qgsdv")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="Scaler"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scaler/Area3D"]
+shape = SubResource("SphereShape3D_qx16b")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Scaler"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.128814, 0, 0)
+light_color = Color(0.172549, 0.423529, 1, 1)
+light_size = 0.019
+omni_range = 1.13773
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Scaler"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.0489811, 0, 0)
+light_color = Color(0.172549, 0.423529, 1, 1)
+light_energy = 2.0
+light_size = 0.019
+omni_range = 1.13773
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_kitp1")
+}
+autoplay = "idle"
+
+[connection signal="body_entered" from="Scaler/Area3D" to="." method="_on_area_3d_body_entered"]

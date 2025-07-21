@@ -23,7 +23,6 @@ var stand_scale = Vector3(1, 1, 1)
 var target_scale = stand_scale
 var lerp_speed = 10.0  # Adjust this value to control the speed of the transition
 
-@onready var soundPlayer = $"Player Sounds/AudioStreamPlayer3D"
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
@@ -73,7 +72,6 @@ func _input(event):
 func interact():
 	if current_interactable:
 		current_interactable.interact()
-		print("interacted")
 
 func _physics_process(delta):
 	

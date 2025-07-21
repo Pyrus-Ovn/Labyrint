@@ -10,7 +10,7 @@ func _ready() -> void:
 	if Globaldiscman.current_song_index != -1:
 		_on_song_changed(Globaldiscman.get_current_song_name(), Globaldiscman.current_song_index)
 
-func _on_song_changed(song_name: String, song_index: int):
+func _on_song_changed(song_name: String, _song_index: int):
 	song_label.text = song_name
 
 
