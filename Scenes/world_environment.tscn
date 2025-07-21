@@ -1,43 +1,28 @@
-[gd_scene load_steps=8 format=3 uid="uid://31afxg83bsko"]
+[gd_scene load_steps=4 format=3 uid="uid://31afxg83bsko"]
 
 [ext_resource type="AudioStream" uid="uid://c0sjppmbxxdfe" path="res://Audio/Ambience.wav" id="1_2edto"]
-
-[sub_resource type="Gradient" id="Gradient_xk6ql"]
-offsets = PackedFloat32Array(0.193396, 0.981132)
-colors = PackedColorArray(0.0654298, 0.100323, 0.13316, 1, 0.62588, 0.665713, 0.648372, 1)
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_xk6ql"]
-noise_type = 2
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_2edto"]
-in_3d_space = true
-seamless = true
-color_ramp = SubResource("Gradient_xk6ql")
-noise = SubResource("FastNoiseLite_xk6ql")
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xk6ql"]
-sky_cover = SubResource("NoiseTexture2D_2edto")
-sun_angle_max = 156.67
-energy_multiplier = 0.8
-
-[sub_resource type="Sky" id="Sky_ij7tu"]
-sky_material = SubResource("ProceduralSkyMaterial_xk6ql")
+[ext_resource type="Sky" path="res://Scenes/Night Sky.tres" id="1_d60sq"]
 
 [sub_resource type="Environment" id="Environment_ft06c"]
 background_mode = 2
-sky = SubResource("Sky_ij7tu")
-ambient_light_color = Color(0.023625, 0.10261, 0.140877, 1)
+background_energy_multiplier = 0.57
+sky = ExtResource("1_d60sq")
+ambient_light_source = 3
+ambient_light_color = Color(0.326133, 0.44428, 0.381688, 1)
 ambient_light_sky_contribution = 0.0
-ambient_light_energy = 0.02
+ambient_light_energy = 0.0
+reflected_light_source = 2
 tonemap_mode = 2
 glow_enabled = true
 fog_enabled = true
 fog_light_color = Color(0.292478, 0.364116, 0.403105, 1)
-fog_light_energy = 0.3
-fog_sun_scatter = 0.93
-fog_sky_affect = 0.94
-fog_height = 36.2
-fog_height_density = -0.45
+fog_light_energy = 0.8
+fog_sun_scatter = 0.8
+fog_density = 0.1
+fog_aerial_perspective = 0.532
+fog_sky_affect = 0.7
+fog_depth_begin = 4.0
+fog_depth_end = 764.7
 
 [node name="WorldEnvironment" type="WorldEnvironment"]
 environment = SubResource("Environment_ft06c")
