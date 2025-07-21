@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ctrboxwfust3t"
+path="res://.godot/imported/Fodskridt 02.wav-7c472f25367b3114edb636c9b17ab9ee.sample"
+
+[deps]
+
+source_file="res://Audio/Fodskridt 02.wav"
+dest_files=["res://.godot/imported/Fodskridt 02.wav-7c472f25367b3114edb636c9b17ab9ee.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
