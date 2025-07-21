@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://31afxg83bsko"]
 
 [ext_resource type="AudioStream" uid="uid://c0sjppmbxxdfe" path="res://Audio/Ambience.wav" id="1_2edto"]
-[ext_resource type="Sky" path="res://Scenes/Night Sky.tres" id="1_d60sq"]
+[ext_resource type="Sky" uid="uid://bbhb40jdrwb40" path="res://Scenes/Night Sky.tres" id="1_d60sq"]
 
 [sub_resource type="Environment" id="Environment_ft06c"]
 background_mode = 2

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnorr78k0uoly"]
+
+[ext_resource type="PackedScene" uid="uid://ck3kdiiux8pu" path="res://Scenes/Ui/ui_discman.tscn" id="1_ety00"]
+[ext_resource type="Script" uid="uid://lij4qqpb4dnn" path="res://Scenes/Ui/master_ui.gd" id="1_jfxas"]
+
+[node name="Master_Ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jfxas")
+
+[node name="ui_discman" parent="." instance=ExtResource("1_ety00")]
+layout_mode = 1

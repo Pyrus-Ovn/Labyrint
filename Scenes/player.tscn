@@ -1,8 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://de75r7nowaybb"]
+[gd_scene load_steps=12 format=3 uid="uid://de75r7nowaybb"]
 
 [ext_resource type="Script" uid="uid://82nbde26me3j" path="res://Scripts/player.gd" id="1_sqbf5"]
 [ext_resource type="PackedScene" uid="uid://dd8hu15op3nti" path="res://Scenes/Player/right_hand.tscn" id="2_6t5aa"]
 [ext_resource type="PackedScene" uid="uid://p7uftg6pda05" path="res://Scenes/Player/left_hand.tscn" id="3_vgqql"]
+[ext_resource type="Script" uid="uid://4bgspn6d8l6b" path="res://Scenes/footstep_manager.gd" id="4_f1ek2"]
+[ext_resource type="AudioStream" uid="uid://dqgitwbd5aiqu" path="res://Audio/Fodskridt 01.wav" id="5_tx1dd"]
+[ext_resource type="AudioStream" uid="uid://ctrboxwfust3t" path="res://Audio/Fodskridt 02.wav" id="6_gymyn"]
+[ext_resource type="AudioStream" uid="uid://ivofs28qxr61" path="res://Audio/Fodskridt 03.wav" id="7_pu2lt"]
+[ext_resource type="AudioStream" uid="uid://bg3j7w3qgjnk6" path="res://Audio/Fodskridt 04.wav" id="8_ukyrk"]
+[ext_resource type="AudioStream" uid="uid://cv2oos6rn6321" path="res://Audio/Fodskridt 05.wav" id="9_7dp3o"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_60x0a"]
 
@@ -15,6 +21,7 @@ script = ExtResource("1_sqbf5")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0416366, 0.82708, -0.350017)
+visible = false
 mesh = SubResource("CapsuleMesh_60x0a")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -33,6 +40,13 @@ collide_with_areas = true
 collide_with_bodies = false
 debug_shape_custom_color = Color(1, 0, 0, 1)
 debug_shape_thickness = 4
+
+[node name="Footstep_Manager" type="Node3D" parent="." node_paths=PackedStringArray("ground_pos")]
+script = ExtResource("4_f1ek2")
+footstep_sounds = Array[AudioStreamWAV]([ExtResource("5_tx1dd"), ExtResource("6_gymyn"), ExtResource("7_pu2lt"), ExtResource("8_ukyrk"), ExtResource("9_7dp3o")])
+ground_pos = NodePath("../Marker3D")
+
+[node name="Marker3D" type="Marker3D" parent="."]
 
 [node name="Right_Hand" parent="Head" instance=ExtResource("2_6t5aa")]
 transform = Transform3D(0.0100656, 0.0647186, 0.271371, 0.0723063, 0.201086, -0.0799441, -0.176502, 0.0860693, -0.0172754, 0.337378, -0.547648, -0.158015)

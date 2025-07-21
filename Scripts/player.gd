@@ -9,8 +9,8 @@ const JUMP_VELOCITY = 40.5
 const SENSITIVITY = 0.005
 
 #bobbing
-const BOB_FREQ = 2.0
-const BOB_AMP = 0.08
+const BOB_FREQ = 8.2
+const BOB_AMP = 0.11
 var t_bob = 0.0
  
 # fov
@@ -22,12 +22,15 @@ var stand_scale = Vector3(1, 1, 1)
 var target_scale = stand_scale
 var lerp_speed = 10.0  # Adjust this value to control the speed of the transition
 
-
+@onready var soundPlayer = $"Player Sounds/AudioStreamPlayer3D"
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
 @onready var ray_cast_3d: RayCast3D = $Head/RayCast3D
 
+# Footstep variables
+var can_play : bool = true
+signal step
 
 func _ready():
 	
@@ -119,5 +122,27 @@ func _physics_process(delta):
 		velocity.x = lerp(velocity.x,direction.x*speed, delta * 3.0 )
 		velocity.z = lerp(velocity.z,direction.z*speed, delta * 3.0 )
 
+	# Head bob
+	t_bob += delta * velocity.length() * float(is_on_floor())
+	camera.transform.origin = _headbob(t_bob)
 
 	move_and_slide() 
+
+func _headbob(time) -> Vector3:
+	var pos = Vector3.ZERO
+	pos.y = sin(time * BOB_FREQ) * BOB_AMP
+	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
+	
+	var low_pos = BOB_AMP - 0.05
+	# Check if we have reached a high point so we can restart can_play
+	if pos.y > -low_pos:
+		can_play = true
+	
+	#check if the head position has reached a low point then turn off can play to avoid
+	#multiple spam of the emit signal
+	if pos.y < -low_pos and can_play:
+		can_play = false
+		emit_signal("step")
+	
+	return pos
+	
