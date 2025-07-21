@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://ce5tufuiou1dq"]
+[gd_scene load_steps=7 format=3 uid="uid://ce5tufuiou1dq"]
 
 [ext_resource type="Script" uid="uid://cic47w3r7ll2a" path="res://lever.gd" id="1_wv1st"]
 [ext_resource type="PackedScene" uid="uid://d23lwktidcmj4" path="res://Scenes/HelperNodes/InteractionArea.tscn" id="2_6kuia"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_6kuia"]
+[sub_resource type="BoxMesh" id="BoxMesh_6kuia"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fhlr4"]
 albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fhlr4"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_fhlr4"]
 radius = 0.547276
@@ -14,8 +16,14 @@ radius = 0.547276
 [node name="Lever" type="Node3D"]
 script = ExtResource("1_wv1st")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("SphereMesh_6kuia")
+[node name="lever_handle" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.915663, 0.0401948, 0, -0.401948, 0.0915663, 0, 0.194271, -0.00883922)
+mesh = SubResource("BoxMesh_6kuia")
+surface_material_override/0 = SubResource("StandardMaterial3D_fhlr4")
+
+[node name="lever_base" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.4, 0, 0, 0, 0.5, 0, 0.0254207, 0.0123468)
+mesh = SubResource("BoxMesh_fhlr4")
 surface_material_override/0 = SubResource("StandardMaterial3D_fhlr4")
 
 [node name="InteractionArea" parent="." groups=["Interactable"] instance=ExtResource("2_6kuia")]

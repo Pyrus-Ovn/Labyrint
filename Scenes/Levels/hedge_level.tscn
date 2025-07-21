@@ -1,7 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://dicmfgmljjae3"]
+[gd_scene load_steps=3 format=3 uid="uid://dicmfgmljjae3"]
 
 [ext_resource type="PackedScene" uid="uid://bi3tivxq4s03q" path="res://Scenes/Levels/hedge_grid_map.tscn" id="1_h7kpw"]
+[ext_resource type="PackedScene" uid="uid://ce5tufuiou1dq" path="res://Scenes/Levels/Level_dressing/lever.tscn" id="2_fmkjl"]
 
 [node name="HedgeLevel" type="Node3D"]
 
 [node name="GridMap" parent="." instance=ExtResource("1_h7kpw")]
+
+[node name="Lever" parent="." instance=ExtResource("2_fmkjl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.17767, 1.56995, 0.755197)
+
+[node name="Lever2" parent="." instance=ExtResource("2_fmkjl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.701665, 1.53488, 0.7997)

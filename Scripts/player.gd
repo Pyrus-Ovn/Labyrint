@@ -47,6 +47,7 @@ func _unhandled_input(event):
 func _input(event):
 	if event.is_action_pressed("Interact") and current_interactable:
 		current_interactable.interact()
+		print("interacted")
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		left_hand.play_grab()
 			#'var camera = $Head/Camera3D
