@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://p7uftg6pda05"]
+
+[ext_resource type="Script" uid="uid://dvxtgeyc6fdwl" path="res://Scenes/Player/left_hand.gd" id="1_eh14e"]
+[ext_resource type="PackedScene" uid="uid://c34pd6whxay37" path="res://Assets/Geo/character/hands/left_hand_anim2.glb" id="3_uh6ws"]
+
+[node name="Left_Hand" type="Node3D"]
+script = ExtResource("1_eh14e")
+
+[node name="left_hand_anim2" parent="." instance=ExtResource("3_uh6ws")]
+
+[node name="geo_Vhånd_lukket" parent="left_hand_anim2/bone/geo_Vhånd_åben" index="0"]
+visible = false
+
+[node name="geo_Vhånd_åben" parent="left_hand_anim2/bone/Skeleton3D" index="0"]
+cast_shadow = 0
+
+[node name="AnimationPlayer" parent="left_hand_anim2" index="1"]
+autoplay = "IDLE_hand"
+
+[editable path="left_hand_anim2"]

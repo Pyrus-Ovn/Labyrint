@@ -1,4 +1,5 @@
 extends CharacterBody3D
+@onready var left_hand: Node3D = $Head/Left_Hand
 
 var current_interactable = null
 var speed
@@ -44,20 +45,21 @@ func _input(event):
 	if event.is_action_pressed("Interact") and current_interactable:
 		current_interactable.interact()
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		var camera = $Head/Camera3D
-		var from = camera.project_ray_origin(event.position)
-		var to = from + camera.project_ray_normal(event.position) * 5.0  # Reduced range for more precise placement
-		
-		var space_state = get_world_3d().direct_space_state
-		var query = PhysicsRayQueryParameters3D.create(from, to)
-		query.collide_with_areas = true
-		query.collide_with_bodies = true
-		query.collision_mask = 0b1
-		
-		var result = space_state.intersect_ray(query)
-		
-		if result and result.has("position") and result.has("normal"):
-			GraffitiSpawner.spawn_graffiti_at(result.position, result.normal)
+		left_hand.play_grab()
+			#'var camera = $Head/Camera3D
+			#var from = camera.project_ray_origin(event.position)
+			#var to = from + camera.project_ray_normal(event.position) * 5.0  # Reduced range for more precise placement
+			
+			#var space_state = get_world_3d().direct_space_state
+			#var query = PhysicsRayQueryParameters3D.create(from, to)
+			#query.collide_with_areas = true
+			#query.collide_with_bodies = true
+			#query.collision_mask = 0b1
+			
+			#var result = space_state.intersect_ray(query)
+			
+			#if result and result.has("position") and result.has("normal"):
+			#	GraffitiSpawner.spawn_graffiti_at(result.position, result.normal)
 
 
 func _physics_process(delta):

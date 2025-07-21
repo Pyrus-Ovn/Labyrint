@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd8hu15op3nti"]
+
+[ext_resource type="PackedScene" uid="uid://b0um4eyx67afy" path="res://Assets/Geo/character/hands/right_hand_anim.glb" id="1_wnyb5"]
+
+[node name="Right_Hand" type="Node3D"]
+
+[node name="right_hand_anim" parent="." instance=ExtResource("1_wnyb5")]
+
+[node name="bone_001" parent="right_hand_anim" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="geo_Hhånd_lukket" parent="right_hand_anim/bone_001/geo_Hhånd_åben" index="0"]
+visible = false
+
+[node name="AnimationPlayer" parent="right_hand_anim" index="1"]
+autoplay = "IDLE_hand"
+
+[editable path="right_hand_anim"]
