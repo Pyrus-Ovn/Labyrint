@@ -1,33 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://daipgi48m6hnw"]
+[gd_scene load_steps=5 format=3 uid="uid://daipgi48m6hnw"]
 
 [ext_resource type="Script" uid="uid://dkgtpkxwdkvgi" path="res://Scenes/world.gd" id="1_gjpho"]
+[ext_resource type="PackedScene" uid="uid://31afxg83bsko" path="res://Scenes/world_environment.tscn" id="2_gjpho"]
 [ext_resource type="PackedScene" uid="uid://dicmfgmljjae3" path="res://Scenes/Levels/hedge_level.tscn" id="3_5nsto"]
 [ext_resource type="PackedScene" uid="uid://de75r7nowaybb" path="res://Scenes/player.tscn" id="3_olspa"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5nsto"]
-sky_horizon_color = Color(0.302864, 0.696161, 0.934014, 1)
-
-[sub_resource type="Sky" id="Sky_gjpho"]
-sky_material = SubResource("ProceduralSkyMaterial_5nsto")
-
-[sub_resource type="Environment" id="Environment_ft06c"]
-background_mode = 2
-sky = SubResource("Sky_gjpho")
-ambient_light_color = Color(0.023625, 0.10261, 0.140877, 1)
-ambient_light_sky_contribution = 0.0
-ambient_light_energy = 0.02
-tonemap_mode = 2
-glow_enabled = true
-fog_enabled = true
-fog_light_color = Color(0.558871, 0.762331, 0.999995, 1)
-fog_light_energy = 0.2
-fog_density = 0.0074
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_gjpho")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_ft06c")
+[node name="WorldEnvironment" parent="." instance=ExtResource("2_gjpho")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, -0.201642, 0.979459, 0, -0.979459, -0.201642, 0, 0, 0)
+light_color = Color(0.698074, 0.81861, 0.816272, 1)
+light_energy = 0.02
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+shadow_enabled = true
+sky_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("3_olspa")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.634928, 2.57612, -0.819943)

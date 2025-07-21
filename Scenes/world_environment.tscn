@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://31afxg83bsko"]
+
+[ext_resource type="AudioStream" uid="uid://c0sjppmbxxdfe" path="res://Audio/Ambience.wav" id="1_2edto"]
+[ext_resource type="Sky" path="res://Scenes/Night Sky.tres" id="1_d60sq"]
+
+[sub_resource type="Environment" id="Environment_ft06c"]
+background_mode = 2
+background_energy_multiplier = 0.57
+sky = ExtResource("1_d60sq")
+ambient_light_source = 3
+ambient_light_color = Color(0.326133, 0.44428, 0.381688, 1)
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 0.0
+reflected_light_source = 2
+tonemap_mode = 2
+glow_enabled = true
+fog_enabled = true
+fog_light_color = Color(0.292478, 0.364116, 0.403105, 1)
+fog_light_energy = 0.8
+fog_sun_scatter = 0.8
+fog_density = 0.1
+fog_aerial_perspective = 0.532
+fog_sky_affect = 0.7
+fog_depth_begin = 4.0
+fog_depth_end = 764.7
+
+[node name="WorldEnvironment" type="WorldEnvironment"]
+environment = SubResource("Environment_ft06c")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_2edto")
+volume_db = -3.0
+autoplay = true
