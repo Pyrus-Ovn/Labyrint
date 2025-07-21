@@ -42,7 +42,7 @@ func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		head.rotate_y(-event.relative.x * SENSITIVITY)
 		camera.rotate_x(-event.relative.y * SENSITIVITY)
-		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-50),deg_to_rad(60))
+		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-47),deg_to_rad(60))
 
 func _input(event):
 	if event.is_action_pressed("Interact"):
@@ -91,7 +91,6 @@ func _physics_process(delta):
 					# Register new interactable
 				current_interactable = new_interactable
 				#snyd
-				print(collider)
 				
 				#current_interactable.interact()
 	elif current_interactable:

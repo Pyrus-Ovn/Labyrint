@@ -4,7 +4,6 @@ extends Node3D
 @onready var close_sfx: AudioStreamPlayer3D = $CloseSFX
 
 @export var open : bool = false
-@onready var interaction_area: Interactable = $InteractionArea
 
 var open_position = Vector3(0,90,0)
 var closed_position = Vector3(0,0,0)
@@ -29,7 +28,6 @@ func _process(delta: float) -> void:
 		animation_progress = min(animation_progress, 1.0)  # Clamp to 1.0
 		
 		var target_progress = 1.0 if open else 0.0
-		print(target_progress)
 		var lerp_amount = ease_out_quad(animation_progress, target_progress)
 		
 		# Interpolate positions

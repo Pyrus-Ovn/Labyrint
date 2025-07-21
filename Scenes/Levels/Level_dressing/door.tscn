@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://borjakxyc1pnr"]
+[gd_scene load_steps=5 format=3 uid="uid://borjakxyc1pnr"]
 
 [ext_resource type="Script" uid="uid://bcc6lga1bhqe8" path="res://door.gd" id="1_d4bew"]
+[ext_resource type="PackedScene" uid="uid://7od1k63wydks" path="res://Assets/Geo/door.glb" id="2_c1rpg"]
 [ext_resource type="AudioStream" uid="uid://ds2wka11bmf2t" path="res://Audio/SFX/Door Open.wav" id="2_erpu2"]
 [ext_resource type="AudioStream" uid="uid://djoqql7kb2wr4" path="res://Audio/SFX/Door Close.wav" id="3_ewwbe"]
 
@@ -14,8 +15,12 @@ script = ExtResource("1_d4bew")
 
 [node name="Hinges" type="Node3D" parent="."]
 
+[node name="door2" parent="Hinges" instance=ExtResource("2_c1rpg")]
+transform = Transform3D(-0.0188916, 0, 0.400847, 0, 0.38998, 0, -0.502508, 0, -0.0150697, 0.510177, -0.507053, 0)
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Hinges"]
 transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 0.2, 0.5, 0, 0)
+visible = false
 mesh = SubResource("BoxMesh_c1rpg")
 skeleton = NodePath("../..")
 
