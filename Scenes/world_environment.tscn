@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://31afxg83bsko"]
 
-[ext_resource type="AudioStream" uid="uid://c0sjppmbxxdfe" path="res://Audio/Ambience.wav" id="1_2edto"]
 [ext_resource type="Sky" uid="uid://bbhb40jdrwb40" path="res://Scenes/Night Sky.tres" id="1_d60sq"]
+[ext_resource type="AudioStream" uid="uid://chsjm5ghibj8x" path="res://Audio/Ambience 2.wav" id="2_d60sq"]
 
 [sub_resource type="Environment" id="Environment_ft06c"]
 background_mode = 2
@@ -28,6 +28,6 @@ fog_depth_end = 764.7
 environment = SubResource("Environment_ft06c")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_2edto")
-volume_db = -3.0
+stream = ExtResource("2_d60sq")
+volume_db = -17.0
 autoplay = true

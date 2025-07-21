@@ -1,6 +1,7 @@
 extends Node3D
 @onready var lever_handle: MeshInstance3D = $lever_handle
 @onready var lever_base: MeshInstance3D = $lever_base
+@onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
 
 
 @export var toggled : bool = false
@@ -43,7 +44,7 @@ func interact():
 	print("i am toggled")
 	animation_progress = 1.0 - animation_progress
 	toggle.emit(toggled)
-	
+	audio_stream_player_3d.play()
 	## Get the material of the mesh
 	#var material = self.mesh_instance_3d.get_surface_override_material(0)
 	#
