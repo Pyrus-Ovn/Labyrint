@@ -40,5 +40,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5807, 1.7344, 2.88682)
 transform = Transform3D(-0.2, -1.74846e-08, 0, -1.74846e-08, 0.2, 1.74846e-08, -1.52855e-15, 1.74846e-08, -0.2, 7.953, 0.439614, 86.3545)
 
 [connection signal="toggle" from="Lever" to="Door" method="_on_lever_toggle"]
-[connection signal="toggle" from="Lever" to="Door2" method="_on_lever_toggle"]
 [connection signal="toggle" from="Lever" to="Door3" method="_on_lever_toggle"]
+[connection signal="toggle" from="Lever" to="Door2" method="_on_lever_toggle"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnorr78k0uoly"]
+[gd_scene load_steps=4 format=3 uid="uid://cnorr78k0uoly"]
 
 [ext_resource type="PackedScene" uid="uid://ck3kdiiux8pu" path="res://Scenes/Ui/ui_discman.tscn" id="1_ety00"]
 [ext_resource type="Script" uid="uid://lij4qqpb4dnn" path="res://Scenes/Ui/master_ui.gd" id="1_jfxas"]
+[ext_resource type="PackedScene" uid="uid://bdo7vsrhff7mr" path="res://Scenes/Ui/ui_parchment.tscn" id="3_6whne"]
 
 [node name="Master_Ui" type="Control"]
 layout_mode = 3
@@ -13,4 +14,7 @@ grow_vertical = 2
 script = ExtResource("1_jfxas")
 
 [node name="ui_discman" parent="." instance=ExtResource("1_ety00")]
+layout_mode = 1
+
+[node name="Ui_Parchment" parent="." instance=ExtResource("3_6whne")]
 layout_mode = 1
