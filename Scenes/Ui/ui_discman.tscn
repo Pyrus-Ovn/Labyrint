@@ -1,0 +1,125 @@
+[gd_scene load_steps=15 format=3 uid="uid://ck3kdiiux8pu"]
+
+[ext_resource type="Texture2D" uid="uid://d306ywegf33p5" path="res://Assets/discman.png" id="1_4ssbi"]
+[ext_resource type="Script" uid="uid://n0mx7ffn08od" path="res://Scenes/Ui/ui_discman.gd" id="1_cecvb"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_jj35v"]
+action = &"hide_discman"
+
+[sub_resource type="Shortcut" id="Shortcut_ja0wl"]
+events = [SubResource("InputEventAction_jj35v")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_u8kf2"]
+action = &"play_discman"
+
+[sub_resource type="Shortcut" id="Shortcut_1w6v0"]
+events = [SubResource("InputEventAction_u8kf2")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_cecvb"]
+action = &"forward_discman"
+
+[sub_resource type="Shortcut" id="Shortcut_u8kf2"]
+events = [SubResource("InputEventAction_cecvb")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_1w6v0"]
+action = &"back_discman"
+
+[sub_resource type="Shortcut" id="Shortcut_jj35v"]
+events = [SubResource("InputEventAction_1w6v0")]
+
+[sub_resource type="SystemFont" id="SystemFont_jj35v"]
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ja0wl"]
+bg_color = Color(0.462951, 0.658957, 0.465138, 1)
+
+[sub_resource type="Theme" id="Theme_3alc0"]
+default_font = SubResource("SystemFont_jj35v")
+Label/fonts/font = SubResource("SystemFont_jj35v")
+Label/styles/normal = SubResource("StyleBoxFlat_ja0wl")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ouqd1"]
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+outline_color = Color(0, 0, 0, 1)
+
+[node name="ui_discman" type="Control"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_vertical = 0
+script = ExtResource("1_cecvb")
+
+[node name="hide_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -33.0
+offset_right = 23.0
+offset_bottom = -2.0
+toggle_mode = true
+button_pressed = true
+shortcut = SubResource("Shortcut_ja0wl")
+text = "I
+"
+clip_text = true
+
+[node name="Discer" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Discman" type="Sprite2D" parent="Discer"]
+position = Vector2(57, -54)
+scale = Vector2(0.183333, 0.183333)
+texture = ExtResource("1_4ssbi")
+
+[node name="play_Button" type="Button" parent="Discer"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = -73.0
+offset_right = 66.0
+offset_bottom = -42.0
+shortcut = SubResource("Shortcut_1w6v0")
+text = "K"
+clip_text = true
+
+[node name="forward_Button" type="Button" parent="Discer"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = -72.0
+offset_right = 95.0
+offset_bottom = -41.0
+shortcut = SubResource("Shortcut_u8kf2")
+text = "L"
+clip_text = true
+
+[node name="back_Button" type="Button" parent="Discer"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = -72.0
+offset_right = 40.0
+offset_bottom = -41.0
+shortcut = SubResource("Shortcut_jj35v")
+text = "J"
+clip_text = true
+
+[node name="Label" type="Label" parent="Discer"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = -91.0
+offset_right = 79.0
+offset_bottom = -75.0
+theme = SubResource("Theme_3alc0")
+text = "Song Title"
+label_settings = SubResource("LabelSettings_ouqd1")
+horizontal_alignment = 1
+
+[connection signal="toggled" from="hide_Button" to="." method="_on_hide_button_toggled"]
+[connection signal="pressed" from="Discer/play_Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Discer/forward_Button" to="." method="_on_forward_button_pressed"]
+[connection signal="pressed" from="Discer/back_Button" to="." method="_on_back_button_pressed"]
