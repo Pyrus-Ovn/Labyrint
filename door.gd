@@ -3,7 +3,8 @@ extends Node3D
 @onready var open_sfx: AudioStreamPlayer3D = $OpenSFX
 @onready var close_sfx: AudioStreamPlayer3D = $CloseSFX
 
-@export var open : bool = false
+@export var reverse_door : bool = false
+var open : bool = reverse_door
 
 var open_position = Vector3(0,90,0)
 var closed_position = Vector3(0,0,0)
@@ -14,7 +15,7 @@ var animation_speed := 0.5
 signal toggle(state:bool)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	open = reverse_door
 
 func ease_out_quad(progress: float, target: float) -> float:
 	if target == 1.0:
@@ -38,7 +39,11 @@ func _process(delta: float) -> void:
 
 
 func _on_lever_toggle(state: bool) -> void:
-	open = state
+	#held og lykke med at fatte det her
+	open = (state != reverse_door)
+	
+	print(open)
+	
 	animation_progress = 1.0 - animation_progress
 	if open:
 		open_sfx.play()

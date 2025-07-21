@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bi3tivxq4s03q" path="res://Scenes/Levels/hedge_grid_map.tscn" id="1_h7kpw"]
 [ext_resource type="PackedScene" uid="uid://ce5tufuiou1dq" path="res://Scenes/Levels/Level_dressing/lever.tscn" id="2_fmkjl"]
 [ext_resource type="PackedScene" uid="uid://borjakxyc1pnr" path="res://Scenes/Levels/Level_dressing/door.tscn" id="3_ogoti"]
-[ext_resource type="PackedScene" uid="uid://d02f1uo3f4stu" path="res://Scenes/Levels/Level_dressing/cd.tscn" id="4_nssir"]
+[ext_resource type="PackedScene" uid="uid://dk2500jb0eebu" path="res://Scenes/Levels/Level_dressing/cd.tscn" id="4_nssir"]
 
 [node name="HedgeLevel" type="Node3D"]
 
@@ -13,14 +13,14 @@ data = {
 }
 
 [node name="Lever" parent="." instance=ExtResource("2_fmkjl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.17767, 1.56995, 0.755197)
-
-[node name="Lever2" parent="." instance=ExtResource("2_fmkjl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.701665, 1.53488, 0.7997)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21035, 1.49997, 0.77382)
 
 [node name="Door" parent="." instance=ExtResource("3_ogoti")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.03246, 1.98696, 2.11048)
+reverse_door = true
+
+[node name="Door2" parent="." instance=ExtResource("3_ogoti")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.22589, 1.95398, -0.933793)
 
 [node name="CD" parent="." instance=ExtResource("4_nssir")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.67488, 2.5, 3.57791)
@@ -32,3 +32,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.67488, 1.97186, -0.893486)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5807, 1.7344, 2.88682)
 
 [connection signal="toggle" from="Lever" to="Door" method="_on_lever_toggle"]
+[connection signal="toggle" from="Lever" to="Door2" method="_on_lever_toggle"]

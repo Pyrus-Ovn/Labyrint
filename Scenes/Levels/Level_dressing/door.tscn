@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://borjakxyc1pnr"]
+[gd_scene load_steps=7 format=3 uid="uid://borjakxyc1pnr"]
 
 [ext_resource type="Script" uid="uid://bcc6lga1bhqe8" path="res://door.gd" id="1_d4bew"]
 [ext_resource type="PackedScene" uid="uid://7od1k63wydks" path="res://Assets/Geo/door.glb" id="2_c1rpg"]

@@ -1,14 +1,14 @@
 extends Node3D
-@onready var lever_handle: MeshInstance3D = $lever_handle
-@onready var lever_base: MeshInstance3D = $lever_base
+#@onready var lever_handle: MeshInstance3D = $lever_handle
 @onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
+@onready var lever_handle: MeshInstance3D = $Scaler/lever
 
 
 @export var toggled : bool = false
 @onready var interaction_area: Interactable = $InteractionArea
 
-var open_position = Vector3(26,0,0)
-var closed_position = Vector3(-26,0,0)
+var open_position = Vector3(40,0,0)
+var closed_position = Vector3(-40,0,0)
 
 var animation_progress := 0.0
 var animation_speed := 3.0

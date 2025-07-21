@@ -6,6 +6,7 @@ var current_interactable = null
 var speed
 const WALK_SPEED = 1.5
 const SPRINT_SPEED = 3.0
+const CROUCH_SPEED = 0.2
 const JUMP_VELOCITY = 40.5
 const SENSITIVITY = 0.005
 
@@ -18,7 +19,7 @@ var t_bob = 0.0
 const BASE_FOV = 60.0
 const FOV_CHANGE = 1.5
 
-var crouch_scale = Vector3(1, 0.5, 1)
+var crouch_scale = Vector3(1, 0.2, 1)
 var stand_scale = Vector3(1, 1, 1)
 var target_scale = stand_scale
 var lerp_speed = 10.0  # Adjust this value to control the speed of the transition
@@ -106,14 +107,18 @@ func _physics_process(delta):
 		
 	if Input.is_action_just_pressed("crouch"):
 		target_scale = crouch_scale
+	if Input.is_action_pressed("crouch"):
+		speed = CROUCH_SPEED
+	else:
+		if Input.is_action_pressed("sprint"):
+			speed = SPRINT_SPEED
+			
+		else:
+			speed = WALK_SPEED
 	if Input.is_action_just_released("crouch"):
 		target_scale = stand_scale
 
 	# Handle sprint
-	if Input.is_action_pressed("sprint"):
-		speed = SPRINT_SPEED
-	else:
-		speed = WALK_SPEED
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("left", "right", "up", "down")
