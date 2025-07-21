@@ -1,10 +1,51 @@
-[gd_scene load_steps=7 format=3 uid="uid://dk2500jb0eebu"]
+[gd_scene load_steps=9 format=3 uid="uid://d02f1uo3f4stu"]
 
 [ext_resource type="Script" uid="uid://bnlm8vj0meugq" path="res://cd.gd" id="1_6slgw"]
 [ext_resource type="PackedScene" uid="uid://k6jav1tv45ai" path="res://Assets/Geo/CD.glb" id="2_qgsdv"]
+[ext_resource type="AudioStream" uid="uid://6c1pxqbxlimq" path="res://Audio/SFX/CD Spin.wav" id="3_qgsdv"]
+[ext_resource type="AudioStream" uid="uid://cu2tg5lc0f7xo" path="res://Audio/SFX/Pickup Item.wav" id="4_qx16b"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_qx16b"]
 radius = 0.921769
+
+[sub_resource type="Animation" id="Animation_pqkdt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scaler:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scaler/OmniLight3D:light_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Scaler/OmniLight3D2:light_energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
 
 [sub_resource type="Animation" id="Animation_s0xln"]
 resource_name = "idle"
@@ -47,45 +88,6 @@ tracks/2/keys = {
 "values": [2.0, 0.4, 2.0]
 }
 
-[sub_resource type="Animation" id="Animation_pqkdt"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Scaler:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Scaler/OmniLight3D:light_energy")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Scaler/OmniLight3D2:light_energy")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [2.0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kitp1"]
 _data = {
 &"RESET": SubResource("Animation_pqkdt"),
@@ -124,5 +126,15 @@ libraries = {
 &"": SubResource("AnimationLibrary_kitp1")
 }
 autoplay = "idle"
+
+[node name="cdSFX" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_qgsdv")
+volume_db = -10.0
+unit_size = 0.5
+autoplay = true
+max_distance = 5.0
+
+[node name="PickupSFX" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_qx16b")
 
 [connection signal="body_entered" from="Scaler/Area3D" to="." method="_on_area_3d_body_entered"]
