@@ -11,18 +11,9 @@ script = ExtResource("1_gjpho")
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("2_gjpho")]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(1, 0, 0, 0, -0.201642, 0.979459, 0, -0.979459, -0.201642, 0, 0, 0)
-light_color = Color(0.698074, 0.81861, 0.816272, 1)
-light_energy = 0.02
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-shadow_enabled = true
-sky_mode = 1
-
 [node name="Master_Ui" parent="." instance=ExtResource("5_p70al")]
 
 [node name="Player" parent="." instance=ExtResource("3_olspa")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.634928, 2.57612, -0.819943)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2.68, 1.595, -2.167)
 
 [node name="HedgeLevel" parent="." instance=ExtResource("3_5nsto")]

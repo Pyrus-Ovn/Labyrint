@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://ck3kdiiux8pu"]
+[gd_scene load_steps=16 format=3 uid="uid://ck3kdiiux8pu"]
 
 [ext_resource type="Texture2D" uid="uid://d306ywegf33p5" path="res://Assets/discman.png" id="1_4ssbi"]
 [ext_resource type="Script" uid="uid://n0mx7ffn08od" path="res://Scenes/Ui/ui_discman.gd" id="1_cecvb"]
+[ext_resource type="PackedScene" uid="uid://u58tom16mlbn" path="res://Assets/Geo/discMan.glb" id="3_u8kf2"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_jj35v"]
 action = &"hide_discman"
@@ -68,7 +69,6 @@ text = "I
 clip_text = true
 
 [node name="Discer" type="Control" parent="."]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -118,6 +118,8 @@ theme = SubResource("Theme_3alc0")
 text = "Song Title"
 label_settings = SubResource("LabelSettings_ouqd1")
 horizontal_alignment = 1
+
+[node name="discMan2" parent="." instance=ExtResource("3_u8kf2")]
 
 [connection signal="toggled" from="hide_Button" to="." method="_on_hide_button_toggled"]
 [connection signal="pressed" from="Discer/play_Button" to="." method="_on_play_button_pressed"]
