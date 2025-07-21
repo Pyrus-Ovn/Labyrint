@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://daipgi48m6hnw"]
+[gd_scene load_steps=6 format=3 uid="uid://daipgi48m6hnw"]
 
 [ext_resource type="Script" uid="uid://dkgtpkxwdkvgi" path="res://Scenes/world.gd" id="1_gjpho"]
 [ext_resource type="PackedScene" uid="uid://31afxg83bsko" path="res://Scenes/world_environment.tscn" id="2_gjpho"]
 [ext_resource type="PackedScene" uid="uid://dicmfgmljjae3" path="res://Scenes/Levels/hedge_level.tscn" id="3_5nsto"]
 [ext_resource type="PackedScene" uid="uid://de75r7nowaybb" path="res://Scenes/player.tscn" id="3_olspa"]
+[ext_resource type="PackedScene" uid="uid://cnorr78k0uoly" path="res://Scenes/Ui/master_ui.tscn" id="5_p70al"]
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_gjpho")
@@ -18,6 +19,8 @@ light_indirect_energy = 0.0
 light_volumetric_fog_energy = 0.0
 shadow_enabled = true
 sky_mode = 1
+
+[node name="Master_Ui" parent="." instance=ExtResource("5_p70al")]
 
 [node name="Player" parent="." instance=ExtResource("3_olspa")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.634928, 2.57612, -0.819943)
