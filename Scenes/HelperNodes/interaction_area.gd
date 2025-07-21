@@ -1,12 +1,14 @@
-extends Area3D
+# Extended Interactable example with highlighting
+extends Node3D
+class_name Interactable
 
-var interact: Callable = func(_player):
+func interact():
+	pass  # Implement in child classes
+
+func highlight():
+	# Add visual feedback
 	pass
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func unhighlight():
+	# Remove visual feedback
 	pass

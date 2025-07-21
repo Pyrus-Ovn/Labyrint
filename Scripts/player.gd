@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-
+var current_interactable = null
 var speed
 const WALK_SPEED = 5.0
 const SPRINT_SPEED = 8.0
@@ -41,6 +41,8 @@ func _unhandled_input(event):
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-40),deg_to_rad(60))
 
 func _input(event):
+	if event.is_action_pressed("Interact") and current_interactable:
+		current_interactable.interact()
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		var camera = $Head/Camera3D
 		var from = camera.project_ray_origin(event.position)
@@ -62,6 +64,26 @@ func _physics_process(delta):
 	
 	collision_shape_3d.scale = collision_shape_3d.scale.lerp(target_scale, lerp_speed * delta)
 
+
+	if ray_cast_3d.is_colliding():
+		var collider = ray_cast_3d.get_collider()
+		if collider is Interactable:
+			
+			var new_interactable = collider.get_parent()
+			if new_interactable != current_interactable:
+				# Unregister previous interactable if different
+				if current_interactable:
+					current_interactable = null
+					
+					# Register new interactable
+				current_interactable = new_interactable
+				#snyd
+				print(collider)
+				
+				#current_interactable.interact()
+	elif current_interactable:
+		#current_interactable.interact()
+		current_interactable = null
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
