@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://br1uq4vvl1wln"]
+[gd_scene load_steps=9 format=4 uid="uid://br1uq4vvl1wln"]
 
 [ext_resource type="Texture2D" uid="uid://bfubmxarwt6iq" path="res://Assets/Geo/Items/dynamit_flagermuslampe1.jpg" id="1_qtcf3"]
+[ext_resource type="Script" uid="uid://by6ovyfiawmkd" path="res://Scenes/Items/dynamit.gd" id="1_tepqi"]
 [ext_resource type="PackedScene" uid="uid://dfy23eehdcol4" path="res://Scenes/Items/item.tscn" id="2_csh2a"]
+[ext_resource type="PackedScene" uid="uid://cig3fto3wmomo" path="res://Scenes/Items/explosion_spawner.tscn" id="4_ikx1g"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ikx1g"]
 size = Vector3(0.0815353, 0.149666, 0.0739441)
@@ -47,8 +49,11 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_dfhi8")
 
 [node name="Dynamit" type="Node3D"]
+script = ExtResource("1_tepqi")
 
 [node name="Item_body" parent="." instance=ExtResource("2_csh2a")]
+contact_monitor = true
+max_contacts_reported = 1
 angular_damp = 3.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Item_body"]
@@ -59,3 +64,10 @@ shape = SubResource("BoxShape3D_ikx1g")
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
 mesh = SubResource("ArrayMesh_tepqi")
 skeleton = NodePath("")
+
+[node name="ExplosionSpawner2" parent="." instance=ExtResource("4_ikx1g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.107495, -0.19092, -0.2296)
+visible = false
+
+[connection signal="body_entered" from="Item_body" to="." method="_on_item_body_body_entered"]
+[connection signal="body_shape_entered" from="Item_body" to="." method="_on_item_body_body_shape_entered"]
