@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ggjd72keimh3"
+path="res://.godot/imported/Disc 07_Outside Inside.wav-6f7db62309acb4da5047d178a2610dae.sample"
+
+[deps]
+
+source_file="res://Audio/CD/Disc 07_Outside Inside.wav"
+dest_files=["res://.godot/imported/Disc 07_Outside Inside.wav-6f7db62309acb4da5047d178a2610dae.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

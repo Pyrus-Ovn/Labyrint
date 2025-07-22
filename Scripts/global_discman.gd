@@ -1,10 +1,16 @@
 extends Node
 class_name Discman
 const DISCMASTERLIST: Array = [
-	"res://Audio/Songs/bossmusic.wav",
-	"res://Audio/Songs/Shop Music (final).wav"
-]
-
+	
+	"res://Audio/CD/Disc 01_Secrets.wav",
+	"res://Audio/CD/Disc 02_The Builder.wav",
+	"res://Audio/CD/Disc 03_Crouch and Crawl.wav",
+	"res://Audio/CD/Disc 04_Coin of Fire.wav",
+	"res://Audio/CD/Disc 05_Doors.wav",
+	"res://Audio/CD/Disc 06_Labyrintus-Route.wav",
+	"res://Audio/CD/Disc 07_Outside Inside.wav",
+	]
+	
 # Static playlist - songs are only added once
 var songs: Array = []
 var current_song_index: int = -1
