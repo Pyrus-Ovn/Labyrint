@@ -1,8 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://dglybe2ik435m"]
+[gd_scene load_steps=12 format=3 uid="uid://dglybe2ik435m"]
 
 [ext_resource type="MeshLibrary" uid="uid://dgag75pbfkosh" path="res://Assets/MeshLibraries/Hedge.tres" id="1_6e1re"]
 [ext_resource type="PackedScene" uid="uid://borjakxyc1pnr" path="res://Scenes/Levels/Level_dressing/door.tscn" id="2_kq25i"]
 [ext_resource type="PackedScene" uid="uid://ce5tufuiou1dq" path="res://Scenes/Levels/Level_dressing/lever.tscn" id="3_m1f4g"]
+[ext_resource type="PackedScene" uid="uid://dil6xp8dqtnku" path="res://Assets/Geo/setDressing/barktræ.glb" id="4_qe42x"]
+[ext_resource type="PackedScene" uid="uid://c6hhaacsqsmcl" path="res://Assets/Geo/setDressing/bush_sculpt.glb" id="5_cvk54"]
+[ext_resource type="PackedScene" uid="uid://de75r7nowaybb" path="res://Scenes/player.tscn" id="5_hn08q"]
+[ext_resource type="PackedScene" uid="uid://xgn41e7ky8d8" path="res://Assets/Geo/setDressing/ItemSten.glb" id="6_r6fse"]
+[ext_resource type="PackedScene" uid="uid://cc6fnj7yxbkua" path="res://Assets/Geo/setDressing/japanskTræ.glb" id="7_6emlh"]
+[ext_resource type="PackedScene" uid="uid://cxs2erbybn64q" path="res://Assets/Geo/setDressing/ItemTræ.glb" id="7_r6fse"]
+[ext_resource type="PackedScene" uid="uid://ce331l8yj7rht" path="res://Assets/Geo/setDressing/skelet.glb" id="8_8gttx"]
+[ext_resource type="PackedScene" uid="uid://cmkh4x4a2fidu" path="res://Assets/Geo/setDressing/træSculpture.glb" id="9_ete6t"]
 
 [node name="Module Template" type="Node3D"]
 
@@ -18,5 +26,74 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98186, 2.27172, 14.1261)
 
 [node name="Lever" parent="." instance=ExtResource("3_m1f4g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0386, 1.5097, -12.6499)
+
+[node name="SetDress" type="Node3D" parent="."]
+transform = Transform3D(1.8206, -0.0527016, 0, 0.0611909, 1.56802, 0, 0, 0, 1.39936, -5.42958, 1.51409, 5.16719)
+
+[node name="barktræ" parent="SetDress" instance=ExtResource("4_qe42x")]
+transform = Transform3D(1, 1.86265e-09, 0, -3.72529e-09, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="barktræ" parent="SetDress/barktræ" instance=ExtResource("4_qe42x")]
+transform = Transform3D(-0.905709, 0.117777, -1.20958, -0.0130574, 1.56241, 0.126797, 1.58046, 0.0804022, -0.692124, 0.771431, -0.189544, 0.184618)
+
+[node name="barktræ2" parent="SetDress/barktræ" instance=ExtResource("4_qe42x")]
+transform = Transform3D(0.97907, 0.203497, -0.00324043, -0.202574, 0.972848, -0.111942, -0.0196275, 0.110256, 0.993709, -0.196032, -0.13153, -5.66918)
+
+[node name="barktræ3" parent="SetDress/barktræ" instance=ExtResource("4_qe42x")]
+transform = Transform3D(-0.936271, 0.0334954, -0.349678, -0.0228082, 0.987546, 0.155666, 0.350537, 0.153721, -0.923846, 0.332044, -0.0097512, 0.32561)
+
+[node name="barktræ4" parent="SetDress/barktræ" instance=ExtResource("4_qe42x")]
+transform = Transform3D(1.01495, -1.49012e-08, 0, -7.45058e-09, 1.44492, 0, 0, 0, 1, -0.301784, 0.0117769, 0.518845)
+
+[node name="barktræ5" parent="SetDress/barktræ" instance=ExtResource("4_qe42x")]
+transform = Transform3D(0.498773, 0.0195324, -0.866512, 0.0574088, 0.996806, 0.0555145, 0.864829, -0.0774346, 0.496058, 7.35967, -0.287206, 1.34609)
+
+[node name="barktræ6" parent="SetDress/barktræ" instance=ExtResource("4_qe42x")]
+transform = Transform3D(1.36261, -0.000196327, 0.00616049, -0.000233885, 1.13702, 0.212817, -0.00428894, -0.12437, 1.9456, -0.247511, 0.00965893, -5.90875)
+
+[node name="bush_sculpt" parent="SetDress" instance=ExtResource("5_cvk54")]
+transform = Transform3D(0.596077, 0.0127186, 0, -0.0232615, 0.439369, 0, 0, 0, 0.66547, 5.24626, -0.057696, -3.47704)
+
+[node name="ItemSten" parent="SetDress" instance=ExtResource("6_r6fse")]
+transform = Transform3D(0.1, 2.56114e-09, 0, -2.56114e-09, 0.1, 0, 0, 0, 0.1, 5.39753, -0.225127, -3.09199)
+
+[node name="ItemSten2" parent="SetDress/ItemSten" instance=ExtResource("6_r6fse")]
+transform = Transform3D(1, -1.86265e-08, 0, 1.11759e-08, 1, 0, 0, 0, 1, -24.4073, 1.0974, 36.6622)
+
+[node name="ItemTræ" parent="SetDress/ItemSten" instance=ExtResource("7_r6fse")]
+transform = Transform3D(-0.176474, 0.0263989, -0.467076, 0.0263989, 0.49897, 0.0182273, 0.467076, -0.0182273, -0.177505, -2.52096, 0.0983782, 37.119)
+
+[node name="ItemTræ" parent="SetDress/ItemSten/ItemTræ" instance=ExtResource("7_r6fse")]
+transform = Transform3D(0.958036, 0.0244018, -4.9206, -0.330099, 0.955896, -0.000872657, 3.37502, 0.0865663, 1.39668, -71.7023, 1.87468, -20.2106)
+
+[node name="ItemTræ2" parent="SetDress/ItemSten/ItemTræ" instance=ExtResource("7_r6fse")]
+transform = Transform3D(0.313562, 0.0267877, 0.949189, 0.0267877, 0.998955, -0.0370414, -0.949189, 0.0370414, 0.312517, -1.32004, -0.117826, 2.46341)
+
+[node name="ItemSten" parent="SetDress/ItemSten/ItemTræ" instance=ExtResource("6_r6fse")]
+transform = Transform3D(0.79678, 0.0711506, -0.600066, -0.0538067, 0.997453, 0.0468236, 0.601869, -0.00502055, 0.798579, 2.77625, -0.108332, -2.08414)
+
+[node name="ItemSten2" parent="SetDress/ItemSten/ItemTræ" instance=ExtResource("6_r6fse")]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 9.31323e-10, 0, 9.31323e-10, 1, -4.26346, 0.166382, -11.2357)
+
+[node name="japanskTræ" parent="SetDress" instance=ExtResource("7_6emlh")]
+transform = Transform3D(1, 7.45058e-09, 0, -1.11759e-08, 1, 0, 0, 0, 1, 4.63597, -0.180915, -13.7192)
+
+[node name="japanskTræ2" parent="SetDress" instance=ExtResource("7_6emlh")]
+transform = Transform3D(0.405313, 0.0232073, -0.913883, 0.0232072, 0.999094, 0.0356636, 0.913883, -0.0356636, 0.404407, 13.7085, -0.534965, 6.22457)
+
+[node name="skelet2" parent="SetDress" instance=ExtResource("8_8gttx")]
+transform = Transform3D(0.0728556, 0.000205562, -0.0314079, -0.00347424, 0.134325, -0.0140352, 0.0231243, 0.0195336, 0.0968455, -0.0917783, 0.00800622, -4.89276)
+
+[node name="skelet2" parent="SetDress/skelet2" instance=ExtResource("8_8gttx")]
+transform = Transform3D(-0.742558, -0.083681, -0.664534, 0.0675165, 0.977759, -0.198567, 0.66637, -0.192315, -0.720393, -2.35071, -1.3804, -12.0537)
+
+[node name="skelet3" parent="SetDress" instance=ExtResource("8_8gttx")]
+transform = Transform3D(0.2, 9.31323e-10, 0, -1.39698e-09, 0.2, 0, 0, 0, 0.2, 4.76597, -0.185988, 5.53277)
+
+[node name="træSculpture" parent="SetDress" instance=ExtResource("9_ete6t")]
+transform = Transform3D(1.01539, -0.354581, 0.0366778, 0.188926, 1.88825, -0.233449, 0.00706231, 0.467043, 0.971677, 14.1377, 0.360038, -13.8256)
+
+[node name="Player" parent="." instance=ExtResource("5_hn08q")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 8.36945, 3.63067, -2.88819)
 
 [connection signal="toggle" from="Lever" to="Door" method="_on_lever_toggle"]
