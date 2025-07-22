@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bi3tivxq4s03q" path="res://Scenes/Levels/hedge_grid_map.tscn" id="1_cf7ky"]
 [ext_resource type="PackedScene" uid="uid://dfubluvtuvoji" path="res://Assets/Geo/BlockoutGeo/grotte.glb" id="2_lf7c2"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Slut" type="Node3D"]
 
 [node name="GridMap" parent="." instance=ExtResource("1_cf7ky")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.509115, 0, 0.571608)

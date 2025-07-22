@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://borjakxyc1pnr" path="res://Scenes/Levels/Level_dressing/door.tscn" id="2_iksir"]
 [ext_resource type="PackedScene" uid="uid://ce5tufuiou1dq" path="res://Scenes/Levels/Level_dressing/lever.tscn" id="3_o2pev"]
 
-[node name="Module Template" type="Node3D"]
+[node name="DØR_LABYRINT" type="Node3D"]
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("1_uf5pa")

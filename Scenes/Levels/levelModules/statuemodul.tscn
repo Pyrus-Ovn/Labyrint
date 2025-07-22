@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bi3tivxq4s03q" path="res://Scenes/Levels/hedge_grid_map.tscn" id="1_dbt8r"]
 [ext_resource type="PackedScene" uid="uid://cnqabojy1tgrn" path="res://Assets/Geo/setDressing/storStatue.glb" id="2_j4qxd"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Staute" type="Node3D"]
 
 [node name="GridMap" parent="." instance=ExtResource("1_dbt8r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53805, 1.19209e-07, 0.100749)
