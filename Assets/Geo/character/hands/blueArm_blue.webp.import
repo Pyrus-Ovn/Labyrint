@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c517jcs70cyxy"
-path.s3tc="res://.godot/imported/left_hand_anim2_hudtekstur.jpg-1dd48c8258857f912a453b6a631b30e7.s3tc.ctex"
+uid="uid://buofutrlfd8b"
+path.s3tc="res://.godot/imported/blueArm_blue.webp-d8d4b943e5f9ddcf5d203c4594dc09db.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "2c86426a3f9f121f5b2b8bc9ee02d3db"
+"md5": "26c92a4a0a056bdb69c0c205e30d8668"
 }
 
 [deps]
 
-source_file="res://Assets/Geo/character/hands/left_hand_anim2_hudtekstur.jpg"
-dest_files=["res://.godot/imported/left_hand_anim2_hudtekstur.jpg-1dd48c8258857f912a453b6a631b30e7.s3tc.ctex"]
+source_file="res://Assets/Geo/character/hands/blueArm_blue.webp"
+dest_files=["res://.godot/imported/blueArm_blue.webp-d8d4b943e5f9ddcf5d203c4594dc09db.s3tc.ctex"]
 
 [params]
 

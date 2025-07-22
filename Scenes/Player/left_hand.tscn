@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://p7uftg6pda05"]
+[gd_scene load_steps=4 format=3 uid="uid://p7uftg6pda05"]
 
 [ext_resource type="Script" uid="uid://dvxtgeyc6fdwl" path="res://Scenes/Player/left_hand.gd" id="1_eh14e"]
+[ext_resource type="PackedScene" uid="uid://cyj4rnfq7wxdn" path="res://Assets/Geo/character/hands/blueArm.glb" id="3_eh14e"]
 [ext_resource type="PackedScene" uid="uid://c34pd6whxay37" path="res://Assets/Geo/character/hands/left_hand_anim2.glb" id="3_uh6ws"]
 
 [node name="Left_Hand" type="Node3D"]
@@ -16,6 +17,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.04185, -0.0733493, 0.219447
 
 [node name="geo_Vhånd_lukket" parent="left_hand_anim2/bone/geo_Vhånd_åben" index="1"]
 visible = false
+
+[node name="blueArm" parent="left_hand_anim2/bone/geo_Vhånd_åben" index="2" instance=ExtResource("3_eh14e")]
+transform = Transform3D(1.00079, -0.0012354, -0.0671494, 0.00102514, 1.2083, -3.43677e-05, 0.0610093, -3.76403e-05, 1.10151, 0.456765, 0.0261157, 0.0232622)
 
 [node name="geo_Vhånd_åben" parent="left_hand_anim2/bone/Skeleton3D" index="0"]
 cast_shadow = 0
