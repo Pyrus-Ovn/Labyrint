@@ -49,22 +49,26 @@ func _unhandled_input(event):
 
 func _input(event):
 	if event.is_action_pressed("Interact"):
-		interact()
+		if current_interactable:
+			if current_interactable.is_in_group("Interactable"):
+				interact()
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		left_hand.play_grab()
 		if left_hand.is_holding_item():
 			left_hand.throw_item(camera)
-		if current_interactable.is_in_group("Interactable"):
-			print("interacting")
-			interact()
+		if current_interactable:
+			if current_interactable.is_in_group("Interactable"):
+				interact()
 		if current_interactable is Item:
 			grab_leftHand()
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_RIGHT:
 		right_hand.play_grab()
 		if right_hand.is_holding_item():
 			right_hand.throw_item(camera)
-		if current_interactable.is_in_group("Interactable"):
-			interact()
+			
+		if current_interactable:
+			if current_interactable.is_in_group("Interactable"):
+				interact()
 		if current_interactable is Item:
 			grab_rightHand()
 			#'var camera = $Head/Camera3D
@@ -84,9 +88,7 @@ func _input(event):
 
 
 func interact():
-	print("trying to interact")
-	if current_interactable.is_in_group("Interactable"):
-		print("calling interact")
+	
 		current_interactable.interact()
 
 func grab_rightHand():
