@@ -1,20 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://31afxg83bsko"]
+[gd_scene load_steps=5 format=3 uid="uid://31afxg83bsko"]
 
-[ext_resource type="Sky" uid="uid://bbhb40jdrwb40" path="res://Scenes/Night Sky.tres" id="1_d60sq"]
 [ext_resource type="AudioStream" uid="uid://chsjm5ghibj8x" path="res://Audio/Ambience 2.wav" id="2_d60sq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2edto"]
+sky_top_color = Color(0.843474, 0.931543, 0.884639, 1)
+
+[sub_resource type="Sky" id="Sky_d60sq"]
+sky_material = SubResource("ProceduralSkyMaterial_2edto")
 
 [sub_resource type="Environment" id="Environment_ft06c"]
 background_mode = 2
 background_energy_multiplier = 0.57
-sky = ExtResource("1_d60sq")
-ambient_light_source = 3
-ambient_light_color = Color(0.326133, 0.44428, 0.381688, 1)
-ambient_light_sky_contribution = 0.0
-ambient_light_energy = 0.0
+sky = SubResource("Sky_d60sq")
+ambient_light_sky_contribution = 0.1
 reflected_light_source = 2
 tonemap_mode = 2
 glow_enabled = true
-fog_enabled = true
 fog_light_color = Color(0.292478, 0.364116, 0.403105, 1)
 fog_light_energy = 0.8
 fog_sun_scatter = 0.8
@@ -23,6 +24,10 @@ fog_aerial_perspective = 0.532
 fog_sky_affect = 0.7
 fog_depth_begin = 4.0
 fog_depth_end = 764.7
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.1
+volumetric_fog_albedo = Color(0.825792, 1, 0.940189, 1)
+volumetric_fog_length = 20.0
 
 [node name="WorldEnvironment" type="WorldEnvironment"]
 environment = SubResource("Environment_ft06c")
@@ -31,3 +36,7 @@ environment = SubResource("Environment_ft06c")
 stream = ExtResource("2_d60sq")
 volume_db = -17.0
 autoplay = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0)
+shadow_enabled = true

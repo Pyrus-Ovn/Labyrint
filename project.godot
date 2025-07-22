@@ -38,6 +38,7 @@ movie_writer/movie_file="/home/snake/Ben productions/Labyrint/movie.avi"
 Interactable=""
 Item=""
 Player=""
+coin=""
 
 [input]
 
