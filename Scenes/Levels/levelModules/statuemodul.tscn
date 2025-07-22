@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c8gkmbqbklsj8"]
+[gd_scene load_steps=3 format=3 uid="uid://c8gkmbqbklsj8"]
 
 [ext_resource type="PackedScene" uid="uid://bi3tivxq4s03q" path="res://Scenes/Levels/hedge_grid_map.tscn" id="1_dbt8r"]
 [ext_resource type="PackedScene" uid="uid://cnqabojy1tgrn" path="res://Assets/Geo/setDressing/storStatue.glb" id="2_j4qxd"]
-[ext_resource type="PackedScene" uid="uid://de75r7nowaybb" path="res://Scenes/player.tscn" id="3_68yi6"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -38,6 +37,3 @@ transform = Transform3D(0.707107, 0.280826, 0.648951, 0, 0.917755, -0.397148, -0
 light_energy = 16.0
 spot_range = 29.0833
 spot_angle = 41.3748
-
-[node name="Player" parent="." instance=ExtResource("3_68yi6")]
-transform = Transform3D(0.141421, 0.0437016, 0.1345, 0, 0.190211, -0.0618034, -0.141421, 0.0437016, 0.1345, 8.65442, 7.71338, 7.47608)
