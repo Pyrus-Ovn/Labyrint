@@ -67,7 +67,8 @@ func _input(event):
 			right_hand.throw_item(camera)
 			
 		if current_interactable:
-			if current_interactable.is_in_group("Interactable"):
+			if current_interactable.is_in_group(
+"Interactable"):
 				interact()
 		if current_interactable is Item:
 			grab_rightHand()
@@ -104,6 +105,15 @@ func grab_leftHand():
 
 	left_hand.pickup_item(current_interactable)
 	#current_interactable.global_position = left_hand.global_position
+
+
+func be_exploded(explosion):
+	var throw_direction = -explosion.global_transform.basis.z.normalized()
+	self.velocity = throw_direction * 10
+	#self.angular_velocity = Vector3(randf_range(-5, 5), randf_range(-5, 5), randf_range(-5, 5))
+	#self.apply_central_impulse(Vector3.UP * 3)
+	velocity.y = JUMP_VELOCITY*0.155
+	velocity.z = JUMP_VELOCITY*0.2
 
 func _physics_process(delta):
 	
