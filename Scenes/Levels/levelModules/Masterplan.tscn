@@ -1,7 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://cn0ywt7rwmga6"]
+[gd_scene load_steps=3 format=3 uid="uid://cn0ywt7rwmga6"]
 
 [ext_resource type="PackedScene" uid="uid://dglybe2ik435m" path="res://Scenes/Levels/levelModules/StartModul.tscn" id="1_tmk3f"]
+[ext_resource type="PackedScene" uid="uid://l3nn8hnh0u4m" path="res://Scenes/Levels/levelModules/Modul2.tscn" id="2_r80x7"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="Module Template" parent="." instance=ExtResource("1_tmk3f")]
+
+[node name="Module Template2" parent="." instance=ExtResource("2_r80x7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.90758, 0, 32.7091)
