@@ -7,14 +7,14 @@ initial_velocity_min = 12.0
 initial_velocity_max = 16.0
 scale_min = 0.2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o8e74"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_60r06"]
 albedo_color = Color(0.906783, 0.329752, 0, 1)
 emission_enabled = true
 emission = Color(0.63409, 0.213276, 0, 1)
 emission_energy_multiplier = 2.6
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_ap8vd"]
-material = SubResource("StandardMaterial3D_o8e74")
+material = SubResource("StandardMaterial3D_60r06")
 top_radius = 0.1
 bottom_radius = 0.0
 
@@ -22,7 +22,7 @@ bottom_radius = 0.0
 _data = [Vector2(0.0138889, 0.590994), 0.0, 0.0, 0, 0, Vector2(0.222222, 0.265614), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="CurveTexture" id="CurveTexture_xv8dp"]
+[sub_resource type="CurveTexture" id="CurveTexture_o8e74"]
 curve = SubResource("Curve_tolp2")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rv6qu"]
@@ -31,16 +31,16 @@ initial_velocity_min = 0.7
 initial_velocity_max = 5.0
 scale_min = 0.5
 scale_max = 3.0
-scale_curve = SubResource("CurveTexture_xv8dp")
+scale_curve = SubResource("CurveTexture_o8e74")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g84hd"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ap8vd"]
 albedo_color = Color(0.836272, 0.628287, 0, 1)
 emission_enabled = true
 emission = Color(0.844822, 0.578581, 0.260348, 1)
 emission_energy_multiplier = 2.0
 
 [sub_resource type="SphereMesh" id="SphereMesh_bo3sc"]
-material = SubResource("StandardMaterial3D_g84hd")
+material = SubResource("StandardMaterial3D_ap8vd")
 radial_segments = 8
 rings = 4
 

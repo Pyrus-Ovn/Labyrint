@@ -8,8 +8,8 @@ var current_interactable = null
 var speed
 const WALK_SPEED = 1.5
 const SPRINT_SPEED = 3.0
-const CROUCH_SPEED = 0.2
-const JUMP_VELOCITY = 40.5
+const CROUCH_SPEED = 0.4
+const JUMP_VELOCITY = 1.5
 const SENSITIVITY = 0.005
 
 #bobbing
