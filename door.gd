@@ -139,3 +139,12 @@ func _on_lever_26_toggle(state: bool) -> void:
 
 func _on_lever_30_toggle(state: bool) -> void:
 	toggle_door(state)
+
+
+func _on_lever_3_toggle(state: bool) -> void:
+	toggle_door(state)
+
+
+func _on_toggle(state: bool) -> void:
+		toggle_door(state)
+		
