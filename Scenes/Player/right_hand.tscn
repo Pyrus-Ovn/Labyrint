@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dd8hu15op3nti"]
+[gd_scene load_steps=4 format=3 uid="uid://dd8hu15op3nti"]
 
 [ext_resource type="Script" uid="uid://bm1cnrf5vv2tf" path="res://Scenes/Player/hand.gd" id="1_6agg8"]
 [ext_resource type="PackedScene" uid="uid://b0um4eyx67afy" path="res://Assets/Geo/character/hands/right_hand_anim.glb" id="1_wnyb5"]
+[ext_resource type="PackedScene" uid="uid://cyj4rnfq7wxdn" path="res://Assets/Geo/character/hands/blueArm.glb" id="3_y40qg"]
 
 [node name="Right_Hand" type="Node3D"]
 script = ExtResource("1_6agg8")
@@ -16,6 +17,9 @@ visible = false
 
 [node name="Item_point" type="Marker3D" parent="right_hand_anim/bone_001/geo_Hhånd_åben" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.04185, -0.0733493, 0.219447)
+
+[node name="blueArm" parent="right_hand_anim/bone_001/geo_Hhånd_åben" index="2" instance=ExtResource("3_y40qg")]
+transform = Transform3D(1.00376, -0.167277, 0.0126033, 0.154234, 1.08878, -5.19408e-10, -0.0113352, 0.00188902, 1.11605, 0, -0.0374458, 0.0225939)
 
 [node name="AnimationPlayer" parent="right_hand_anim" index="1"]
 autoplay = "IDLE_hand"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://cvp3sypyqvw5k"]
+
+[ext_resource type="Script" uid="uid://drjxlhe1g3k10" path="res://Scenes/Ui/DocumentResource.gd" id="1_32lcc"]
+[ext_resource type="Texture2D" uid="uid://1h5dipc1mjee" path="res://Assets/Parchment.png" id="2_w6klj"]
+
+[resource]
+script = ExtResource("1_32lcc")
+texture = ExtResource("2_w6klj")
+bounds = Rect2(0, 0, 800, 600)
+metadata/_custom_type_script = "uid://drjxlhe1g3k10"
