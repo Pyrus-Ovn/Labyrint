@@ -65,9 +65,8 @@ transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
 mesh = SubResource("ArrayMesh_tepqi")
 skeleton = NodePath("")
 
-[node name="ExplosionSpawner2" parent="." instance=ExtResource("4_ikx1g")]
+[node name="ExplosionSpawner2" parent="Item_body" instance=ExtResource("4_ikx1g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.107495, -0.19092, -0.2296)
-visible = false
 
 [connection signal="body_entered" from="Item_body" to="." method="_on_item_body_body_entered"]
 [connection signal="body_shape_entered" from="Item_body" to="." method="_on_item_body_body_shape_entered"]

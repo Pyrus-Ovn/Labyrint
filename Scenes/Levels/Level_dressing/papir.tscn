@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://df3l3psfld3jm"]
+[gd_scene load_steps=9 format=3 uid="uid://c7y6eklvxooe"]
 
 [ext_resource type="Script" uid="uid://bnlm8vj0meugq" path="res://cd.gd" id="1_kfvt6"]
 [ext_resource type="PackedScene" uid="uid://k6jav1tv45ai" path="res://Assets/Geo/CD.glb" id="2_h6y78"]

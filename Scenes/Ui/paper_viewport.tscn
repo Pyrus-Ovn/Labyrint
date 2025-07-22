@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://coodph6pfd2p3"]
+
+[ext_resource type="PackedScene" uid="uid://cj6yju6j57an3" path="res://Assets/Geo/character/papir/papir01_køkkenrulle.glb" id="1_mfm2s"]
+[ext_resource type="PackedScene" uid="uid://dlv0qhi55b7tp" path="res://Assets/Geo/character/papir/papir02_notetoSelf.glb" id="2_xlqsy"]
+
+[sub_resource type="World3D" id="World3D_mfm2s"]
+
+[sub_resource type="Environment" id="Environment_j75di"]
+ambient_light_color = Color(0, 0, 0, 0.0313726)
+ambient_light_energy = 9.59
+
+[node name="SubViewport" type="SubViewport"]
+own_world_3d = true
+world_3d = SubResource("World3D_mfm2s")
+transparent_bg = true
+size = Vector2i(320, 240)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.994538, 0, -0.104372, 0, 1, 0, 0.104372, 0, -0.994538, 0, 0, -2.64171)
+environment = SubResource("Environment_j75di")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(-0.994538, 0, -0.104372, 0, 1, 0, 0.104372, 0, -0.994538, 0, 0, -2.64171)
+
+[node name="papir01_køkkenrulle2" parent="Node3D" instance=ExtResource("1_mfm2s")]
+transform = Transform3D(-0.993396, 0.113992, 0.0130685, -0.00884164, 0.0375072, -0.999257, -0.114398, -0.992773, -0.0362516, 0.0795388, -0.0975721, -1.29533)
+
+[node name="papir02_notetoSelf2" parent="Node3D" instance=ExtResource("2_xlqsy")]
+transform = Transform3D(0.991814, -0.101097, 0.0780034, 0.101097, 0.248538, -0.963332, 0.0780034, 0.963332, 0.256724, 2.28299, 0, -1.44444)
