@@ -38,7 +38,7 @@ func _process(delta: float) -> void:
 			hinges.rotation_degrees = open_position.lerp(closed_position, lerp_amount)
 
 
-func _on_lever_toggle(state: bool) -> void:
+func toggle_door(state: bool):
 	#held og lykke med at fatte det her
 	open = (state != reverse_door)
 	
@@ -49,3 +49,38 @@ func _on_lever_toggle(state: bool) -> void:
 		open_sfx.play()
 	else:
 		close_sfx.play()
+
+
+func _on_lever_toggle(state: bool) -> void:
+	toggle_door(state)
+
+func _on_lever_2_toggle(state: bool) -> void:
+	toggle_door(state)
+
+
+
+func _on_lever_4_toggle(state: bool) -> void:
+	toggle_door(state)
+
+
+
+func _on_lever_5_toggle(state: bool) -> void:
+	toggle_door(state)
+
+
+
+func _on_lever_6_toggle(state: bool) -> void:
+	toggle_door(state)
+
+
+
+func _on_lever_7_toggle(state: bool) -> void:
+	toggle_door(state)
+
+
+func _on_lever_8_toggle(state: bool) -> void:
+	toggle_door(state)
+
+
+func _on_lever_9_toggle(state: bool) -> void:
+	toggle_door(state)

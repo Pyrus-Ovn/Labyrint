@@ -1,0 +1,92 @@
+[gd_scene load_steps=5 format=3 uid="uid://l3nn8hnh0u4m"]
+
+[ext_resource type="MeshLibrary" uid="uid://dgag75pbfkosh" path="res://Assets/MeshLibraries/Hedge.tres" id="1_uf5pa"]
+[ext_resource type="PackedScene" uid="uid://borjakxyc1pnr" path="res://Scenes/Levels/Level_dressing/door.tscn" id="2_iksir"]
+[ext_resource type="PackedScene" uid="uid://ce5tufuiou1dq" path="res://Scenes/Levels/Level_dressing/lever.tscn" id="3_o2pev"]
+[ext_resource type="PackedScene" uid="uid://de75r7nowaybb" path="res://Scenes/player.tscn" id="4_iksir"]
+
+[node name="Module Template" type="Node3D"]
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("1_uf5pa")
+cell_size = Vector3(3, 3, 3)
+data = {
+"cells": PackedInt32Array(6, 65534, 1441802, 6, 65533, 1441802, 6, 65532, 1441802, 6, 65535, 1441802, 6, 0, 1441802, 6, 1, 1441802, 6, 2, 1441802, 6, 3, 1441802, 5, 4, 655370, 4, 4, 655370, 3, 4, 655370, 2, 4, 655370, 0, 4, 655370, 65535, 4, 655370, 65534, 4, 1441797, 65533, 4, 655370, 65532, 4, 655370, 65531, 3, 1048586, 65531, 2, 1048586, 65531, 1, 1048586, 65531, 0, 1048586, 65531, 65535, 1048586, 65531, 65534, 1048586, 65531, 65533, 1048586, 65531, 65532, 1048586, 65532, 65531, 10, 65533, 65531, 0, 65534, 65531, 10, 0, 65531, 10, 65535, 65531, 1441801, 1, 65531, 0, 2, 65531, 10, 3, 65531, 10, 4, 65531, 10, 5, 65531, 10, 65531, 4, 1048580, 6, 4, 655364, 1, 4, 655370, 6, 65531, 1441796, 65531, 65531, 4, 5, 3, 1048582, 4, 3, 1048582, 2, 3, 1048582, 1, 3, 1048582, 0, 3, 1048582, 65535, 3, 1048582, 65533, 3, 1048582, 65532, 3, 1048582, 65533, 2, 1048582, 65532, 2, 1048582, 65534, 2, 1048581, 65535, 2, 1048581, 0, 2, 1048581, 1, 2, 1048582, 4, 2, 1048582, 5, 2, 1048582, 3, 2, 1048582, 2, 2, 1048582, 3, 1, 6, 4, 1, 1048582, 5, 1, 1048582, 5, 0, 1048582, 5, 65535, 1048582, 5, 65534, 1048582, 5, 65533, 1048582, 5, 65532, 1048582, 4, 65532, 1048582, 3, 65532, 1048582, 2, 65532, 1048582, 1, 65532, 0, 0, 65532, 655370, 65535, 65532, 1441801, 65534, 65532, 655370, 65533, 65532, 0, 65532, 65532, 1048582, 65532, 65533, 1048582, 65532, 65534, 1048582, 65532, 65535, 1048582, 65532, 1, 1048582, 65533, 1, 1048576, 65534, 1, 1048585, 65535, 1, 1048585, 0, 1, 1048585, 1, 1, 1048576, 2, 1, 6, 4, 0, 1048582, 3, 0, 6, 2, 0, 1441798, 1, 0, 1048576, 0, 0, 1048585, 65535, 0, 1048585, 65534, 0, 1048585, 65533, 0, 1048576, 65533, 65535, 0, 65534, 65535, 6, 65535, 65535, 6, 0, 65535, 1441798, 1, 65535, 0, 2, 65535, 1441798, 3, 65535, 655370, 4, 65535, 1048582, 4, 65534, 1048582, 3, 65534, 6, 2, 65534, 6, 1, 65534, 0, 0, 65534, 10, 65535, 65534, 1048581, 65534, 65534, 10, 65533, 65534, 0, 65533, 65533, 0, 65534, 65533, 1048582, 65535, 65533, 1048582, 0, 65533, 1048582, 1, 65533, 0, 2, 65533, 1048582, 3, 65533, 1048582, 4, 65533, 1048582, 3, 3, 1048582, 65534, 3, 1048582, 65532, 0, 1048582, 65535, 65530, 1048585)
+}
+
+[node name="Player" parent="." instance=ExtResource("4_iksir")]
+transform = Transform3D(0.2, 0, 0, 0, 0.199993, -0.00164408, 0, 0.00164408, 0.199993, -1.60909, 1.55337, -2.02319)
+
+[node name="Door" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.04747, 2.00723, -10.7033)
+
+[node name="Lever" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.89369, 1.49886, -14.6084)
+
+[node name="Door2" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.07069, 2.16845, -6.01721)
+reverse_door = true
+
+[node name="Door3" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01297, 1.94782, 0.212367)
+
+[node name="Door4" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.13501, 2.0293, 0.097175)
+
+[node name="Door5" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98186, 1.96362, 0.0687757)
+
+[node name="Door6" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.951622, 2.15866, 3.02362)
+
+[node name="Door7" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98186, 2.02935, 3.45317)
+
+[node name="Door8" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98186, 2.03848, 2.92454)
+
+[node name="Door9" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.799761, 2.15406, 6.15522)
+
+[node name="Door10" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98186, 2.05079, 6.50266)
+
+[node name="Door11" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98186, 2.1241, 6.24018)
+
+[node name="Lever2" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.456, 1.5, -0.864)
+
+[node name="Lever3" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.689, 1.5, -0.932)
+
+[node name="Lever4" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.755, 1.5, -0.946)
+
+[node name="Lever5" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.493, 1.5, 1.506)
+
+[node name="Lever6" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.454, 1.5, 1.921)
+
+[node name="Lever7" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.515, 1.5, 1.8)
+
+[node name="Lever8" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.494, 1.5, 4.726)
+
+[node name="Lever9" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.501, 1.5, 5.372)
+
+[node name="Lever10" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.844, 1.5, 4.905)
+
+[connection signal="toggle" from="Lever" to="Door" method="_on_lever_toggle"]
+[connection signal="toggle" from="Lever" to="Door2" method="_on_lever_toggle"]
+[connection signal="toggle" from="Lever2" to="Door8" method="_on_lever_2_toggle"]
+[connection signal="toggle" from="Lever4" to="Door3" method="_on_lever_4_toggle"]
+[connection signal="toggle" from="Lever5" to="Door4" method="_on_lever_5_toggle"]
+[connection signal="toggle" from="Lever6" to="Door6" method="_on_lever_6_toggle"]
+[connection signal="toggle" from="Lever7" to="Door7" method="_on_lever_7_toggle"]
+[connection signal="toggle" from="Lever8" to="Door5" method="_on_lever_8_toggle"]
+[connection signal="toggle" from="Lever9" to="Door11" method="_on_lever_9_toggle"]
