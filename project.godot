@@ -36,6 +36,7 @@ movie_writer/movie_file="/home/snake/Ben productions/Labyrint/movie.avi"
 [global_group]
 
 Interactable=""
+Item=""
 
 [input]
 
