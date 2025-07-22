@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c8gkmbqbklsj8" path="res://Scenes/Levels/levelModules/statuemodul.tscn" id="7_y654r"]
 [ext_resource type="MeshLibrary" uid="uid://dgag75pbfkosh" path="res://Assets/MeshLibraries/Hedge.tres" id="8_a50ic"]
 [ext_resource type="PackedScene" uid="uid://borjakxyc1pnr" path="res://Scenes/Levels/Level_dressing/door.tscn" id="9_xnwdd"]
-[ext_resource type="PackedScene" uid="uid://ce5tufuiou1dq" path="res://Scenes/lever.tscn" id="10_x2mh5"]
+[ext_resource type="PackedScene" path="res://Scenes/lever.tscn" id="10_x2mh5"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -17,7 +17,7 @@
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3, 0, 0)
 
 [node name="Brønd!" parent="." instance=ExtResource("2_6umiu")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -19.8341, 0, 50.626)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -18, 0, 48)
 
 [node name="Kravlemodul" parent="." instance=ExtResource("3_xnwdd")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -42.47, 0, -3.281)
@@ -75,8 +75,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5179, 1.49983, -109.507)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9819, 2.10313, -74.3291)
 reverse_door = true
 
-[connection signal="toggle" from="DOOR/Lever4" to="DOOR/Door5" method="_on_lever_4_toggle"]
 [connection signal="toggle" from="DOOR/Lever4" to="DOOR/Door6" method="_on_lever_4_toggle"]
+[connection signal="toggle" from="DOOR/Lever4" to="DOOR/Door5" method="_on_lever_4_toggle"]
 [connection signal="toggle" from="DOOR/Lever2" to="DOOR/Door2" method="_on_lever_2_toggle"]
 [connection signal="toggle" from="DOOR/Lever2" to="DOOR/Door4" method="_on_lever_2_toggle"]
 [connection signal="toggle" from="DOOR/Door" to="DOOR/Door" method="_on_toggle"]

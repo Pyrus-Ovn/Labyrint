@@ -2,6 +2,7 @@ extends Node
 class_name Discman
 const DISCMASTERLIST: Array = [
 	
+	"res://Audio/CD/Disc 00_Labyrintus Theme.wav",
 	"res://Audio/CD/Disc 01_Secrets.wav",
 	"res://Audio/CD/Disc 02_The Builder.wav",
 	"res://Audio/CD/Disc 03_Crouch and Crawl.wav",
