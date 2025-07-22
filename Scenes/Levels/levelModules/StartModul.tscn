@@ -1,11 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://dglybe2ik435m"]
+[gd_scene load_steps=11 format=3 uid="uid://dglybe2ik435m"]
 
 [ext_resource type="MeshLibrary" uid="uid://dgag75pbfkosh" path="res://Assets/MeshLibraries/Hedge.tres" id="1_6e1re"]
 [ext_resource type="PackedScene" uid="uid://borjakxyc1pnr" path="res://Scenes/Levels/Level_dressing/door.tscn" id="2_kq25i"]
 [ext_resource type="PackedScene" uid="uid://ce5tufuiou1dq" path="res://Scenes/Levels/Level_dressing/lever.tscn" id="3_m1f4g"]
 [ext_resource type="PackedScene" uid="uid://dil6xp8dqtnku" path="res://Assets/Geo/setDressing/barktræ.glb" id="4_qe42x"]
 [ext_resource type="PackedScene" uid="uid://c6hhaacsqsmcl" path="res://Assets/Geo/setDressing/bush_sculpt.glb" id="5_cvk54"]
-[ext_resource type="PackedScene" uid="uid://de75r7nowaybb" path="res://Scenes/player.tscn" id="5_hn08q"]
 [ext_resource type="PackedScene" uid="uid://xgn41e7ky8d8" path="res://Assets/Geo/setDressing/ItemSten.glb" id="6_r6fse"]
 [ext_resource type="PackedScene" uid="uid://cc6fnj7yxbkua" path="res://Assets/Geo/setDressing/japanskTræ.glb" id="7_6emlh"]
 [ext_resource type="PackedScene" uid="uid://cxs2erbybn64q" path="res://Assets/Geo/setDressing/ItemTræ.glb" id="7_r6fse"]
@@ -22,7 +21,7 @@ data = {
 }
 
 [node name="Door" parent="." instance=ExtResource("2_kq25i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98186, 2.27172, 14.1261)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98186, 2.00063, 14.1261)
 
 [node name="Lever" parent="." instance=ExtResource("3_m1f4g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0386, 1.5097, -12.6499)
@@ -92,8 +91,5 @@ transform = Transform3D(0.2, 9.31323e-10, 0, -1.39698e-09, 0.2, 0, 0, 0, 0.2, 4.
 
 [node name="træSculpture" parent="SetDress" instance=ExtResource("9_ete6t")]
 transform = Transform3D(1.01539, -0.354581, 0.0366778, 0.188926, 1.88825, -0.233449, 0.00706231, 0.467043, 0.971677, 14.1377, 0.360038, -13.8256)
-
-[node name="Player" parent="." instance=ExtResource("5_hn08q")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 8.36945, 3.63067, -2.88819)
 
 [connection signal="toggle" from="Lever" to="Door" method="_on_lever_toggle"]
