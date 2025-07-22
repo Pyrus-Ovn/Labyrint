@@ -1,0 +1,126 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwbfk5sryyvmy"]
+
+[sub_resource type="Animation" id="Animation_y0y2i"]
+resource_name = "topEye"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("topEye:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.266666, 0.7, 0.833333, 1.63333, 3.46667, 3.63333, 4.16667, 4.73333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -54.92), Vector2(-9.28506e-08, -53.984), Vector2(0, 0), Vector2(0, -117.402), Vector2(0, -118.748), Vector2(0, -117.402), Vector2(0, -250)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bottomEye:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.316666, 1.68333, 3.23333, 3.33333, 3.93333, 4.03333, 4.77333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(0, 71.7052), Vector2(0, 75.04), Vector2(0, 71.7052), Vector2(0, 75.04), Vector2(0, 220)]
+}
+
+[sub_resource type="Animation" id="Animation_jwnih"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("topEye:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bottomEye:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2lvn8"]
+_data = {
+&"RESET": SubResource("Animation_jwnih"),
+&"topEye": SubResource("Animation_y0y2i")
+}
+
+[node name="UiEyes" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_2lvn8")
+}
+autoplay = "topEye"
+
+[node name="topEye" type="Node2D" parent="."]
+
+[node name="topEye" type="ColorRect" parent="topEye"]
+offset_left = -110.0
+offset_top = 19.0
+offset_right = 282.69
+offset_bottom = 223.74
+rotation = -0.338594
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="topEye/topEye"]
+offset_left = 206.822
+offset_top = -36.3664
+offset_right = 584.822
+offset_bottom = 158.244
+rotation = 0.541052
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="topEye/topEye"]
+offset_left = 115.032
+offset_top = -31.6144
+offset_right = 493.032
+offset_bottom = 162.996
+rotation = 0.347321
+color = Color(0, 0, 0, 1)
+
+[node name="bottomEye" type="Node2D" parent="."]
+
+[node name="bottomEye" type="ColorRect" parent="bottomEye"]
+offset_left = 417.0
+offset_top = 223.0
+offset_right = 806.0
+offset_bottom = 362.0
+rotation = 2.89899
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="bottomEye/bottomEye"]
+offset_left = 206.822
+offset_top = -36.3664
+offset_right = 584.822
+offset_bottom = 114.634
+rotation = 0.541052
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="bottomEye/bottomEye"]
+offset_left = 97.4318
+offset_top = -44.0357
+offset_right = 475.432
+offset_bottom = 106.964
+rotation = 0.347321
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 207.0
+offset_bottom = 121.0

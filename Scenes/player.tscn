@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://de75r7nowaybb"]
+[gd_scene load_steps=15 format=3 uid="uid://de75r7nowaybb"]
 
 [ext_resource type="Script" uid="uid://82nbde26me3j" path="res://Scripts/player.gd" id="1_sqbf5"]
 [ext_resource type="PackedScene" uid="uid://dd8hu15op3nti" path="res://Scenes/Player/right_hand.tscn" id="2_6t5aa"]
+[ext_resource type="PackedScene" uid="uid://bwbfk5sryyvmy" path="res://Scenes/Ui/ui_eyes.tscn" id="2_tx1dd"]
 [ext_resource type="PackedScene" uid="uid://p7uftg6pda05" path="res://Scenes/Player/left_hand.tscn" id="3_vgqql"]
 [ext_resource type="Script" uid="uid://4bgspn6d8l6b" path="res://Scenes/footstep_manager.gd" id="4_f1ek2"]
 [ext_resource type="AudioStream" uid="uid://dqgitwbd5aiqu" path="res://Audio/Fodskridt 01.wav" id="5_tx1dd"]
@@ -20,9 +21,11 @@ points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607,
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tx1dd"]
 albedo_color = Color(1, 0.0862745, 1, 0.0745098)
 
-[node name="Player" type="CharacterBody3D" groups=["players"]]
+[node name="Player" type="CharacterBody3D" groups=["Player"]]
 floor_max_angle = 0.872665
 script = ExtResource("1_sqbf5")
+
+[node name="UiEyes" parent="." instance=ExtResource("2_tx1dd")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0416366, 0.82708, -0.350017)
