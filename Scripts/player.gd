@@ -64,7 +64,10 @@ func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_RIGHT:
 		right_hand.play_grab()
 		if right_hand.is_holding_item():
-			right_hand.throw_item(camera)
+			if current_interactable.useable():
+				current_interactable.use
+			else:
+				right_hand.throw_item(camera)
 			
 		if current_interactable:
 			if current_interactable.is_in_group(

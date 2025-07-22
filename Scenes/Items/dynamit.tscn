@@ -55,6 +55,7 @@ script = ExtResource("1_tepqi")
 contact_monitor = true
 max_contacts_reported = 1
 angular_damp = 3.0
+useable = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Item_body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00372815, 0.0241404, -0.00443172)
@@ -70,3 +71,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.107495, -0.19092, -0.2296)
 
 [connection signal="body_entered" from="Item_body" to="." method="_on_item_body_body_entered"]
 [connection signal="body_shape_entered" from="Item_body" to="." method="_on_item_body_body_shape_entered"]
+[connection signal="used" from="Item_body" to="." method="_on_item_body_used"]

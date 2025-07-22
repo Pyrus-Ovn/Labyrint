@@ -137,7 +137,6 @@ data = PackedVector3Array(-1.0009, -1, 0.999, -1.0009, 0.9994, -0.9913, -1.0009,
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mlfll"]
 margin = 0.0
-radius = 13.584
 
 [node name="Well" type="Node3D"]
 script = ExtResource("1_tnavy")
@@ -154,10 +153,10 @@ transform = Transform3D(0.00796174, -0.0127146, -0.00475671, 0.00487909, -0.0023
 shape = SubResource("ConcavePolygonShape3D_tnavy")
 
 [node name="Area3D" type="Area3D" parent="StaticBody3D"]
-transform = Transform3D(0.796174, -0.373958, -0.475671, 0.487909, -0.0681442, 0.870231, -0.357844, -0.924939, 0.128203, 5.22498, 14.8931, 10.1137)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/Area3D"]
-transform = Transform3D(1, 5.36442e-07, 4.06057e-07, 5.96046e-08, 1, -7.45058e-09, -1.63913e-07, -9.68575e-08, 1, -14.0057, 12.8119, -22.3796)
+transform = Transform3D(1, 5.36442e-07, 4.06057e-07, 5.96046e-08, 1, -7.45058e-09, -1.63913e-07, -9.68575e-08, 1, -0.0927697, -0.428895, -0.30691)
 shape = SubResource("SphereShape3D_mlfll")
 
 [connection signal="body_entered" from="StaticBody3D/Area3D" to="." method="_on_area_3d_body_entered"]
