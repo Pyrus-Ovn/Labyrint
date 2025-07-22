@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dicmfgmljjae3"]
+[gd_scene load_steps=7 format=3 uid="uid://dicmfgmljjae3"]
 
 [ext_resource type="PackedScene" uid="uid://bi3tivxq4s03q" path="res://Scenes/Levels/hedge_grid_map.tscn" id="1_h7kpw"]
 [ext_resource type="PackedScene" uid="uid://ce5tufuiou1dq" path="res://Scenes/Levels/Level_dressing/lever.tscn" id="2_fmkjl"]
 [ext_resource type="PackedScene" uid="uid://borjakxyc1pnr" path="res://Scenes/Levels/Level_dressing/door.tscn" id="3_ogoti"]
 [ext_resource type="PackedScene" uid="uid://dk2500jb0eebu" path="res://Scenes/Levels/Level_dressing/cd.tscn" id="4_nssir"]
 [ext_resource type="PackedScene" uid="uid://dfubluvtuvoji" path="res://Assets/Geo/BlockoutGeo/grotte.glb" id="5_ui505"]
+[ext_resource type="PackedScene" uid="uid://br1uq4vvl1wln" path="res://Scenes/Items/dynamit.tscn" id="7_yutgq"]
 
 [node name="HedgeLevel" type="Node3D"]
 
@@ -38,6 +39,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5807, 1.7344, 2.88682)
 
 [node name="grotte2" parent="." instance=ExtResource("5_ui505")]
 transform = Transform3D(-0.2, -1.74846e-08, 0, -1.74846e-08, 0.2, 1.74846e-08, -1.52855e-15, 1.74846e-08, -0.2, 7.953, 0.439614, 86.3545)
+
+[node name="Dynamit" parent="." instance=ExtResource("7_yutgq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, -3)
 
 [connection signal="toggle" from="Lever" to="Door" method="_on_lever_toggle"]
 [connection signal="toggle" from="Lever" to="Door3" method="_on_lever_toggle"]

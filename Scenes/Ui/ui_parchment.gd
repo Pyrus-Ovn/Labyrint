@@ -1,9 +1,6 @@
 extends Control
 const FYLDPEN = preload("res://Assets/fyldpen.png")
 @onready var canvas_layer: CanvasLayer = $CanvasLayer
-#@onready var parchment: Sprite2D = $CanvasLayer/Parchment
-@onready var draw_rect: ColorRect = $CanvasLayer/Parchment/CanvasLayer/drawRect
-#@onready var line_2d: Line2D = $CanvasLayer/Parchment/CanvasLayer/Line2D
 @onready var _lines: Line2D = $CanvasLayer/Parchment/Line2D
 "res://Assets/fyldpen.png"
 var is_paused : bool = false
@@ -59,11 +56,9 @@ func hide_pause_menu():
 
 
 func _on_color_rect_mouse_entered() -> void:
-	print("mouse in")
 	_within_bounds = true
 
 
 func _on_color_rect_mouse_exited() -> void:
-	print("mouse out")
 	_current_line = null
 	_within_bounds = false

@@ -2,6 +2,8 @@ extends CharacterBody3D
 @onready var left_hand: Node3D = $Head/Left_Hand
 @onready var right_hand: Node3D = $Head/Right_Hand
 
+var holding_item_left = null
+
 var current_interactable = null
 var speed
 const WALK_SPEED = 1.5
@@ -27,7 +29,7 @@ var lerp_speed = 10.0  # Adjust this value to control the speed of the transitio
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
-@onready var ray_cast_3d: RayCast3D = $Head/RayCast3D
+@onready var ray_cast_3d: RayCast3D = $Head/Camera3D/RayCast3D
 
 # Footstep variables
 var can_play : bool = true
@@ -50,10 +52,20 @@ func _input(event):
 		interact()
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		left_hand.play_grab()
-		interact()
+		if left_hand.is_holding_item():
+			left_hand.throw_item(camera)
+		if current_interactable is Interactable:
+			interact()
+		if current_interactable is Item:
+			grab_leftHand()
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_RIGHT:
 		right_hand.play_grab()
-		interact()
+		if right_hand.is_holding_item():
+			right_hand.throw_item(camera)
+		if current_interactable is Interactable:
+			interact()
+		if current_interactable is Item:
+			grab_rightHand()
 			#'var camera = $Head/Camera3D
 			#var from = camera.project_ray_origin(event.position)
 			#var to = from + camera.project_ray_normal(event.position) * 5.0  # Reduced range for more precise placement
@@ -71,8 +83,22 @@ func _input(event):
 
 
 func interact():
-	if current_interactable:
+	if current_interactable is Interactable:
 		current_interactable.interact()
+
+func grab_rightHand():
+	right_hand.pickup_item(current_interactable)
+	
+func grab_leftHand():
+	#item.gravity_scale = 0
+	#item.set_collision_layer_value(1,false)
+	#item.set_collision_mask_value(1,false)
+	#item.global_transform = L_item_point.global_transform
+	#item.reparent(L_item_point)
+	#holding_item_left = item
+
+	left_hand.pickup_item(current_interactable)
+	#current_interactable.global_position = left_hand.global_position
 
 func _physics_process(delta):
 	
@@ -91,8 +117,18 @@ func _physics_process(delta):
 					
 					# Register new interactable
 				current_interactable = new_interactable
+		elif collider is Item:
+			var new_interactable = collider
+			if new_interactable != current_interactable:
+				# Unregister previous interactable if different
+				if current_interactable:
+					current_interactable = null
+					
+					# Register new interactable
+				current_interactable = new_interactable
+				print(current_interactable)
 				#snyd
-				
+				#grab_leftHand()
 				#current_interactable.interact()
 	elif current_interactable:
 		#current_interactable.interact()
