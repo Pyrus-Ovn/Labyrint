@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cn0ywt7rwmga6"]
+
+[ext_resource type="PackedScene" uid="uid://dglybe2ik435m" path="res://Scenes/Levels/levelModules/StartModul.tscn" id="1_tmk3f"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Module Template" parent="." instance=ExtResource("1_tmk3f")]
