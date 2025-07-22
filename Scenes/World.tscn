@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dkgtpkxwdkvgi" path="res://Scenes/world.gd" id="1_gjpho"]
 [ext_resource type="PackedScene" uid="uid://31afxg83bsko" path="res://Scenes/world_environment.tscn" id="2_gjpho"]
-[ext_resource type="PackedScene" uid="uid://dicmfgmljjae3" path="res://Scenes/Levels/hedge_level.tscn" id="3_5nsto"]
 [ext_resource type="PackedScene" uid="uid://de75r7nowaybb" path="res://Scenes/player.tscn" id="3_olspa"]
+[ext_resource type="PackedScene" uid="uid://cn0ywt7rwmga6" path="res://Scenes/Levels/levelModules/Masterplan.tscn" id="5_45d1s"]
 [ext_resource type="PackedScene" uid="uid://cnorr78k0uoly" path="res://Scenes/Ui/master_ui.tscn" id="5_p70al"]
 
 [node name="Node3D" type="Node3D"]
@@ -13,7 +13,7 @@ script = ExtResource("1_gjpho")
 
 [node name="Master_Ui" parent="." instance=ExtResource("5_p70al")]
 
-[node name="Player" parent="." instance=ExtResource("3_olspa")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2.68, 1.595, -2.167)
+[node name="Node3D" parent="." instance=ExtResource("5_45d1s")]
 
-[node name="HedgeLevel" parent="." instance=ExtResource("3_5nsto")]
+[node name="Player" parent="." instance=ExtResource("3_olspa")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 9.54, 0)
