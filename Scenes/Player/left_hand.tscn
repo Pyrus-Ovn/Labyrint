@@ -8,7 +8,13 @@ script = ExtResource("1_eh14e")
 
 [node name="left_hand_anim2" parent="." instance=ExtResource("3_uh6ws")]
 
-[node name="geo_Vhånd_lukket" parent="left_hand_anim2/bone/geo_Vhånd_åben" index="0"]
+[node name="bone" parent="left_hand_anim2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.999859, -0.0168006, 0, 0.0168006, 0.999859, 0, 0.0306008, 0)
+
+[node name="Item_point" type="Marker3D" parent="left_hand_anim2/bone/geo_Vhånd_åben" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.04185, -0.0733493, 0.219447)
+
+[node name="geo_Vhånd_lukket" parent="left_hand_anim2/bone/geo_Vhånd_åben" index="1"]
 visible = false
 
 [node name="geo_Vhånd_åben" parent="left_hand_anim2/bone/Skeleton3D" index="0"]

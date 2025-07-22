@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://l3nn8hnh0u4m"]
+[gd_scene load_steps=4 format=3 uid="uid://l3nn8hnh0u4m"]
 
 [ext_resource type="MeshLibrary" uid="uid://dgag75pbfkosh" path="res://Assets/MeshLibraries/Hedge.tres" id="1_uf5pa"]
 [ext_resource type="PackedScene" uid="uid://borjakxyc1pnr" path="res://Scenes/Levels/Level_dressing/door.tscn" id="2_iksir"]
 [ext_resource type="PackedScene" uid="uid://ce5tufuiou1dq" path="res://Scenes/Levels/Level_dressing/lever.tscn" id="3_o2pev"]
-[ext_resource type="PackedScene" uid="uid://de75r7nowaybb" path="res://Scenes/player.tscn" id="4_iksir"]
 
 [node name="Module Template" type="Node3D"]
 
@@ -11,11 +10,8 @@
 mesh_library = ExtResource("1_uf5pa")
 cell_size = Vector3(3, 3, 3)
 data = {
-"cells": PackedInt32Array(6, 65534, 1441802, 6, 65533, 1441802, 6, 65532, 1441802, 6, 65535, 1441802, 6, 0, 1441802, 6, 1, 1441802, 6, 2, 1441802, 6, 3, 1441802, 5, 4, 655370, 4, 4, 655370, 3, 4, 655370, 2, 4, 655370, 0, 4, 655370, 65535, 4, 655370, 65534, 4, 1441797, 65533, 4, 655370, 65532, 4, 655370, 65531, 3, 1048586, 65531, 2, 1048586, 65531, 1, 1048586, 65531, 0, 1048586, 65531, 65535, 1048586, 65531, 65534, 1048586, 65531, 65533, 1048586, 65531, 65532, 1048586, 65532, 65531, 10, 65533, 65531, 0, 65534, 65531, 10, 0, 65531, 10, 65535, 65531, 1441801, 1, 65531, 0, 2, 65531, 10, 3, 65531, 10, 4, 65531, 10, 5, 65531, 10, 65531, 4, 1048580, 6, 4, 655364, 1, 4, 655370, 6, 65531, 1441796, 65531, 65531, 4, 5, 3, 1048582, 4, 3, 1048582, 2, 3, 1048582, 1, 3, 1048582, 0, 3, 1048582, 65535, 3, 1048582, 65533, 3, 1048582, 65532, 3, 1048582, 65533, 2, 1048582, 65532, 2, 1048582, 65534, 2, 1048581, 65535, 2, 1048581, 0, 2, 1048581, 1, 2, 1048582, 4, 2, 1048582, 5, 2, 1048582, 3, 2, 1048582, 2, 2, 1048582, 3, 1, 6, 4, 1, 1048582, 5, 1, 1048582, 5, 0, 1048582, 5, 65535, 1048582, 5, 65534, 1048582, 5, 65533, 1048582, 5, 65532, 1048582, 4, 65532, 1048582, 3, 65532, 1048582, 2, 65532, 1048582, 1, 65532, 0, 0, 65532, 655370, 65535, 65532, 1441801, 65534, 65532, 655370, 65533, 65532, 0, 65532, 65532, 1048582, 65532, 65533, 1048582, 65532, 65534, 1048582, 65532, 65535, 1048582, 65532, 1, 1048582, 65533, 1, 1048576, 65534, 1, 1048585, 65535, 1, 1048585, 0, 1, 1048585, 1, 1, 1048576, 2, 1, 6, 4, 0, 1048582, 3, 0, 6, 2, 0, 1441798, 1, 0, 1048576, 0, 0, 1048585, 65535, 0, 1048585, 65534, 0, 1048585, 65533, 0, 1048576, 65533, 65535, 0, 65534, 65535, 6, 65535, 65535, 6, 0, 65535, 1441798, 1, 65535, 0, 2, 65535, 1441798, 3, 65535, 655370, 4, 65535, 1048582, 4, 65534, 1048582, 3, 65534, 6, 2, 65534, 6, 1, 65534, 0, 0, 65534, 10, 65535, 65534, 1048581, 65534, 65534, 10, 65533, 65534, 0, 65533, 65533, 0, 65534, 65533, 1048582, 65535, 65533, 1048582, 0, 65533, 1048582, 1, 65533, 0, 2, 65533, 1048582, 3, 65533, 1048582, 4, 65533, 1048582, 3, 3, 1048582, 65534, 3, 1048582, 65532, 0, 1048582, 65535, 65530, 1048585)
+"cells": PackedInt32Array(65533, 65531, 0, 65534, 65531, 10, 0, 65531, 10, 65535, 65531, 1441801, 1, 65531, 0, 1, 3, 1441802, 0, 3, 1048582, 65535, 3, 1048582, 65533, 3, 1048586, 65533, 2, 1048586, 65534, 2, 1048581, 65535, 2, 1048581, 0, 2, 1048581, 1, 2, 1441802, 1, 65532, 0, 0, 65532, 655370, 65535, 65532, 1441801, 65534, 65532, 655370, 65533, 65532, 0, 65533, 1, 1048576, 65534, 1, 1048585, 65535, 1, 1048585, 0, 1, 1048585, 1, 1, 1048576, 1, 0, 1048576, 0, 0, 1048585, 65535, 0, 1048585, 65534, 0, 1048585, 65533, 0, 1048576, 65533, 65535, 0, 65534, 65535, 6, 65535, 65535, 6, 0, 65535, 1441798, 1, 65535, 0, 1, 65534, 0, 0, 65534, 10, 65535, 65534, 1048581, 65534, 65534, 10, 65533, 65534, 0, 65533, 65533, 0, 65534, 65533, 1048582, 65535, 65533, 1048582, 0, 65533, 1048582, 1, 65533, 0, 65534, 3, 1048582, 65535, 65530, 1048585, 65533, 4, 1048585, 65534, 4, 1048585, 65535, 4, 1048585, 0, 4, 1048585, 1, 4, 1048585, 1, 5, 1048585, 0, 5, 1048585, 65535, 5, 1048585, 65534, 5, 1048585, 65533, 5, 1048585, 65533, 6, 1048585, 65534, 6, 1048585, 65535, 6, 1048585, 0, 6, 1048585, 1, 6, 1048585, 1, 7, 1048585, 0, 7, 1048585, 65535, 7, 1048585, 65534, 7, 1048585, 65533, 7, 1048585, 65533, 8, 1048585, 65534, 8, 1048585, 65535, 8, 1048585, 0, 8, 1048585, 1, 8, 1048585, 1, 9, 1048585, 0, 9, 1048585, 65535, 9, 1048585, 65534, 9, 1048585, 65533, 9, 1048585, 65533, 10, 1048585, 65534, 10, 1048585, 65535, 10, 1048585, 0, 10, 1048585, 1, 10, 1048585, 65533, 11, 1048586, 65533, 12, 655365, 1, 11, 1441802, 1, 12, 5, 0, 11, 1441798, 65535, 11, 1441798, 65534, 11, 1441798, 65534, 12, 1441798, 65535, 12, 1441798, 0, 12, 1441798, 1, 13, 655364, 65533, 13, 1048580, 65535, 13, 1441797, 0, 13, 655370, 65534, 13, 655370)
 }
-
-[node name="Player" parent="." instance=ExtResource("4_iksir")]
-transform = Transform3D(0.2, 0, 0, 0, 0.199993, -0.00164408, 0, 0.00164408, 0.199993, -1.60909, 1.55337, -2.02319)
 
 [node name="Door" parent="." instance=ExtResource("2_iksir")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.04747, 2.00723, -10.7033)
@@ -81,6 +77,130 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.501, 1.5, 5.372)
 [node name="Lever10" parent="." instance=ExtResource("3_o2pev")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.844, 1.5, 4.905)
 
+[node name="Door12" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.89679, 2.02742, 12.2139)
+
+[node name="Door16" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.994728, 2.02742, 12.5077)
+
+[node name="Door20" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01524, 2.02742, 12.6017)
+
+[node name="Door21" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01524, 2.02742, 17.1804)
+reverse_door = true
+
+[node name="Door22" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01524, 2.02742, 22.6299)
+
+[node name="Door23" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01524, 2.02742, 27.6472)
+
+[node name="Door24" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.14352, 2.02742, 27.8475)
+
+[node name="Door25" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.14352, 2.02742, 22.7851)
+
+[node name="Door26" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.14352, 2.02742, 17.2612)
+reverse_door = true
+
+[node name="Door27" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.14352, 2.02742, 12.2905)
+
+[node name="Door28" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.04467, 2.02742, 12.2905)
+reverse_door = true
+
+[node name="Door29" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.04467, 2.02742, 16.853)
+
+[node name="Door30" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.04467, 2.02742, 22.2199)
+
+[node name="Door31" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.04467, 2.02742, 27.5457)
+
+[node name="Door17" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.994728, 2.02742, 17.5114)
+
+[node name="Door18" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.994728, 2.02742, 22.5415)
+
+[node name="Door19" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.994728, 2.02742, 27.3631)
+
+[node name="Door13" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.89679, 2.02742, 17.8123)
+
+[node name="Door14" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.89679, 2.02742, 22.5017)
+
+[node name="Door15" parent="." instance=ExtResource("2_iksir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.89679, 2.02742, 27.4147)
+reverse_door = true
+
+[node name="Lever11" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.42903, 1.51242, 10.9241)
+
+[node name="Lever15" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14731, 1.51242, 10.9241)
+
+[node name="Lever19" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.86512, 1.51242, 10.9241)
+
+[node name="Lever23" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.07832, 1.51242, 10.9241)
+
+[node name="Lever27" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.57309, 1.51242, 10.6599)
+
+[node name="Lever28" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.57309, 1.51242, 14.4108)
+
+[node name="Lever29" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.57309, 1.51242, 19.5059)
+
+[node name="Lever30" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.57309, 1.51242, 25.3097)
+
+[node name="Lever24" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.61663, 1.51242, 14.6423)
+
+[node name="Lever25" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.78526, 1.51242, 19.8369)
+
+[node name="Lever26" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.67675, 1.51242, 25.1835)
+
+[node name="Lever20" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.86512, 1.51242, 14.9048)
+
+[node name="Lever21" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.86512, 1.51242, 20.143)
+
+[node name="Lever22" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.86512, 1.51242, 24.9686)
+
+[node name="Lever16" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14731, 1.51242, 15.008)
+
+[node name="Lever17" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14731, 1.51242, 19.9478)
+
+[node name="Lever18" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14731, 1.51242, 25.1292)
+
+[node name="Lever12" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.42903, 1.51242, 15.3656)
+
+[node name="Lever13" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.42903, 1.51242, 20.1318)
+
+[node name="Lever14" parent="." instance=ExtResource("3_o2pev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.42903, 1.51242, 25.286)
+
 [connection signal="toggle" from="Lever" to="Door" method="_on_lever_toggle"]
 [connection signal="toggle" from="Lever" to="Door2" method="_on_lever_toggle"]
 [connection signal="toggle" from="Lever2" to="Door8" method="_on_lever_2_toggle"]
@@ -90,3 +210,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.844, 1.5, 4.905)
 [connection signal="toggle" from="Lever7" to="Door7" method="_on_lever_7_toggle"]
 [connection signal="toggle" from="Lever8" to="Door5" method="_on_lever_8_toggle"]
 [connection signal="toggle" from="Lever9" to="Door11" method="_on_lever_9_toggle"]
+[connection signal="toggle" from="Lever11" to="Door20" method="_on_lever_11_toggle"]
+[connection signal="toggle" from="Lever19" to="Door18" method="_on_lever_19_toggle"]
+[connection signal="toggle" from="Lever23" to="Door14" method="_on_lever_23_toggle"]
+[connection signal="toggle" from="Lever29" to="Door17" method="_on_lever_29_toggle"]
+[connection signal="toggle" from="Lever29" to="Door30" method="_on_lever_29_toggle"]
+[connection signal="toggle" from="Lever30" to="Door19" method="_on_lever_30_toggle"]
+[connection signal="toggle" from="Lever24" to="Door16" method="_on_lever_24_toggle"]
+[connection signal="toggle" from="Lever24" to="Door26" method="_on_lever_24_toggle"]
+[connection signal="toggle" from="Lever26" to="Door12" method="_on_lever_26_toggle"]
+[connection signal="toggle" from="Lever26" to="Door28" method="_on_lever_26_toggle"]
+[connection signal="toggle" from="Lever21" to="Door21" method="_on_lever_21_toggle"]
+[connection signal="toggle" from="Lever21" to="Door22" method="_on_lever_21_toggle"]
+[connection signal="toggle" from="Lever22" to="Door15" method="_on_lever_22_toggle"]
+[connection signal="toggle" from="Lever22" to="Door27" method="_on_lever_22_toggle"]
+[connection signal="toggle" from="Lever16" to="Door25" method="_on_lever_16_toggle"]
+[connection signal="toggle" from="Lever17" to="Door13" method="_on_lever_17_toggle"]
+[connection signal="toggle" from="Lever12" to="Door29" method="_on_lever_12_toggle"]

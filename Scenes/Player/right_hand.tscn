@@ -14,6 +14,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 [node name="geo_Hhånd_lukket" parent="right_hand_anim/bone_001/geo_Hhånd_åben" index="0"]
 visible = false
 
+[node name="Item_point" type="Marker3D" parent="right_hand_anim/bone_001/geo_Hhånd_åben" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.04185, -0.0733493, 0.219447)
+
 [node name="AnimationPlayer" parent="right_hand_anim" index="1"]
 autoplay = "IDLE_hand"
 

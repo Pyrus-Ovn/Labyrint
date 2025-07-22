@@ -84,3 +84,58 @@ func _on_lever_8_toggle(state: bool) -> void:
 
 func _on_lever_9_toggle(state: bool) -> void:
 	toggle_door(state)
+
+
+func _on_lever_11_toggle(state: bool) -> void:
+	toggle_door(state)
+
+
+
+
+
+func _on_lever_19_toggle(state: bool) -> void:
+	toggle_door(state)
+
+
+func _on_lever_23_toggle(state: bool) -> void:
+	toggle_door(state)
+
+
+func _on_lever_12_toggle(state: bool) -> void:
+	toggle_door(state)
+
+
+func _on_lever_16_toggle(state: bool) -> void:
+	toggle_door(state)
+
+
+func _on_lever_24_toggle(state: bool) -> void:
+	toggle_door(state)
+
+
+func _on_lever_17_toggle(state: bool) -> void:
+	toggle_door(state)
+
+
+func _on_lever_21_toggle(state: bool) -> void:
+	toggle_door(state)
+
+
+func _on_lever_29_toggle(state: bool) -> void:
+	toggle_door(state)
+
+
+func _on_lever_18_toggle(state: bool) -> void:
+	toggle_door(state)
+
+
+func _on_lever_22_toggle(state: bool) -> void:
+	toggle_door(state)
+
+
+func _on_lever_26_toggle(state: bool) -> void:
+	toggle_door(state)
+
+
+func _on_lever_30_toggle(state: bool) -> void:
+	toggle_door(state)

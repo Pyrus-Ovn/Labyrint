@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfy23eehdcol4"]
+
+[ext_resource type="Script" uid="uid://c1ed435qn4x5k" path="res://Scenes/Items/item.gd" id="1_nd5d4"]
+
+[node name="Item_body" type="RigidBody3D" groups=["Item"]]
+collision_layer = 3
+collision_mask = 3
+lock_rotation = true
+script = ExtResource("1_nd5d4")
