@@ -2,8 +2,8 @@ extends Node3D
 @onready var scaler: Node3D = $Scaler
 
 @onready var cd_sfx: AudioStreamPlayer3D = $cdSFX
-const NUMBER_OF_CD = 2
-@export_range(1, NUMBER_OF_CD) var disc_number : int
+const NUMBER_OF_CD = 7
+@export_range(0, NUMBER_OF_CD) var disc_number : int
 
 @onready var pickup_sfx: AudioStreamPlayer3D = $PickupSFX
 

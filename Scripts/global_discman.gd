@@ -1,5 +1,6 @@
 extends Node
 class_name Discman
+#tallet til cden er det fra filnavnet, nemt!
 const DISCMASTERLIST: Array = [
 	
 	"res://Audio/CD/Disc 00_Labyrintus Theme.wav",

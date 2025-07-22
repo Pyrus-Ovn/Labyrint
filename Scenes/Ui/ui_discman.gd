@@ -1,6 +1,7 @@
 extends Control
 @onready var discer: Control = $Discer
-@onready var song_label: Label = $Discer/Label
+# dårligt dårligt @onready var song_label: Label = $Discer/Label
+@onready var song_label: Label = $Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,6 +12,7 @@ func _ready() -> void:
 		_on_song_changed(Globaldiscman.get_current_song_name(), Globaldiscman.current_song_index)
 
 func _on_song_changed(song_name: String, _song_index: int):
+	
 	song_label.text = song_name
 
 
