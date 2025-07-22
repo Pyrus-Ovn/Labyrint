@@ -9,7 +9,7 @@ func throw():
 
 
 func has_use():
-	return has_use
+	return useable
 
 func use():
 	emit_signal("used")

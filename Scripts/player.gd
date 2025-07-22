@@ -55,7 +55,11 @@ func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		left_hand.play_grab()
 		if left_hand.is_holding_item():
-			left_hand.throw_item(camera)
+			if left_hand.is_holding_useable_item():
+				left_hand.use_item()
+			else:
+				left_hand.throw_item(camera)
+			
 		if current_interactable:
 			if current_interactable.is_in_group("Interactable"):
 				interact()
@@ -64,8 +68,8 @@ func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_RIGHT:
 		right_hand.play_grab()
 		if right_hand.is_holding_item():
-			if current_interactable.useable():
-				current_interactable.use
+			if right_hand.is_holding_useable_item():
+				right_hand.use_item()
 			else:
 				right_hand.throw_item(camera)
 			
