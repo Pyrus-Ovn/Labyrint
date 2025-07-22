@@ -8,13 +8,14 @@ extends Node3D
 
 
 
-func _on_area_3d_body_entered(_player: Node3D) -> void:
+func _on_area_3d_body_entered(body: Node3D) -> void:
 	#add data to discman
 	#play crazy effects
-	cd_sfx.stop()
-	pickup_sfx.play()
-	scaler.visible = false
-	await  pickup_sfx.finished
-	
-	queue_free()
+	if body.is_in_group("Player"):
+		cd_sfx.stop()
+		pickup_sfx.play()
+		scaler.visible = false
+		await  pickup_sfx.finished
+		
+		queue_free()
 	

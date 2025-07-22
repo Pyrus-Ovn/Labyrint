@@ -54,7 +54,8 @@ func _input(event):
 		left_hand.play_grab()
 		if left_hand.is_holding_item():
 			left_hand.throw_item(camera)
-		if current_interactable is Interactable:
+		if current_interactable.is_in_group("Interactable"):
+			print("interacting")
 			interact()
 		if current_interactable is Item:
 			grab_leftHand()
@@ -62,7 +63,7 @@ func _input(event):
 		right_hand.play_grab()
 		if right_hand.is_holding_item():
 			right_hand.throw_item(camera)
-		if current_interactable is Interactable:
+		if current_interactable.is_in_group("Interactable"):
 			interact()
 		if current_interactable is Item:
 			grab_rightHand()
@@ -83,7 +84,9 @@ func _input(event):
 
 
 func interact():
-	if current_interactable is Interactable:
+	print("trying to interact")
+	if current_interactable.is_in_group("Interactable"):
+		print("calling interact")
 		current_interactable.interact()
 
 func grab_rightHand():
@@ -108,7 +111,7 @@ func _physics_process(delta):
 	if ray_cast_3d.is_colliding():
 		var collider = ray_cast_3d.get_collider()
 		if collider is Interactable:
-			
+			#print("collider is interactable")
 			var new_interactable = collider.get_parent()
 			if new_interactable != current_interactable:
 				# Unregister previous interactable if different
@@ -117,6 +120,7 @@ func _physics_process(delta):
 					
 					# Register new interactable
 				current_interactable = new_interactable
+				print(current_interactable)
 		elif collider is Item:
 			var new_interactable = collider
 			if new_interactable != current_interactable:
@@ -126,7 +130,7 @@ func _physics_process(delta):
 					
 					# Register new interactable
 				current_interactable = new_interactable
-				print(current_interactable)
+				#print(current_interactable)
 				#snyd
 				#grab_leftHand()
 				#current_interactable.interact()
