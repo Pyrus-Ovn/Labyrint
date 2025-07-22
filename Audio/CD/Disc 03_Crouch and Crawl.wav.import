@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b4di64t8hrhmm"
+path="res://.godot/imported/Disc 03_Crouch and Crawl.wav-612e703062cb39f1fdd206c081449098.sample"
+
+[deps]
+
+source_file="res://Audio/CD/Disc 03_Crouch and Crawl.wav"
+dest_files=["res://.godot/imported/Disc 03_Crouch and Crawl.wav-612e703062cb39f1fdd206c081449098.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c0r7l1e4sxtk1"
+path="res://.godot/imported/Disc 05_Doors.wav-09c7f29768d7ba075c5ee9b18496a1b4.sample"
+
+[deps]
+
+source_file="res://Audio/CD/Disc 05_Doors.wav"
+dest_files=["res://.godot/imported/Disc 05_Doors.wav-09c7f29768d7ba075c5ee9b18496a1b4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
