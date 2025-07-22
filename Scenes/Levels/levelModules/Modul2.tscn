@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://borjakxyc1pnr" path="res://Scenes/Levels/Level_dressing/door.tscn" id="2_iksir"]
 [ext_resource type="PackedScene" uid="uid://ce5tufuiou1dq" path="res://Scenes/Levels/Level_dressing/lever.tscn" id="3_o2pev"]
 
-[node name="Module Template" type="Node3D"]
+[node name="DØR_LABYRINT" type="Node3D"]
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("1_uf5pa")
@@ -213,8 +213,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.42903, 1.51242, 25.286)
 [connection signal="toggle" from="Lever11" to="Door20" method="_on_lever_11_toggle"]
 [connection signal="toggle" from="Lever19" to="Door18" method="_on_lever_19_toggle"]
 [connection signal="toggle" from="Lever23" to="Door14" method="_on_lever_23_toggle"]
-[connection signal="toggle" from="Lever29" to="Door17" method="_on_lever_29_toggle"]
 [connection signal="toggle" from="Lever29" to="Door30" method="_on_lever_29_toggle"]
+[connection signal="toggle" from="Lever29" to="Door17" method="_on_lever_29_toggle"]
 [connection signal="toggle" from="Lever30" to="Door19" method="_on_lever_30_toggle"]
 [connection signal="toggle" from="Lever24" to="Door16" method="_on_lever_24_toggle"]
 [connection signal="toggle" from="Lever24" to="Door26" method="_on_lever_24_toggle"]
@@ -222,8 +222,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.42903, 1.51242, 25.286)
 [connection signal="toggle" from="Lever26" to="Door28" method="_on_lever_26_toggle"]
 [connection signal="toggle" from="Lever21" to="Door21" method="_on_lever_21_toggle"]
 [connection signal="toggle" from="Lever21" to="Door22" method="_on_lever_21_toggle"]
-[connection signal="toggle" from="Lever22" to="Door15" method="_on_lever_22_toggle"]
 [connection signal="toggle" from="Lever22" to="Door27" method="_on_lever_22_toggle"]
+[connection signal="toggle" from="Lever22" to="Door15" method="_on_lever_22_toggle"]
 [connection signal="toggle" from="Lever16" to="Door25" method="_on_lever_16_toggle"]
 [connection signal="toggle" from="Lever17" to="Door13" method="_on_lever_17_toggle"]
 [connection signal="toggle" from="Lever12" to="Door29" method="_on_lever_12_toggle"]

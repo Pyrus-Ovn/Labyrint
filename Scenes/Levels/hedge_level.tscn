@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://br1uq4vvl1wln" path="res://Scenes/Items/dynamit.tscn" id="7_yutgq"]
 
 [node name="HedgeLevel" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0556269, 0.000118256, 0.136971)
 
 [node name="GridMap" parent="." instance=ExtResource("1_h7kpw")]
 data = {
