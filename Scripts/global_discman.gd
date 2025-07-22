@@ -1,5 +1,9 @@
 extends Node
 class_name Discman
+const DISCMASTERLIST: Array = [
+	"res://Audio/Songs/bossmusic.wav",
+	"res://Audio/Songs/Shop Music (final).wav"
+]
 
 # Static playlist - songs are only added once
 var songs: Array = []
@@ -14,11 +18,15 @@ func _ready():
 	audio_player = AudioStreamPlayer.new()
 	add_child(audio_player)
 	audio_player.connect("finished", _on_song_finished)
-	add_song("res://Audio/Songs/bossmusic.wav")
-	add_song("res://Audio/Songs/Shop Music (final).wav")
+	#add_song("res://Audio/Songs/bossmusic.wav")
+	#add_song("res://Audio/Songs/Shop Music (final).wav")
 	
 func  _on_song_finished():
 	play_next()
+
+func pickup_disc(disc_number):
+	
+	add_song(DISCMASTERLIST[disc_number])
 
 # Add a song to the playlist if it's not already there
 func add_song(song_path: String) -> bool:
@@ -32,10 +40,9 @@ func add_song(song_path: String) -> bool:
 		_song_paths.append(song_path)
 		
 		# If this is the first song added, set as current
-		if current_song_index == -1:
-			current_song_index = 0
-			audio_player.stream = song
-			
+		current_song_index = songs.size() - 1
+		audio_player.stream = song
+		play()
 		return true
 	return false
 
