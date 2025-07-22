@@ -1,6 +1,6 @@
-[gd_scene load_steps=13 format=4 uid="uid://d2v1nj48q0rfn"]
+[gd_scene load_steps=13 format=4 uid="uid://bpswbly1i8mwg"]
 
-[ext_resource type="Script" uid="uid://b0wggrse5l4c2" path="res://Scenes/Levels/Level_dressing/well.gd" id="1_tnavy"]
+[ext_resource type="Script" path="res://Scenes/Levels/Level_dressing/well.gd" id="1_tnavy"]
 [ext_resource type="Texture2D" uid="uid://j70jm4r5v026" path="res://Assets/Geo/setDressing/brønd_Bark Texture.png" id="2_s525b"]
 [ext_resource type="Texture2D" uid="uid://eta3y7af4871" path="res://Assets/Geo/setDressing/brønd_Grus Texture.png" id="3_ang38"]
 [ext_resource type="Texture2D" uid="uid://b18ofuqq218t4" path="res://Assets/Geo/setDressing/brønd_Buske Texture.png" id="4_35cvu"]
@@ -159,5 +159,12 @@ transform = Transform3D(0.796174, -0.373958, -0.475671, 0.487909, -0.0681442, 0.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/Area3D"]
 transform = Transform3D(1, 5.36442e-07, 4.06057e-07, 5.96046e-08, 1, -7.45058e-09, -1.63913e-07, -9.68575e-08, 1, -14.0057, 12.8119, -22.3796)
 shape = SubResource("SphereShape3D_mlfll")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0122172, -0.999925, 0, 0.999925, 0.0122172, -0.112954, -0.881718, -0.373616)
+light_color = Color(0.694886, 0.622264, 0.982012, 1)
+light_energy = 50.0
+spot_range = 15.0
+spot_angle = 8.91475
 
 [connection signal="body_entered" from="StaticBody3D/Area3D" to="." method="_on_area_3d_body_entered"]
