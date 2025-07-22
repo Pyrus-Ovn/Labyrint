@@ -14,131 +14,131 @@ data = {
 }
 
 [node name="Door" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.04747, 2.00723, -10.7033)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0058, 2.00723, -10.7033)
 
 [node name="Lever" parent="." instance=ExtResource("3_o2pev")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.89369, 1.49886, -14.6084)
 
 [node name="Door2" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.07069, 2.16845, -6.01721)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.06729, 2, -5.83794)
 reverse_door = true
 
 [node name="Door3" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01297, 1.94782, 0.212367)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 0.212)
 
 [node name="Door4" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.13501, 2.0293, 0.097175)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.06051, 2, 0.172)
 
 [node name="Door5" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98186, 1.96362, 0.0687757)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.01474, 2, 0.340559)
 
 [node name="Door6" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.951622, 2.15866, 3.02362)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.951622, 2, 3.23798)
 
 [node name="Door7" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98186, 2.02935, 3.45317)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98186, 2, 3.23932)
 
 [node name="Door8" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98186, 2.03848, 2.92454)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98186, 2, 3.24632)
 
 [node name="Door9" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.799761, 2.15406, 6.15522)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.799761, 2, 6.18006)
 
 [node name="Door10" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98186, 2.05079, 6.50266)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98186, 2, 6.22939)
 
 [node name="Door11" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98186, 2.1241, 6.24018)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98186, 2, 6.16666)
 
 [node name="Lever2" parent="." instance=ExtResource("3_o2pev")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.456, 1.5, -0.864)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.456, 2, -0.864)
 
 [node name="Lever3" parent="." instance=ExtResource("3_o2pev")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.689, 1.5, -0.932)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.689, 2, -0.932)
 
 [node name="Lever4" parent="." instance=ExtResource("3_o2pev")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.755, 1.5, -0.946)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.755, 2, -0.946)
 
 [node name="Lever5" parent="." instance=ExtResource("3_o2pev")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.493, 1.5, 1.506)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.493, 2, 1.506)
 
 [node name="Lever6" parent="." instance=ExtResource("3_o2pev")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.454, 1.5, 1.921)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.454, 2, 1.921)
 
 [node name="Lever7" parent="." instance=ExtResource("3_o2pev")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.515, 1.5, 1.8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.515, 2, 1.8)
 
 [node name="Lever8" parent="." instance=ExtResource("3_o2pev")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.494, 1.5, 4.726)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.494, 2, 4.726)
 
 [node name="Lever9" parent="." instance=ExtResource("3_o2pev")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.501, 1.5, 5.372)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.501, 2, 5.372)
 
 [node name="Lever10" parent="." instance=ExtResource("3_o2pev")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.844, 1.5, 4.905)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.844, 2, 4.905)
 
 [node name="Door12" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.89679, 2.02742, 12.2139)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9677, 2, 12.2855)
 
 [node name="Door16" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.994728, 2.02742, 12.5077)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.994728, 2, 12.2759)
 
 [node name="Door20" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01524, 2.02742, 12.6017)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01524, 2, 12.3117)
 
 [node name="Door21" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01524, 2.02742, 17.1804)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01524, 2, 17.5156)
 reverse_door = true
 
 [node name="Door22" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01524, 2.02742, 22.6299)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01524, 2, 22.5525)
 
 [node name="Door23" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01524, 2.02742, 27.6472)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01524, 2, 27.3891)
 
 [node name="Door24" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.14352, 2.02742, 27.8475)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.93551, 2, 27.3571)
 
 [node name="Door25" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.14352, 2.02742, 22.7851)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.96117, 2, 22.6046)
 
 [node name="Door26" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.14352, 2.02742, 17.2612)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97535, 2, 17.4932)
 reverse_door = true
 
 [node name="Door27" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.14352, 2.02742, 12.2905)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.03259, 2, 12.2905)
 
 [node name="Door28" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.04467, 2.02742, 12.2905)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.97717, 2, 12.2905)
 reverse_door = true
 
 [node name="Door29" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.04467, 2.02742, 16.853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.04467, 2, 17.4073)
 
 [node name="Door30" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.04467, 2.02742, 22.2199)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.04467, 2, 22.5287)
 
 [node name="Door31" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.04467, 2.02742, 27.5457)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.96674, 2, 27.3645)
 
 [node name="Door17" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.994728, 2.02742, 17.5114)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.994728, 2, 17.5114)
 
 [node name="Door18" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.994728, 2.02742, 22.5415)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.994728, 2, 22.5415)
 
 [node name="Door19" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.994728, 2.02742, 27.3631)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.994728, 2, 27.3889)
 
 [node name="Door13" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.89679, 2.02742, 17.8123)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.89679, 2, 17.4507)
 
 [node name="Door14" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.89679, 2.02742, 22.5017)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.89679, 2, 22.5017)
 
 [node name="Door15" parent="." instance=ExtResource("2_iksir")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.89679, 2.02742, 27.4147)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.89679, 2, 27.4147)
 reverse_door = true
 
 [node name="Lever11" parent="." instance=ExtResource("3_o2pev")]
