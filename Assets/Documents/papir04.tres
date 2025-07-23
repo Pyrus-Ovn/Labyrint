@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://dxyqgwohunwii"]
+
+[ext_resource type="Script" uid="uid://drjxlhe1g3k10" path="res://Scenes/Ui/DocumentResource.gd" id="1_e6qq0"]
+[ext_resource type="Texture2D" uid="uid://cs5kpxcxrd0md" path="res://Assets/Geo/character/papir/paperPNG/papir03_stickynote.png" id="2_5dqus"]
+
+[resource]
+script = ExtResource("1_e6qq0")
+texture = ExtResource("2_5dqus")
+bounds = Rect2(300, 300, 600, 600)
+metadata/_custom_type_script = "uid://drjxlhe1g3k10"
