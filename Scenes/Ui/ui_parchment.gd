@@ -22,16 +22,20 @@ var _current_line: Line2D = null
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	#var new_doc = preload("res://Assets/Documents/parchment.tres")
+	#add_document(new_doc)
 	initialize_documents()
 	hide_pause_menu()
-	var new_doc = preload("res://Assets/Documents/parchment.tres")
-	add_document(new_doc)
+	
 	# Connect button signals
 	left_button.pressed.connect(_on_left_button_pressed)
 	right_button.pressed.connect(_on_right_button_pressed)
+	var emitter = get_node("/root/World/Player")
+	emitter.connect("document_collected", _on_document_collected)
 
 func initialize_documents():
 	# Clear existing documents if any
+	
 	for child in parchment_container.get_children():
 		if child != $CanvasLayer/Parchment/ColorRect and child != left_button and child != right_button:
 			child.queue_free()
@@ -77,6 +81,9 @@ func initialize_documents():
 	
 	# Show first document
 	show_document(0)
+
+func _on_document_collected(document):
+	add_document(document)
 
 # Add this function to your script
 func add_document(document: DocumentResource) -> void:

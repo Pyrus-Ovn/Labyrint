@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://dpev3y6ft7ui7"]
+
+[ext_resource type="Script" uid="uid://drjxlhe1g3k10" path="res://Scenes/Ui/DocumentResource.gd" id="1_bvvry"]
+[ext_resource type="Texture2D" uid="uid://beu64i2fjw8p7" path="res://Assets/Geo/character/papir/paperPNG/papir16_emptyNotes.png" id="2_rq43d"]
+
+[resource]
+script = ExtResource("1_bvvry")
+texture = ExtResource("2_rq43d")
+bounds = Rect2(400, 300, 650, 850)
+metadata/_custom_type_script = "uid://drjxlhe1g3k10"
