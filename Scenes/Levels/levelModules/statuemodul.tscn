@@ -1,10 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://c8gkmbqbklsj8"]
+[gd_scene load_steps=13 format=3 uid="uid://c8gkmbqbklsj8"]
 
 [ext_resource type="PackedScene" uid="uid://bi3tivxq4s03q" path="res://Scenes/Levels/hedge_grid_map.tscn" id="1_dbt8r"]
 [ext_resource type="PackedScene" uid="uid://cnqabojy1tgrn" path="res://Assets/Geo/setDressing/storStatue.glb" id="2_j4qxd"]
 [ext_resource type="PackedScene" uid="uid://dma6kfnkwoxcx" path="res://Scenes/Levels/japanskTræ.glb" id="3_68yi6"]
 [ext_resource type="PackedScene" uid="uid://dtmo474ttnbxs" path="res://Scenes/Levels/barktræ.glb" id="4_1krb3"]
-[ext_resource type="PackedScene" uid="uid://dk2500jb0eebu" path="res://Scenes/Levels/Level_dressing/cd.tscn" id="5_1krb3"]
+[ext_resource type="PackedScene" uid="uid://dil6xp8dqtnku" path="res://Assets/Geo/setDressing/barktræ.glb" id="5_nchiy"]
+[ext_resource type="PackedScene" uid="uid://cxwryo8vk0fkd" path="res://Scenes/Items/sten.tscn" id="6_v8khi"]
+[ext_resource type="PackedScene" uid="uid://c6hhaacsqsmcl" path="res://Assets/Geo/setDressing/bush_sculpt.glb" id="7_8ps6c"]
+[ext_resource type="PackedScene" uid="uid://cxs2erbybn64q" path="res://Assets/Geo/setDressing/ItemTræ.glb" id="8_mcstj"]
+[ext_resource type="PackedScene" uid="uid://cc6fnj7yxbkua" path="res://Assets/Geo/setDressing/japanskTræ.glb" id="9_8ps6c"]
+[ext_resource type="PackedScene" uid="uid://cmkh4x4a2fidu" path="res://Assets/Geo/setDressing/træSculpture.glb" id="10_mcstj"]
+[ext_resource type="PackedScene" uid="uid://c2hbvu31eemcs" path="res://Assets/Geo/setDressing/bike.glb" id="11_mcstj"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fvxas"]
 points = PackedVector3Array(-4.78155, 0.464625, -9.67617, -7.51774, 0.0239634, 0.128818, -0.884898, 5.97141, 0.128818, 0.487808, -0.890771, -13.1376, -5.83778, -4.68657, 1.13747, 3.13676, -4.6828, 1.13199, -3.51425, -3.40405, -9.70119, 2.99228, 4.38681, 0.916913, -2.63874, 3.42958, -9.85974, -5.91754, 4.15922, 0.900459, 1.17416, 0.479651, -12.9083, 3.23208, 4.59875, -0.0990491, -0.884898, -5.46668, -0.100482, 3.23208, -4.78035, -0.0990491, -6.14503, 4.36923, -0.100482, -5.87697, -0.391656, -7.76524, -3.7316, 2.18882, -10.7825, -5.91663, -4.78035, -0.100482, 4.14683, 0.252367, -0.0990491, -1.11444, -0.662367, -12.9083, -5.62194, 0.676317, -8.38645, -1.99656, -3.27855, -9.57575, -2.02806, 5.97141, -0.100482, 4.14683, -1.5771, -0.0990491, 1.17416, -0.432844, -12.9083, -7.51774, -0.890771, -0.100482, -1.79497, 4.42038, 0.97346, -2.48601, -5.46668, -0.100482, -2.43856, 3.26473, -10.3499, -3.7207, 2.82125, -10.1158, -0.262914, 0.469812, -13.05, -6.37458, -4.09402, -0.100482)
@@ -43,6 +49,56 @@ transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 17.1152, 1.52057, -3.14
 [node name="barktræ" parent="." instance=ExtResource("4_1krb3")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -18.2837, 1.60833, -2.76408)
 
-[node name="CD" parent="." instance=ExtResource("5_1krb3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.45355, 1.91015, -3.74489)
-disc_number = 2
+[node name="barktræ" parent="barktræ" instance=ExtResource("5_nchiy")]
+transform = Transform3D(0.995217, 0.0976871, 0, -0.0976871, 0.995217, 0, 0, 0, 1, 21.3765, 0, -8.67574)
+
+[node name="barktræ2" parent="barktræ" instance=ExtResource("5_nchiy")]
+transform = Transform3D(-0.0202331, -0.807685, 0.589267, 0.999686, -0.0250428, 0, 0.0147569, 0.589082, 0.807939, 21.6157, 0, -8.9796)
+
+[node name="barktræ3" parent="barktræ" instance=ExtResource("5_nchiy")]
+transform = Transform3D(-0.106902, 0.0576686, -0.992596, 0.00617514, 0.998336, 0.057337, 0.99425, 0, -0.10708, 4.58673, 0, 8.27446)
+
+[node name="Sten" parent="." instance=ExtResource("6_v8khi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.81255, 1.57171, 5.22037)
+
+[node name="Sten2" parent="." instance=ExtResource("6_v8khi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.757132, 1.7509, 4.55301)
+
+[node name="Sten3" parent="." instance=ExtResource("6_v8khi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.77262, 1.55, -9.9628)
+
+[node name="Sten4" parent="." instance=ExtResource("6_v8khi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.70231, 1.55, 3.7087)
+
+[node name="bush_sculpt" parent="." instance=ExtResource("7_8ps6c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.31959, -0.197959, 5.02682)
+
+[node name="ItemTræ" parent="." instance=ExtResource("8_mcstj")]
+transform = Transform3D(0.049025, 0, -0.0871582, 0, 0.1, 0, 0.0871582, 0, 0.049025, 10.0189, 1.47893, -14.9305)
+
+[node name="ItemTræ" parent="ItemTræ" instance=ExtResource("8_mcstj")]
+transform = Transform3D(-0.54376, 0, -0.83924, 0, 1, 0, 0.83924, 0, -0.54376, -2.83078, -0.180642, -1.52979)
+
+[node name="japanskTræ2" parent="." instance=ExtResource("9_8ps6c")]
+transform = Transform3D(0.0830177, 0, -0.98172, 0, 1.78558, 0, 1.22152, 0, 0.0667204, 11.2819, 1.50629, 1.56804)
+
+[node name="træSculpture" parent="." instance=ExtResource("10_mcstj")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -8.02658, 0.573917, -3.19176)
+
+[node name="træSculpture2" parent="." instance=ExtResource("10_mcstj")]
+transform = Transform3D(-0.0631687, 0, -0.495994, 0, 0.5, 0, 0.495994, 0, -0.0631687, -8.38677, 1.44769, -1.32209)
+
+[node name="træSculpture3" parent="." instance=ExtResource("10_mcstj")]
+transform = Transform3D(-0.0631687, 0, -0.495994, 0, 0.5, 0, 0.495994, 0, -0.0631687, -8.35581, 1.34294, -5.81504)
+
+[node name="ItemTræ2" parent="." instance=ExtResource("8_mcstj")]
+transform = Transform3D(-0.117981, 0.00125574, 0.209419, 0.00125698, 0.106947, -0.0105401, -0.0198128, -0.000692668, -1.24771, 6.59263, 1.52634, 8.83755)
+
+[node name="ItemTræ4" parent="." instance=ExtResource("8_mcstj")]
+transform = Transform3D(0.065118, 0.000135863, 1.06138, 0.00125698, 0.106947, -0.0105401, -0.100358, 0.00142766, 0.688556, 2.52786, 1.52634, -8.90661)
+
+[node name="ItemTræ3" parent="." instance=ExtResource("8_mcstj")]
+transform = Transform3D(-0.0987955, 0.000425461, -0.713559, 0.00125698, 0.106947, -0.0105401, 0.0674649, -0.00136955, -1.04474, 5.61383, 1.47818, 8.05751)
+
+[node name="bike2" parent="." instance=ExtResource("11_mcstj")]
+transform = Transform3D(0.189449, -0.0546038, -0.0335755, 0.053766, 0.192402, -0.00952878, 0.0349015, -8.1366e-10, 0.196931, 4.26358, 1.53954, -0.0922559)
