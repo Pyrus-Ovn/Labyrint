@@ -24,6 +24,5 @@ func _on_item_body_used() -> void:
 	audio_stream_player_3d.stop()
 	dynamit.visible = false
 	await get_tree().create_timer(0.8).timeout
-	print("hej hej")
 	dynamit.queue_free()
 	item_body.queue_free() # Replace with function body.

@@ -206,12 +206,12 @@ func _on_right_button_pressed():
 		return
 	show_document(current_document_index + 1, 1)
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("parchment") || event.is_action_pressed("ui_cancel"):
-		if is_paused == false:
-			show_pause_menu()
-		else:
-			hide_pause_menu()
+#func _unhandled_input(event: InputEvent) -> void:
+	#if event.is_action_pressed("parchment") || event.is_action_pressed("ui_cancel"):
+		#if is_paused == false:
+			#show_pause_menu()
+		#else:
+			#hide_pause_menu()
 	
 	# Document navigation
 	#if is_paused and not is_animating:
@@ -221,6 +221,11 @@ func _unhandled_input(event: InputEvent) -> void:
 			##right_button.press()
 
 func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("parchment") || event.is_action_pressed("ui_cancel"):
+		if is_paused == false:
+			show_pause_menu()
+		else:
+			hide_pause_menu()
 	if not is_paused:
 		return
 		
@@ -274,10 +279,3 @@ func _on_color_rect_mouse_entered() -> void:
 func _on_color_rect_mouse_exited() -> void:
 	_current_line = null
 	_within_bounds = false
-
-
-func _on_texture_button_pressed() -> void:
-	if is_paused == false:
-		show_pause_menu()
-	else:
-		hide_pause_menu()
