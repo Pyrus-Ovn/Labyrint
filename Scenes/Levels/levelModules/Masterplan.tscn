@@ -82,7 +82,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5179, 1.49983, -109.507)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9819, 2.10313, -74.3291)
 reverse_door = true
 
-[connection signal="toggle" from="DOOR/Lever4" to="DOOR/Door6" method="_on_lever_4_toggle"]
 [node name="set-dressing" type="Node3D" parent="."]
 
 [node name="Sten" parent="set-dressing" instance=ExtResource("11_5qe67")]
