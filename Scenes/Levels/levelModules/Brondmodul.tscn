@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cevtr124k7tdx"]
+[gd_scene load_steps=7 format=3 uid="uid://cevtr124k7tdx"]
 
 [ext_resource type="PackedScene" uid="uid://bi3tivxq4s03q" path="res://Scenes/Levels/hedge_grid_map.tscn" id="1_33mst"]
 [ext_resource type="PackedScene" uid="uid://dil6xp8dqtnku" path="res://Assets/Geo/setDressing/barktræ.glb" id="2_csxjo"]
-[ext_resource type="PackedScene" path="res://Scenes/Levels/Level_dressing/Well.tscn" id="3_csxjo"]
+[ext_resource type="PackedScene" uid="uid://bpswbly1i8mwg" path="res://Scenes/Levels/Level_dressing/Well.tscn" id="3_csxjo"]
+[ext_resource type="PackedScene" path="res://Scenes/Items/sten.tscn" id="4_jh8t6"]
+[ext_resource type="PackedScene" uid="uid://cxs2erbybn64q" path="res://Assets/Geo/setDressing/ItemTræ.glb" id="5_nr6wm"]
 
 [sub_resource type="FogMaterial" id="FogMaterial_33mst"]
 density = 0.7
@@ -34,3 +36,157 @@ material = SubResource("FogMaterial_33mst")
 
 [node name="Well" parent="." instance=ExtResource("3_csxjo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.61573, 2.30104, -1.248)
+
+[node name="Setdress" type="Node3D" parent="."]
+
+[node name="Sten" parent="Setdress" instance=ExtResource("4_jh8t6")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 1.04336, 1.55, -3.03314)
+
+[node name="Sten2" parent="Setdress" instance=ExtResource("4_jh8t6")]
+transform = Transform3D(1.06641, 0, 0.743492, 0, 1.3, 0, -0.743492, 0, 1.06641, 0.499401, 1.55, -2.74544)
+
+[node name="Sten3" parent="Setdress" instance=ExtResource("4_jh8t6")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0.0739555, 1.55, -2.1402)
+
+[node name="Sten4" parent="Setdress" instance=ExtResource("4_jh8t6")]
+transform = Transform3D(0.736122, 0, -1.07151, 0, 1.3, 0, 1.07151, 0, 0.736122, -0.0631252, 1.55, -1.40914)
+
+[node name="Sten5" parent="Setdress" instance=ExtResource("4_jh8t6")]
+transform = Transform3D(-0.0295842, 0, -1.29966, 0, 1.3, 0, 1.29966, 0, -0.0295842, 0.112907, 1.55, -0.650756)
+
+[node name="Sten6" parent="Setdress" instance=ExtResource("4_jh8t6")]
+transform = Transform3D(1.12041, 0, -0.659311, 0, 1.3, 0, 0.659311, 0, 1.12041, 0.81973, 1.55, -0.0938928)
+
+[node name="Sten7" parent="Setdress" instance=ExtResource("4_jh8t6")]
+transform = Transform3D(1.25729, 0, 0.3305, 0, 1.3, 0, -0.3305, 0, 1.25729, 1.63962, 1.55, 0.0263031)
+
+[node name="Sten8" parent="Setdress" instance=ExtResource("4_jh8t6")]
+transform = Transform3D(0.435018, 0, -1.22505, 0, 1.3, 0, 1.22505, 0, 0.435018, 2.60119, 1.55, -0.410773)
+
+[node name="Sten13" parent="Setdress" instance=ExtResource("4_jh8t6")]
+transform = Transform3D(0.435018, 0, -1.22505, 0, 1.3, 0, 1.22505, 0, 0.435018, 4.94313, 1.55, -0.410773)
+
+[node name="Sten14" parent="Setdress" instance=ExtResource("4_jh8t6")]
+transform = Transform3D(0.811119, 0, -0.389982, 0, 0.9, 0, 0.389982, 0, 0.811119, 4.94313, 1.55, -0.597649)
+
+[node name="Sten9" parent="Setdress" instance=ExtResource("4_jh8t6")]
+transform = Transform3D(1.12576, 0, 0.650118, 0, 1.3, 0, -0.650118, 0, 1.12576, 3.07104, 1.55, -1.13195)
+
+[node name="Sten10" parent="Setdress" instance=ExtResource("4_jh8t6")]
+transform = Transform3D(1.21951, 0, -0.450335, 0, 1.3, 0, 0.450335, 0, 1.21951, 3.10382, 1.55, -2.04981)
+
+[node name="Sten11" parent="Setdress" instance=ExtResource("4_jh8t6")]
+transform = Transform3D(-0.761824, 0, -1.05339, 0, 1.3, 0, 1.05339, 0, -0.761824, 2.55748, 1.55, -2.65079)
+
+[node name="Sten12" parent="Setdress" instance=ExtResource("4_jh8t6")]
+transform = Transform3D(1.25893, 0, -0.324198, 0, 1.3, 0, 0.324198, 0, 1.25893, 1.86908, 1.55, -2.98953)
+
+[node name="ItemTræ" parent="Setdress" instance=ExtResource("5_nr6wm")]
+transform = Transform3D(0.1, 0, 0, 0, -0.00129849, 0.0999916, 0, -0.0999916, -0.00129849, 5.04291, 1.61457, -0.213564)
+
+[node name="barktræ5" parent="Setdress" instance=ExtResource("2_csxjo")]
+transform = Transform3D(1.07536, 0, 0.896435, 0, 1.4, 0, -0.896435, 0, 1.07536, 4.62342, 1.53017, 4.14148)
+
+[node name="barktræ6" parent="Setdress" instance=ExtResource("2_csxjo")]
+transform = Transform3D(0.768116, 0, 0.640311, 0, 1, 0, -0.640311, 0, 0.768116, 5.85386, 1.53017, 2.87498)
+
+[node name="Skov" type="Node3D" parent="Setdress"]
+
+[node name="barktræ4" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(1.1744, 0, 0.933157, 0, 1.5, 0, -0.933157, 0, 1.1744, 7.21291, 1.64089, 1.64424)
+
+[node name="barktræ5" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(1.07536, 0, 0.896435, 0, 1.4, 0, -0.896435, 0, 1.07536, 5.74697, 1.53017, 1.46169)
+
+[node name="barktræ6" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(0.768116, 0, 0.640311, 0, 1, 0, -0.640311, 0, 0.768116, 6.69331, 1.53017, -0.00938439)
+
+[node name="barktræ7" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(1.32688, 0, -0.699557, 0, 1.5, 0, 0.699557, 0, 1.32688, 6.52084, 1.64089, -4.56967)
+
+[node name="barktræ8" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(1.25341, 0, -0.623671, 0, 1.4, 0, 0.623671, 0, 1.25341, 5.67063, 1.53017, -5.97959)
+
+[node name="barktræ9" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(0.895292, 0, -0.445479, 0, 1, 0, 0.445479, 0, 0.895292, 7.13979, 1.53017, -5.82773)
+
+[node name="barktræ10" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(1.36633, 0, -0.618989, 0, 1.5, 0, 0.618989, 0, 1.36633, -2.80965, 1.64089, 3.19538)
+
+[node name="barktræ11" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(1.28845, 0, -0.547631, 0, 1.4, 0, 0.547631, 0, 1.28845, -3.74262, 1.53017, 1.8388)
+
+[node name="barktræ12" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(0.920321, 0, -0.391165, 0, 1, 0, 0.391165, 0, 0.920321, -2.64786, 1.53017, 0.935781)
+
+[node name="barktræ13" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(0.892423, 0, 1.20565, 0, 1.5, 0, -1.20565, 0, 0.892423, 1.03919, 1.64089, 3.6017)
+
+[node name="barktræ14" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(0.806286, 0, 1.14451, 0, 1.4, 0, -1.14451, 0, 0.806286, -0.483217, 1.53017, 4.22859)
+
+[node name="barktræ15" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(0.575919, 0, 0.817507, 0, 1, 0, -0.817507, 0, 0.575919, -1.13588, 1.53017, 2.96844)
+
+[node name="barktræ17" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(0.831887, 0, -1.12604, 0, 1.4, 0, 1.12604, 0, 0.831887, -4.15644, 1.53017, -3.87261)
+
+[node name="barktræ18" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(0.594205, 0, -0.804314, 0, 1, 0, 0.804314, 0, 0.594205, -2.75478, 1.53017, -4.09463)
+
+[node name="barktræ19" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(-0.271706, 0, -1.47519, 0, 1.5, 0, 1.47519, 0, -0.271706, -3.96872, 1.64089, -5.69101)
+
+[node name="barktræ20" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(-0.221204, 0, -1.38241, 0, 1.4, 0, 1.38241, 0, -0.221204, -2.87677, 1.53017, -6.92323)
+
+[node name="barktræ21" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(-0.158003, 0, -0.987439, 0, 1, 0, 0.987439, 0, -0.158003, -1.73667, 1.53017, -6.07817)
+
+[node name="barktræ10" parent="Setdress/Skov/barktræ21" instance=ExtResource("2_csxjo")]
+transform = Transform3D(-1.48748, 0, 0.193427, 0, 1.5, 0, -0.193427, 0, -1.48748, -1.90618, -0.214798, -2.44151)
+
+[node name="barktræ12" parent="Setdress/Skov/barktræ21" instance=ExtResource("2_csxjo")]
+transform = Transform3D(-0.994405, 0, 0.105639, 0, 1, 0, -0.105639, 0, -0.994405, -1.40169, -0.371218, -0.233016)
+
+[node name="barktræ22" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(-1.3646, 0, -0.622778, 0, 1.5, 0, 0.622778, 0, -1.3646, 2.485, 1.64089, -7.27886)
+
+[node name="barktræ23" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(-1.25964, 0, -0.610995, 0, 1.4, 0, 0.610995, 0, -1.25964, 4.12058, 1.53017, -7.09021)
+
+[node name="barktræ24" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(-0.899741, 0, -0.436425, 0, 1, 0, 0.436425, 0, -0.899741, 4.08147, 1.53017, -5.67162)
+
+[node name="barktræ25" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(0.586795, 0, 1.38046, 0, 1.5, 0, -1.38046, 0, 0.586795, 3.91871, 1.64089, 2.86577)
+
+[node name="barktræ26" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(0.517282, 0, 1.30093, 0, 1.4, 0, -1.30093, 0, 0.517282, 2.58437, 1.53017, 3.83027)
+
+[node name="barktræ27" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(1.41214, 0, -0.50584, 0, 1.5, 0, 0.50584, 0, 1.41214, 7.62435, 1.64089, -1.43615)
+
+[node name="barktræ28" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(1.32871, 0, -0.441051, 0, 1.4, 0, 0.441051, 0, 1.32871, 6.58417, 1.53017, -2.71238)
+
+[node name="barktræ29" parent="Setdress/Skov" instance=ExtResource("2_csxjo")]
+transform = Transform3D(0.94908, 0, -0.315036, 0, 1, 0, 0.315036, 0, 0.94908, 7.60188, 1.53017, -3.70142)
+
+[node name="ItemTræ2" parent="Setdress" instance=ExtResource("5_nr6wm")]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, -0.1, 0, 0.1, -4.37114e-09, -4.12415, 1.68183, 0.303325)
+
+[node name="ItemTræ3" parent="Setdress" instance=ExtResource("5_nr6wm")]
+transform = Transform3D(0.085233, -0.0523004, 2.28613e-09, 3.41305e-17, -4.37114e-09, -0.1, 0.0523004, 0.085233, -3.72565e-09, -3.87224, 1.68183, -0.599387)
+
+[node name="ItemTræ4" parent="Setdress" instance=ExtResource("5_nr6wm")]
+transform = Transform3D(0.108835, -0.103223, 4.51201e-09, 0, -6.55671e-09, -0.15, 0.103223, 0.108835, -4.75733e-09, -3.48587, 1.68183, -0.0460691)
+
+[node name="ItemTræ6" parent="Setdress" instance=ExtResource("5_nr6wm")]
+transform = Transform3D(0.0848379, -0.123703, 5.40725e-09, 3.66721e-16, -6.55671e-09, -0.15, 0.123703, 0.0848379, -3.70838e-09, -3.27009, 1.68183, -1.99542)
+
+[node name="ItemTræ7" parent="Setdress" instance=ExtResource("5_nr6wm")]
+transform = Transform3D(0.0565586, -0.0824689, 3.60483e-09, 0, -4.37114e-09, -0.1, 0.0824689, 0.0565586, -2.47226e-09, -3.94558, 1.68183, -2.61439)
+
+[node name="ItemTræ5" parent="Setdress" instance=ExtResource("5_nr6wm")]
+transform = Transform3D(0.131826, 0.0422267, 0.0577827, -0.0459476, 0.142789, 0.000477415, -0.0548703, -0.0181194, 0.138423, -4.75447, 1.46913, 7.72477)
