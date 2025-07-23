@@ -1,8 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://dglybe2ik435m"]
+[gd_scene load_steps=13 format=3 uid="uid://c0j8l7oywau7y"]
 
 [ext_resource type="MeshLibrary" uid="uid://dgag75pbfkosh" path="res://Assets/MeshLibraries/Hedge.tres" id="1_6e1re"]
 [ext_resource type="PackedScene" uid="uid://borjakxyc1pnr" path="res://Scenes/Levels/Level_dressing/door.tscn" id="2_kq25i"]
-[ext_resource type="PackedScene" uid="uid://ce5tufuiou1dq" path="res://Scenes/lever.tscn" id="3_m1f4g"]
+[ext_resource type="PackedScene" uid="uid://c7h1a5noyvvqv" path="res://Scenes/lever.tscn" id="3_m1f4g"]
 [ext_resource type="PackedScene" uid="uid://dil6xp8dqtnku" path="res://Assets/Geo/setDressing/barktræ.glb" id="4_qe42x"]
 [ext_resource type="PackedScene" uid="uid://c6hhaacsqsmcl" path="res://Assets/Geo/setDressing/bush_sculpt.glb" id="5_cvk54"]
 [ext_resource type="PackedScene" uid="uid://xgn41e7ky8d8" path="res://Assets/Geo/setDressing/ItemSten.glb" id="6_r6fse"]
@@ -10,8 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://cxs2erbybn64q" path="res://Assets/Geo/setDressing/ItemTræ.glb" id="7_r6fse"]
 [ext_resource type="PackedScene" uid="uid://ce331l8yj7rht" path="res://Assets/Geo/setDressing/skelet.glb" id="8_8gttx"]
 [ext_resource type="PackedScene" uid="uid://cmkh4x4a2fidu" path="res://Assets/Geo/setDressing/træSculpture.glb" id="9_ete6t"]
-[ext_resource type="PackedScene" path="res://Scenes/Items/sten.tscn" id="11_r6fse"]
-[ext_resource type="PackedScene" path="res://Scenes/Items/lantern.tscn" id="12_6emlh"]
+[ext_resource type="PackedScene" uid="uid://cxwryo8vk0fkd" path="res://Scenes/Items/sten.tscn" id="11_r6fse"]
+[ext_resource type="PackedScene" uid="uid://bb3nhh0m67t1d" path="res://Scenes/Items/lantern.tscn" id="12_6emlh"]
 
 [node name="Start" type="Node3D"]
 
@@ -53,7 +53,7 @@ transform = Transform3D(0.498773, 0.0195324, -0.866512, 0.0574088, 0.996806, 0.0
 transform = Transform3D(1.36261, -0.000196327, 0.00616049, -0.000233885, 1.13702, 0.212817, -0.00428894, -0.12437, 1.9456, -0.247511, 0.00965893, -5.90875)
 
 [node name="bush_sculpt" parent="SetDress" instance=ExtResource("5_cvk54")]
-transform = Transform3D(0.596077, 0.0127186, 0, -0.0232615, 0.439369, 0, 0, 0, 0.66547, 5.24313, -0.165773, -3.47704)
+transform = Transform3D(0.596077, 0.0127186, 0, -0.0232615, 0.439369, 0, 0, 0, 0.66547, 5.24626, -0.057696, -3.47704)
 
 [node name="ItemSten" parent="SetDress" instance=ExtResource("6_r6fse")]
 transform = Transform3D(0.1, 2.56114e-09, 0, -2.56114e-09, 0.1, 0, 0, 0, 0.1, 5.39753, -0.225127, -3.09199)

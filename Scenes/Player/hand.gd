@@ -1,12 +1,17 @@
 extends Node3D
 @onready var animation_player: AnimationPlayer = $right_hand_anim/AnimationPlayer
 @onready var item_point: Marker3D = $right_hand_anim/bone_001/geo_Hhånd_åben/Item_point
+@onready var move: AudioStreamPlayer3D = $move
+@onready var throw: AudioStreamPlayer3D = $throw
+
+
 
 const THROW_FORCE = 5
 const UPWARD_FORCE = 1
 
 var holding_item = null
 func play_grab():
+	move.play()
 
 	animation_player.play("GRAB_hand")
 	animation_player.queue("IDLE_hand")
@@ -25,8 +30,19 @@ func is_holding_item():
 	if holding_item:
 		return true
 	return false
+	
+func is_holding_useable_item():
+	if holding_item:
+		return holding_item.has_use()
+	return false
+
+func use_item():
+	if not holding_item:
+		return
+	holding_item.use()
 
 func throw_item(camera):
+	throw.play()
 	if not holding_item:
 		return
 		

@@ -86,10 +86,10 @@ tracks/1/path = NodePath("GPUParticles3D:emitting")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true]
+"values": [true, false]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -98,14 +98,14 @@ tracks/2/path = NodePath("debris:emitting")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true]
+"values": [true, false]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
-tracks/3/enabled = true
+tracks/3/enabled = false
 tracks/3/path = NodePath("GPUParticles3D:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
@@ -135,6 +135,7 @@ _data = {
 }
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_n7ln8"]
+radius = 0.01
 
 [sub_resource type="SphereMesh" id="SphereMesh_xj4ab"]
 
@@ -192,14 +193,15 @@ script = ExtResource("1_yf1m1")
 libraries = {
 &"": SubResource("AnimationLibrary_5jokq")
 }
+autoplay = "RESET"
 
 [node name="Area3D" type="Area3D" parent="."]
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("SphereShape3D_n7ln8")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
+visible = false
 mesh = SubResource("SphereMesh_xj4ab")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_jnu5n")
