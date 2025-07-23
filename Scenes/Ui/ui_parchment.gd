@@ -4,8 +4,9 @@ const FYLDPEN = preload("res://Assets/fyldpen.png")
 
 @onready var canvas_layer: CanvasLayer = $CanvasLayer
 @onready var parchment_container = $CanvasLayer/Parchment
-@onready var left_button = $CanvasLayer/LeftButton
-@onready var right_button = $CanvasLayer/RightButton
+
+@onready var left_button: TextureButton = $CanvasLayer/Node2D/LeftButton
+@onready var right_button: TextureButton = $CanvasLayer/Node2D/RightButton
 
 # Array of document resources
 @export var documents: Array[DocumentResource] = []
@@ -273,3 +274,10 @@ func _on_color_rect_mouse_entered() -> void:
 func _on_color_rect_mouse_exited() -> void:
 	_current_line = null
 	_within_bounds = false
+
+
+func _on_texture_button_pressed() -> void:
+	if is_paused == false:
+		show_pause_menu()
+	else:
+		hide_pause_menu()
