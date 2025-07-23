@@ -2,6 +2,7 @@ extends Control
 @onready var discer: Control = $Discer
 #@onready var song_label: Label = $Label
 @onready var song_label: Label = $Discer/Discman/Label
+@onready var hide_button: TextureButton = $Hidebuttoncontroller/hide_Button
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,6 +14,9 @@ func _ready() -> void:
 
 func _on_song_changed(song_name: String, _song_index: int):
 	song_label.text = song_name
+	if !discer.visible:
+		_on_hide_button_toggled(true)
+		hide_button.button_pressed = true
 
 
 
