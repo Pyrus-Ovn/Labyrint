@@ -1,12 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://c15638b2m5x6f"]
+[gd_scene load_steps=12 format=3 uid="uid://c15638b2m5x6f"]
 
-[ext_resource type="Texture2D" uid="uid://jmrf305yyxgs" path="res://Assets/UI_assets/discman/_small_0002_RedbuttonUP.png" id="1_cwjnk"]
 [ext_resource type="Script" uid="uid://b7d5ljjeyxax" path="res://Scenes/Levels/main_menu.gd" id="1_iruej"]
-[ext_resource type="Texture2D" uid="uid://b7nmdc4ju8hrb" path="res://Assets/UI_assets/discman/_small_0003_RedbuttonDOWN.png" id="1_koonp"]
-[ext_resource type="Texture2D" uid="uid://dr7sw8l4f4xj3" path="res://Assets/UI_assets/discman/_small_0000_YellowbuttonUP.png" id="2_d2tbo"]
-[ext_resource type="Texture2D" uid="uid://0wa4kdewf1nx" path="res://Assets/UI_assets/discman/_small_0001_YellowbuttonDOWN.png" id="3_0t1wx"]
+[ext_resource type="Texture2D" uid="uid://dno7ok3nh1fag" path="res://Scenes/Ui/smaller_0000_start_Up.png" id="2_8dgdn"]
 [ext_resource type="PackedScene" uid="uid://31afxg83bsko" path="res://Scenes/world_environment.tscn" id="3_v2at7"]
+[ext_resource type="Texture2D" uid="uid://css3t3y6blhyb" path="res://Scenes/Ui/smaller_0001_start_down.png" id="3_ybd2e"]
 [ext_resource type="PackedScene" uid="uid://cn0ywt7rwmga6" path="res://Scenes/Levels/levelModules/Masterplan.tscn" id="4_0t1wx"]
+[ext_resource type="Texture2D" uid="uid://dnbwo7hmbwip0" path="res://Scenes/Ui/smaller_0004_exit_up.png" id="4_x0g5v"]
+[ext_resource type="Texture2D" uid="uid://dbp0rejj2cjn7" path="res://Scenes/Ui/smaller_0005_exit_down.png" id="5_82l7r"]
+[ext_resource type="Texture2D" uid="uid://xmsthg0fi3u7" path="res://Scenes/Ui/skiltusLabyrintus.png" id="6_2xmls"]
 
 [sub_resource type="Animation" id="Animation_p70al"]
 resource_name = "Camera01"
@@ -50,30 +51,35 @@ _data = {
 script = ExtResource("1_iruej")
 
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(5.64, 0)
-scale = Vector2(0.5, 0.5)
+position = Vector2(-2, 15)
+scale = Vector2(0.05, 0.05)
 
 [node name="start" type="TextureButton" parent="Node2D"]
-offset_left = 240.72
-offset_top = 142.0
-offset_right = 355.72
-offset_bottom = 221.0
+offset_left = 2302.5
+offset_top = 1922.5
+offset_right = 3902.5
+offset_bottom = 2622.5
 action_mode = 0
-texture_normal = ExtResource("1_cwjnk")
-texture_pressed = ExtResource("1_cwjnk")
-texture_hover = ExtResource("1_koonp")
+texture_normal = ExtResource("2_8dgdn")
+texture_pressed = ExtResource("2_8dgdn")
+texture_hover = ExtResource("3_ybd2e")
 stretch_mode = 0
 
 [node name="exit" type="TextureButton" parent="Node2D"]
-offset_left = 244.72
-offset_top = 224.0
-offset_right = 359.72
-offset_bottom = 328.0
+offset_left = 2402.5
+offset_top = 2742.5
+offset_right = 3822.5
+offset_bottom = 3362.5
 action_mode = 0
-texture_normal = ExtResource("2_d2tbo")
-texture_pressed = ExtResource("2_d2tbo")
-texture_hover = ExtResource("3_0t1wx")
+texture_normal = ExtResource("4_x0g5v")
+texture_pressed = ExtResource("4_x0g5v")
+texture_hover = ExtResource("5_82l7r")
 stretch_mode = 0
+
+[node name="SkiltusLabyrintus" type="Sprite2D" parent="Node2D"]
+position = Vector2(3200, 900)
+scale = Vector2(5.78, 5.78)
+texture = ExtResource("6_2xmls")
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("3_v2at7")]
 

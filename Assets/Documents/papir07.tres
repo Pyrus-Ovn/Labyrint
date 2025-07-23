@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://cdq3qoccmi2mg"]
 
-[ext_resource type="Script" path="res://Scenes/Ui/DocumentResource.gd" id="1_fmgpg"]
+[ext_resource type="Script" uid="uid://drjxlhe1g3k10" path="res://Scenes/Ui/DocumentResource.gd" id="1_fmgpg"]
 [ext_resource type="Texture2D" uid="uid://c1k1svg5ywrq0" path="res://Assets/Geo/character/papir/paperPNG/papir07_spillemand.png" id="2_fmgpg"]
 
 [resource]
