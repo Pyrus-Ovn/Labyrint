@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://dhidgm44vt1i2"]
 
-[ext_resource type="PackedScene" uid="uid://b3few5jrj32nd" path="res://Assets/MeshLibraries/brioklodser-col.glb" id="1_wdqpc"]
+[ext_resource type="PackedScene" uid="uid://cb3aci4o106y1" path="res://Assets/MeshLibraries/brioklodser-col (1).glb" id="1_wdqpc"]
 
 [node name="HedgeMeshLibrary" type="Node3D"]
 
-[node name="brioklodser-col" parent="." instance=ExtResource("1_wdqpc")]
+[node name="brioklodser-col (1)" parent="." instance=ExtResource("1_wdqpc")]
