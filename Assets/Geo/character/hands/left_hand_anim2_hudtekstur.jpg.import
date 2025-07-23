@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c517jcs70cyxy"
 path.s3tc="res://.godot/imported/left_hand_anim2_hudtekstur.jpg-1dd48c8258857f912a453b6a631b30e7.s3tc.ctex"
+path.etc2="res://.godot/imported/left_hand_anim2_hudtekstur.jpg-1dd48c8258857f912a453b6a631b30e7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/Geo/character/hands/left_hand_anim2_hudtekstur.jpg"
-dest_files=["res://.godot/imported/left_hand_anim2_hudtekstur.jpg-1dd48c8258857f912a453b6a631b30e7.s3tc.ctex"]
+dest_files=["res://.godot/imported/left_hand_anim2_hudtekstur.jpg-1dd48c8258857f912a453b6a631b30e7.s3tc.ctex", "res://.godot/imported/left_hand_anim2_hudtekstur.jpg-1dd48c8258857f912a453b6a631b30e7.etc2.ctex"]
 
 [params]
 

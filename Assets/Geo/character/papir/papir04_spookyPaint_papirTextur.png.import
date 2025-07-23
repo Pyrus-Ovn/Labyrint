@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckvc4qakuxsa1"
 path.s3tc="res://.godot/imported/papir04_spookyPaint_papirTextur.png-b74c0a5453b1572a7ec0d922dd8b2728.s3tc.ctex"
+path.etc2="res://.godot/imported/papir04_spookyPaint_papirTextur.png-b74c0a5453b1572a7ec0d922dd8b2728.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/Geo/character/papir/papir04_spookyPaint_papirTextur.png"
-dest_files=["res://.godot/imported/papir04_spookyPaint_papirTextur.png-b74c0a5453b1572a7ec0d922dd8b2728.s3tc.ctex"]
+dest_files=["res://.godot/imported/papir04_spookyPaint_papirTextur.png-b74c0a5453b1572a7ec0d922dd8b2728.s3tc.ctex", "res://.godot/imported/papir04_spookyPaint_papirTextur.png-b74c0a5453b1572a7ec0d922dd8b2728.etc2.ctex"]
 
 [params]
 

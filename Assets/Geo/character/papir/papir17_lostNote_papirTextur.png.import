@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c25tehl63a2s2"
 path.s3tc="res://.godot/imported/papir17_lostNote_papirTextur.png-a5b37fd8abd6d35ba9000416db280cad.s3tc.ctex"
+path.etc2="res://.godot/imported/papir17_lostNote_papirTextur.png-a5b37fd8abd6d35ba9000416db280cad.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/Geo/character/papir/papir17_lostNote_papirTextur.png"
-dest_files=["res://.godot/imported/papir17_lostNote_papirTextur.png-a5b37fd8abd6d35ba9000416db280cad.s3tc.ctex"]
+dest_files=["res://.godot/imported/papir17_lostNote_papirTextur.png-a5b37fd8abd6d35ba9000416db280cad.s3tc.ctex", "res://.godot/imported/papir17_lostNote_papirTextur.png-a5b37fd8abd6d35ba9000416db280cad.etc2.ctex"]
 
 [params]
 

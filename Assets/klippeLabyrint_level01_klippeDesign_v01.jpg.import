@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://vy7xby18ja7l"
 path.s3tc="res://.godot/imported/klippeLabyrint_level01_klippeDesign_v01.jpg-0cfe5a43a34733638321063548da58d9.s3tc.ctex"
+path.etc2="res://.godot/imported/klippeLabyrint_level01_klippeDesign_v01.jpg-0cfe5a43a34733638321063548da58d9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/klippeLabyrint_level01_klippeDesign_v01.jpg"
-dest_files=["res://.godot/imported/klippeLabyrint_level01_klippeDesign_v01.jpg-0cfe5a43a34733638321063548da58d9.s3tc.ctex"]
+dest_files=["res://.godot/imported/klippeLabyrint_level01_klippeDesign_v01.jpg-0cfe5a43a34733638321063548da58d9.s3tc.ctex", "res://.godot/imported/klippeLabyrint_level01_klippeDesign_v01.jpg-0cfe5a43a34733638321063548da58d9.etc2.ctex"]
 
 [params]
 
