@@ -381,7 +381,7 @@ transform = Transform3D(0.0309572, 0, -0.999521, 0, 1, 0, 0.999521, 0, 0.0309572
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.748, 1.53857, 10.4545)
 
 [node name="Explodable_wall8" parent="." instance=ExtResource("24_e33ue")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47396, 2.0148, 61.5761)
+transform = Transform3D(1, 0, 0, 0, -0.970452, -0.241295, 0, 0.241295, -0.970452, 1.47396, 3.22372, 61.3528)
 
 [node name="Explodable_wall9" parent="." instance=ExtResource("24_e33ue")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9848, 2.01481, 55.4715)
