@@ -11,12 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://b1n11kyi3mcn3" path="res://Assets/UI_assets/discman/infoinfo.png" id="11_632op"]
 [ext_resource type="Texture2D" uid="uid://bf8tr3r58mjbh" path="res://Assets/UI_assets/discman/infoinfo_down.png" id="12_u2rcy"]
 
-[sub_resource type="InputEventAction" id="InputEventAction_0uy04"]
-action = &"hide_discman"
-
-[sub_resource type="Shortcut" id="Shortcut_8sc1s"]
-events = [SubResource("InputEventAction_0uy04")]
-
 [sub_resource type="InputEventAction" id="InputEventAction_4ea70"]
 action = &"forward_discman"
 
@@ -47,9 +41,15 @@ Label/fonts/font = SubResource("SystemFont_jj35v")
 Label/styles/normal = SubResource("StyleBoxFlat_ja0wl")
 
 [sub_resource type="LabelSettings" id="LabelSettings_ouqd1"]
-font_size = 95
+font_size = 120
 font_color = Color(0, 0, 0, 1)
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="InputEventAction" id="InputEventAction_0uy04"]
+action = &"hide_discman"
+
+[sub_resource type="Shortcut" id="Shortcut_8sc1s"]
+events = [SubResource("InputEventAction_0uy04")]
 
 [node name="ui_discman" type="Control"]
 layout_mode = 3
@@ -63,27 +63,14 @@ offset_bottom = -1.0
 grow_vertical = 0
 script = ExtResource("1_cecvb")
 
-[node name="Hidebuttoncontroller" type="Node2D" parent="."]
-scale = Vector2(0.076, 0.076)
-
-[node name="hide_Button" type="TextureButton" parent="Hidebuttoncontroller"]
-offset_left = -26.3155
-offset_top = -513.158
-offset_right = 489.684
-offset_bottom = -12.158
-toggle_mode = true
-shortcut = SubResource("Shortcut_8sc1s")
-texture_normal = ExtResource("11_632op")
-texture_pressed = ExtResource("12_u2rcy")
-stretch_mode = 0
-
 [node name="Discer" type="Control" parent="."]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Discman" type="Sprite2D" parent="Discer"]
-position = Vector2(55, -43)
+position = Vector2(46, -44)
 scale = Vector2(0.07575, 0.07575)
 texture = ExtResource("4_3alc0")
 
@@ -138,8 +125,22 @@ label_settings = SubResource("LabelSettings_ouqd1")
 horizontal_alignment = 1
 text_overrun_behavior = 1
 
-[connection signal="pressed" from="Hidebuttoncontroller/hide_Button" to="." method="_on_hide_button_pressed"]
-[connection signal="toggled" from="Hidebuttoncontroller/hide_Button" to="." method="_on_hide_button_toggled"]
+[node name="Hidebuttoncontroller" type="Node2D" parent="."]
+scale = Vector2(0.076, 0.076)
+
+[node name="hide_Button" type="TextureButton" parent="Hidebuttoncontroller"]
+offset_left = -26.3155
+offset_top = -513.158
+offset_right = 489.684
+offset_bottom = -12.158
+toggle_mode = true
+shortcut = SubResource("Shortcut_8sc1s")
+texture_normal = ExtResource("11_632op")
+texture_pressed = ExtResource("12_u2rcy")
+stretch_mode = 0
+
 [connection signal="pressed" from="Discer/Discman/forward_Button" to="." method="_on_forward_button_pressed"]
 [connection signal="pressed" from="Discer/Discman/back_Button" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Discer/Discman/play_Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Hidebuttoncontroller/hide_Button" to="." method="_on_hide_button_pressed"]
+[connection signal="toggled" from="Hidebuttoncontroller/hide_Button" to="." method="_on_hide_button_toggled"]
