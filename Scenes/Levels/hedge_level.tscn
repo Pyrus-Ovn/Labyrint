@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dicmfgmljjae3"]
 
 [ext_resource type="PackedScene" uid="uid://bi3tivxq4s03q" path="res://Scenes/Levels/hedge_grid_map.tscn" id="1_h7kpw"]
-[ext_resource type="PackedScene" uid="uid://ce5tufuiou1dq" path="res://Scenes/lever.tscn" id="2_fmkjl"]
+[ext_resource type="PackedScene" uid="uid://c7h1a5noyvvqv" path="res://Scenes/lever.tscn" id="2_fmkjl"]
 [ext_resource type="PackedScene" uid="uid://borjakxyc1pnr" path="res://Scenes/Levels/Level_dressing/door.tscn" id="3_ogoti"]
 [ext_resource type="PackedScene" uid="uid://dk2500jb0eebu" path="res://Scenes/Levels/Level_dressing/cd.tscn" id="4_nssir"]
 [ext_resource type="PackedScene" uid="uid://dfubluvtuvoji" path="res://Assets/Geo/BlockoutGeo/grotte.glb" id="5_ui505"]

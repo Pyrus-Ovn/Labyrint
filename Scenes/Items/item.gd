@@ -1,14 +1,19 @@
-extends RigidBody3D
-class_name Item
+class_name Item extends RigidBody3D
 
+@export var useable = false
 
+signal used()
 func throw():
 	
 	pass  # Implement in child classes
 
+
+func has_use():
+	return useable
+
 func use():
-	
-	pass  # Implement in child classes
+	emit_signal("used")
+	useable = false
 
 func interact():
 	#pickup

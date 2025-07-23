@@ -28,6 +28,16 @@ func is_holding_item():
 	if holding_item:
 		return true
 	return false
+	
+func is_holding_useable_item():
+	if holding_item:
+		return holding_item.has_use()
+	return false
+
+func use_item():
+	if not holding_item:
+		return
+	holding_item.use()
 
 func throw_item(camera):
 	throw.play()
