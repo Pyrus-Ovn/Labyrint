@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://l3nn8hnh0u4m"]
+[gd_scene load_steps=14 format=3 uid="uid://l3nn8hnh0u4m"]
 
 [ext_resource type="MeshLibrary" uid="uid://dgag75pbfkosh" path="res://Assets/MeshLibraries/Hedge.tres" id="1_3l8so"]
 [ext_resource type="PackedScene" uid="uid://borjakxyc1pnr" path="res://Scenes/Levels/Level_dressing/door.tscn" id="2_di7dl"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://dk2500jb0eebu" path="res://Scenes/Levels/Level_dressing/cd.tscn" id="9_0l2lx"]
 [ext_resource type="PackedScene" uid="uid://csugo80tusbm4" path="res://Scenes/Levels/Level_dressing/explodable_wall.tscn" id="10_b4vcu"]
 [ext_resource type="PackedScene" uid="uid://br1uq4vvl1wln" path="res://Scenes/Items/dynamit.tscn" id="11_di7dl"]
+[ext_resource type="PackedScene" uid="uid://df3l3psfld3jm" path="res://Scenes/Levels/Level_dressing/papir.tscn" id="12_nwtta"]
+[ext_resource type="Resource" uid="uid://y7b8oftn8o1u" path="res://Assets/Documents/papir05.tres" id="13_08iyw"]
 
 [node name="DØR_LABYRINT" type="Node3D"]
 
@@ -272,6 +274,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.59169, 1.66287, 10.5948)
 
 [node name="Dynamit" parent="." instance=ExtResource("11_di7dl")]
 transform = Transform3D(1, 0, 0, 0, 0.052057, -0.998644, 0, 0.998644, 0.052057, -1.486, 1.61401, 21.0195)
+
+[node name="Paper" parent="." instance=ExtResource("12_nwtta")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11755, 1.67603, 9.64115)
+document = ExtResource("13_08iyw")
 
 [connection signal="toggle" from="Lever" to="Door" method="_on_lever_toggle"]
 [connection signal="toggle" from="Lever" to="Door2" method="_on_lever_toggle"]

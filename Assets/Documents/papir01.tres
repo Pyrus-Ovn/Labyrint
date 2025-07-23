@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://c3kpwpqat8g06"]
 
-[ext_resource type="Script" uid="uid://drjxlhe1g3k10" path="res://Scenes/Ui/DocumentResource.gd" id="1_t6daf"]
+[ext_resource type="Script" path="res://Scenes/Ui/DocumentResource.gd" id="1_t6daf"]
 [ext_resource type="Texture2D" uid="uid://bfdogj8k3nrcr" path="res://Assets/Geo/character/papir/paperPNG/papir01_køkkenrulle.png" id="2_cuae5"]
 
 [resource]

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://cswi23xykx0ci"]
 
-[ext_resource type="Script" uid="uid://drjxlhe1g3k10" path="res://Scenes/Ui/DocumentResource.gd" id="1_fo3lm"]
+[ext_resource type="Script" path="res://Scenes/Ui/DocumentResource.gd" id="1_fo3lm"]
 [ext_resource type="Texture2D" uid="uid://cletmjlkn6i2x" path="res://Assets/Geo/character/papir/paperPNG/papir18_email.png" id="2_fo3lm"]
 
 [resource]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bre0nly3ctqh7"]
+[gd_scene load_steps=9 format=3 uid="uid://bre0nly3ctqh7"]
 
 [ext_resource type="PackedScene" uid="uid://bi3tivxq4s03q" path="res://Scenes/Levels/hedge_grid_map.tscn" id="1_klsf8"]
 [ext_resource type="PackedScene" uid="uid://dma6kfnkwoxcx" path="res://Scenes/Levels/japanskTræ.glb" id="2_5c4mp"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://dk2500jb0eebu" path="res://Scenes/Levels/Level_dressing/cd.tscn" id="4_klsf8"]
 [ext_resource type="PackedScene" uid="uid://br1uq4vvl1wln" path="res://Scenes/Items/dynamit.tscn" id="5_jy2a2"]
 [ext_resource type="PackedScene" uid="uid://csugo80tusbm4" path="res://Scenes/Levels/Level_dressing/explodable_wall.tscn" id="6_8ss0n"]
+[ext_resource type="PackedScene" uid="uid://df3l3psfld3jm" path="res://Scenes/Levels/Level_dressing/papir.tscn" id="7_0l1xg"]
+[ext_resource type="Resource" uid="uid://c1w2bqr88chhg" path="res://Assets/Documents/papir10.tres" id="8_i48nw"]
 
 [node name="Kravlemodul" type="Node3D"]
 
@@ -123,3 +125,7 @@ transform = Transform3D(-0.0140669, 0, -0.999901, 0, 1, 0, 0.999901, 0, -0.01406
 
 [node name="Explodable_wall2" parent="." instance=ExtResource("6_8ss0n")]
 transform = Transform3D(0.0868776, 0, -0.996219, 0, 1, 0, 0.996219, 0, 0.0868776, -39.8652, 1.82234, -15.21)
+
+[node name="Paper" parent="." instance=ExtResource("7_0l1xg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.3835, 1.70453, -1.32146)
+document = ExtResource("8_i48nw")

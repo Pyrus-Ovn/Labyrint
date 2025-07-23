@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://cf8lgl1qnojnp"]
 
-[ext_resource type="Script" uid="uid://drjxlhe1g3k10" path="res://Scenes/Ui/DocumentResource.gd" id="1_pxxyh"]
+[ext_resource type="Script" path="res://Scenes/Ui/DocumentResource.gd" id="1_pxxyh"]
 [ext_resource type="Texture2D" uid="uid://bngonr3gcgvc5" path="res://Assets/Geo/character/papir/paperPNG/papir13_mrComputer.png" id="2_6qfkp"]
 
 [resource]

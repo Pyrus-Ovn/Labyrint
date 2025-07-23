@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cn0ywt7rwmga6"]
+[gd_scene load_steps=35 format=3 uid="uid://cn0ywt7rwmga6"]
 
 [ext_resource type="PackedScene" uid="uid://c0j8l7oywau7y" path="res://Scenes/Levels/levelModules/StartModul.tscn" id="1_tmk3f"]
 [ext_resource type="PackedScene" uid="uid://cevtr124k7tdx" path="res://Scenes/Levels/levelModules/Brondmodul.tscn" id="2_6umiu"]
@@ -25,6 +25,15 @@
 [ext_resource type="PackedScene" uid="uid://c3jnvcf0r48qj" path="res://Scenes/Levels/levelModules/mønt.glb" id="22_qp6n6"]
 [ext_resource type="PackedScene" uid="uid://csugo80tusbm4" path="res://Scenes/Levels/Level_dressing/explodable_wall.tscn" id="24_e33ue"]
 [ext_resource type="PackedScene" uid="uid://br1uq4vvl1wln" path="res://Scenes/Items/dynamit.tscn" id="25_qp6n6"]
+[ext_resource type="PackedScene" uid="uid://df3l3psfld3jm" path="res://Scenes/Levels/Level_dressing/papir.tscn" id="26_6rcx2"]
+[ext_resource type="Resource" uid="uid://dxyqgwohunwii" path="res://Assets/Documents/papir04.tres" id="27_qa845"]
+[ext_resource type="Resource" uid="uid://y7b8oftn8o1u" path="res://Assets/Documents/papir05.tres" id="28_ionxx"]
+[ext_resource type="Resource" uid="uid://6mttc3cs8aem" path="res://Assets/Documents/papir06.tres" id="29_g64hn"]
+[ext_resource type="Resource" uid="uid://cdq3qoccmi2mg" path="res://Assets/Documents/papir07.tres" id="30_6jjx1"]
+[ext_resource type="Resource" uid="uid://s65me4wp5n5r" path="res://Assets/Documents/papir08.tres" id="31_sbaf4"]
+[ext_resource type="Resource" uid="uid://dswixr46qylfn" path="res://Assets/Documents/papir09.tres" id="32_i0s25"]
+[ext_resource type="Resource" uid="uid://dpev3y6ft7ui7" path="res://Assets/Documents/papir17.tres" id="33_ionxx"]
+[ext_resource type="Resource" uid="uid://cswi23xykx0ci" path="res://Assets/Documents/papir18.tres" id="34_g64hn"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -397,6 +406,38 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4072, 1.73914, 55.6831)
 
 [node name="Dynamit11" parent="." instance=ExtResource("25_qp6n6")]
 transform = Transform3D(0.283045, -0.959107, 0, 0.959107, 0.283045, 0, 0, 0, 1, 12.2187, 1.69644, 55.5018)
+
+[node name="Paper" parent="." instance=ExtResource("26_6rcx2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9417, 1.71607, -4.07377)
+document = ExtResource("27_qa845")
+
+[node name="Paper2" parent="." instance=ExtResource("26_6rcx2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.4645, 1.82495, -7.59012)
+document = ExtResource("28_ionxx")
+
+[node name="Paper3" parent="." instance=ExtResource("26_6rcx2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.9225, 1.74856, -15.4925)
+document = ExtResource("29_g64hn")
+
+[node name="Paper4" parent="." instance=ExtResource("26_6rcx2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.6789, 1.81406, -37.6462)
+document = ExtResource("30_6jjx1")
+
+[node name="Paper5" parent="." instance=ExtResource("26_6rcx2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.8208, 1.6435, -65.0392)
+document = ExtResource("31_sbaf4")
+
+[node name="Paper6" parent="." instance=ExtResource("26_6rcx2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.6807, 1.83693, -74.2313)
+document = ExtResource("32_i0s25")
+
+[node name="Paper7" parent="." instance=ExtResource("26_6rcx2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.1615, 1.71349, -63.1367)
+document = ExtResource("33_ionxx")
+
+[node name="Paper8" parent="." instance=ExtResource("26_6rcx2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.882, 1.89553, -77.587)
+document = ExtResource("34_g64hn")
 
 [connection signal="toggle" from="DOOR/Lever4" to="DOOR/Door6" method="_on_lever_4_toggle"]
 [connection signal="toggle" from="DOOR/Lever4" to="DOOR/Door5" method="_on_lever_4_toggle"]

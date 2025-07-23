@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://fv7espny3fl6"]
+[gd_scene load_steps=15 format=3 uid="uid://fv7espny3fl6"]
 
 [ext_resource type="PackedScene" uid="uid://bi3tivxq4s03q" path="res://Scenes/Levels/hedge_grid_map.tscn" id="1_qnevg"]
 [ext_resource type="PackedScene" path="res://Scenes/Items/sten.tscn" id="2_crs0t"]
@@ -8,6 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://dtmo474ttnbxs" path="res://Scenes/Levels/barktræ.glb" id="7_110xf"]
 [ext_resource type="PackedScene" uid="uid://dma6kfnkwoxcx" path="res://Scenes/Levels/japanskTræ.glb" id="8_5otny"]
 [ext_resource type="PackedScene" uid="uid://dk2500jb0eebu" path="res://Scenes/Levels/Level_dressing/cd.tscn" id="8_110xf"]
+[ext_resource type="PackedScene" uid="uid://df3l3psfld3jm" path="res://Scenes/Levels/Level_dressing/papir.tscn" id="9_3fbdq"]
+[ext_resource type="Resource" uid="uid://bahkwex68c5v" path="res://Assets/Documents/papir13.tres" id="10_kat2a"]
+[ext_resource type="Resource" uid="uid://cf8lgl1qnojnp" path="res://Assets/Documents/papir14.tres" id="11_dtl52"]
+[ext_resource type="Resource" uid="uid://d3mowi5pr6geq" path="res://Assets/Documents/papir15.tres" id="12_n08fd"]
+[ext_resource type="Resource" uid="uid://3mfdg7k4ta0c" path="res://Assets/Documents/papir16.tres" id="13_5sp57"]
+[ext_resource type="PackedScene" uid="uid://br1uq4vvl1wln" path="res://Scenes/Items/dynamit.tscn" id="14_jxyux"]
 
 [node name="Node3D2" type="Node3D"]
 
@@ -56,7 +62,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.06591, 1.50184, -4.95
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.06591, 1.50184, -7.33018)
 
 [node name="træSculpture4" parent="." instance=ExtResource("4_iaw23")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 7.07352, 1.50184, -7.27351)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 7.0863, 1.44439, -7.35812)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 4.27897, 3.77454, -6.06418)
@@ -109,3 +115,25 @@ transform = Transform3D(0.630934, 0, -0.901067, 0, 1.1, 0, 0.901067, 0, 0.630934
 [node name="CD" parent="." instance=ExtResource("8_110xf")]
 transform = Transform3D(1, 0, 0, 0, 0.989298, -0.14591, 0, 0.14591, 0.989298, 4.63645, 1.90671, -26.4085)
 disc_number = 4
+
+[node name="Paper" parent="." instance=ExtResource("9_3fbdq")]
+transform = Transform3D(1, 0, 0, 0, 0.997946, 0.0640621, 0, -0.0640621, 0.997946, -7.50118, 1.8734, 6.41405)
+document = ExtResource("10_kat2a")
+
+[node name="Paper2" parent="." instance=ExtResource("9_3fbdq")]
+transform = Transform3D(0.845358, 0.175862, -0.504423, 0.162574, -0.984163, -0.0706619, -0.508862, -0.0222717, -0.86056, 7.99163, 1.78349, 1.43705)
+document = ExtResource("11_dtl52")
+
+[node name="Paper3" parent="." instance=ExtResource("9_3fbdq")]
+transform = Transform3D(1, 0, 0, 0, 0.949327, -0.314291, 0, 0.314291, 0.949327, 25.6262, 1.58988, -7.041)
+document = ExtResource("12_n08fd")
+
+[node name="Paper4" parent="." instance=ExtResource("9_3fbdq")]
+transform = Transform3D(1, 0, 0, 0, 0.887799, -0.460231, 0, 0.460231, 0.887799, 5.10585, 1.74499, -7.78884)
+document = ExtResource("13_5sp57")
+
+[node name="Dynamit" parent="." instance=ExtResource("14_jxyux")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.20175, 1.56487, -7.61595)
+
+[node name="Dynamit2" parent="." instance=ExtResource("14_jxyux")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.54198, 1.5687, -7.34734)
