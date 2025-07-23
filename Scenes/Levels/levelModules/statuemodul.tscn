@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c8gkmbqbklsj8"]
+[gd_scene load_steps=7 format=3 uid="uid://c8gkmbqbklsj8"]
 
 [ext_resource type="PackedScene" uid="uid://bi3tivxq4s03q" path="res://Scenes/Levels/hedge_grid_map.tscn" id="1_dbt8r"]
 [ext_resource type="PackedScene" uid="uid://cnqabojy1tgrn" path="res://Assets/Geo/setDressing/storStatue.glb" id="2_j4qxd"]
 [ext_resource type="PackedScene" uid="uid://dma6kfnkwoxcx" path="res://Scenes/Levels/japanskTræ.glb" id="3_68yi6"]
 [ext_resource type="PackedScene" uid="uid://dtmo474ttnbxs" path="res://Scenes/Levels/barktræ.glb" id="4_1krb3"]
+[ext_resource type="PackedScene" uid="uid://dk2500jb0eebu" path="res://Scenes/Levels/Level_dressing/cd.tscn" id="5_1krb3"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fvxas"]
 points = PackedVector3Array(-4.78155, 0.464625, -9.67617, -7.51774, 0.0239634, 0.128818, -0.884898, 5.97141, 0.128818, 0.487808, -0.890771, -13.1376, -5.83778, -4.68657, 1.13747, 3.13676, -4.6828, 1.13199, -3.51425, -3.40405, -9.70119, 2.99228, 4.38681, 0.916913, -2.63874, 3.42958, -9.85974, -5.91754, 4.15922, 0.900459, 1.17416, 0.479651, -12.9083, 3.23208, 4.59875, -0.0990491, -0.884898, -5.46668, -0.100482, 3.23208, -4.78035, -0.0990491, -6.14503, 4.36923, -0.100482, -5.87697, -0.391656, -7.76524, -3.7316, 2.18882, -10.7825, -5.91663, -4.78035, -0.100482, 4.14683, 0.252367, -0.0990491, -1.11444, -0.662367, -12.9083, -5.62194, 0.676317, -8.38645, -1.99656, -3.27855, -9.57575, -2.02806, 5.97141, -0.100482, 4.14683, -1.5771, -0.0990491, 1.17416, -0.432844, -12.9083, -7.51774, -0.890771, -0.100482, -1.79497, 4.42038, 0.97346, -2.48601, -5.46668, -0.100482, -2.43856, 3.26473, -10.3499, -3.7207, 2.82125, -10.1158, -0.262914, 0.469812, -13.05, -6.37458, -4.09402, -0.100482)
@@ -41,3 +42,7 @@ transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 17.1152, 1.52057, -3.14
 
 [node name="barktræ" parent="." instance=ExtResource("4_1krb3")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -18.2837, 1.60833, -2.76408)
+
+[node name="CD" parent="." instance=ExtResource("5_1krb3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.45355, 1.91015, -3.74489)
+disc_number = 2
