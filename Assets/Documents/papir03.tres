@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://dblkb6y52stx8"]
+
+[ext_resource type="Script" uid="uid://drjxlhe1g3k10" path="res://Scenes/Ui/DocumentResource.gd" id="1_4euyk"]
+[ext_resource type="Texture2D" uid="uid://lud15tjgcduy" path="res://Assets/Geo/character/papir/paperPNG/papir02_notetoSelf.png" id="2_i26t1"]
+
+[resource]
+script = ExtResource("1_4euyk")
+texture = ExtResource("2_i26t1")
+bounds = Rect2(250, 50, 750, 750)
+metadata/_custom_type_script = "uid://drjxlhe1g3k10"

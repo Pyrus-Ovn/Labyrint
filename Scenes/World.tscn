@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cn0ywt7rwmga6" path="res://Scenes/Levels/levelModules/Masterplan.tscn" id="5_45d1s"]
 [ext_resource type="PackedScene" uid="uid://cnorr78k0uoly" path="res://Scenes/Ui/master_ui.tscn" id="5_p70al"]
 
-[node name="Node3D" type="Node3D"]
+[node name="World" type="Node3D"]
 script = ExtResource("1_gjpho")
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("2_gjpho")]

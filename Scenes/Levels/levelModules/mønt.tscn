@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://fv7espny3fl6"]
 
 [ext_resource type="PackedScene" uid="uid://bi3tivxq4s03q" path="res://Scenes/Levels/hedge_grid_map.tscn" id="1_qnevg"]
-[ext_resource type="PackedScene" path="res://Scenes/Items/sten.tscn" id="2_crs0t"]
+[ext_resource type="PackedScene" uid="uid://cxwryo8vk0fkd" path="res://Scenes/Items/sten.tscn" id="2_crs0t"]
 [ext_resource type="PackedScene" uid="uid://c3jnvcf0r48qj" path="res://Scenes/Levels/levelModules/mønt.glb" id="3_iaw23"]
 [ext_resource type="PackedScene" uid="uid://cmkh4x4a2fidu" path="res://Assets/Geo/setDressing/træSculpture.glb" id="4_iaw23"]
 [ext_resource type="PackedScene" uid="uid://borjakxyc1pnr" path="res://Scenes/Levels/Level_dressing/door.tscn" id="6_6cn8a"]
