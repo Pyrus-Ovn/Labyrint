@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bdo7vsrhff7mr" path="res://Scenes/Ui/ui_parchment.tscn" id="3_6whne"]
 [ext_resource type="Script" uid="uid://drjxlhe1g3k10" path="res://Scenes/Ui/DocumentResource.gd" id="4_1rwpk"]
 [ext_resource type="Texture2D" uid="uid://dwlltmuid8tld" path="res://Assets/UI_assets/Button_TAB.png" id="4_qp3re"]
-[ext_resource type="Resource" uid="uid://c6ugk4l74aq5v" path="res://Assets/Documents/papir03.tres" id="5_1rwpk"]
+[ext_resource type="Resource" uid="uid://dblkb6y52stx8" path="res://Assets/Documents/papir03.tres" id="5_1rwpk"]
 [ext_resource type="Texture2D" uid="uid://de5y2orbwv2g7" path="res://Assets/UI_assets/Button_TAB_down.png" id="5_4bij2"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_1rwpk"]
