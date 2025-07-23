@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cj05t6jtldtic"
 path.s3tc="res://.godot/imported/boulder_Grus Texture.png-00c53f63fb63c697870efc52d930f3f0.s3tc.ctex"
+path.etc2="res://.godot/imported/boulder_Grus Texture.png-00c53f63fb63c697870efc52d930f3f0.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/Geo/setDressing/boulder_Grus Texture.png"
-dest_files=["res://.godot/imported/boulder_Grus Texture.png-00c53f63fb63c697870efc52d930f3f0.s3tc.ctex"]
+dest_files=["res://.godot/imported/boulder_Grus Texture.png-00c53f63fb63c697870efc52d930f3f0.s3tc.ctex", "res://.godot/imported/boulder_Grus Texture.png-00c53f63fb63c697870efc52d930f3f0.etc2.ctex"]
 
 [params]
 

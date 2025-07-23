@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://0to483hxnkg2"
 path.s3tc="res://.godot/imported/CD_Probs Texture 1.png-26cb58a11cce2e25a46f842751b17420.s3tc.ctex"
+path.etc2="res://.godot/imported/CD_Probs Texture 1.png-26cb58a11cce2e25a46f842751b17420.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/Geo/CD_Probs Texture 1.png"
-dest_files=["res://.godot/imported/CD_Probs Texture 1.png-26cb58a11cce2e25a46f842751b17420.s3tc.ctex"]
+dest_files=["res://.godot/imported/CD_Probs Texture 1.png-26cb58a11cce2e25a46f842751b17420.s3tc.ctex", "res://.godot/imported/CD_Probs Texture 1.png-26cb58a11cce2e25a46f842751b17420.etc2.ctex"]
 
 [params]
 

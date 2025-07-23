@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cl7w0chn4oqdo"
 path.s3tc="res://.godot/imported/geo_Hhånd_åben_hudtekstur.jpg-4dc0e0e77d15c78278b0b43588cc32ac.s3tc.ctex"
+path.etc2="res://.godot/imported/geo_Hhånd_åben_hudtekstur.jpg-4dc0e0e77d15c78278b0b43588cc32ac.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/Geo/character/hands/geo_Hhånd_åben_hudtekstur.jpg"
-dest_files=["res://.godot/imported/geo_Hhånd_åben_hudtekstur.jpg-4dc0e0e77d15c78278b0b43588cc32ac.s3tc.ctex"]
+dest_files=["res://.godot/imported/geo_Hhånd_åben_hudtekstur.jpg-4dc0e0e77d15c78278b0b43588cc32ac.s3tc.ctex", "res://.godot/imported/geo_Hhånd_åben_hudtekstur.jpg-4dc0e0e77d15c78278b0b43588cc32ac.etc2.ctex"]
 
 [params]
 

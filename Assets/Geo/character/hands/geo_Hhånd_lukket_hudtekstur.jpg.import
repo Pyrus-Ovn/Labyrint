@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0nsk66mwadc0"
 path.s3tc="res://.godot/imported/geo_Hhånd_lukket_hudtekstur.jpg-929a5883da59ce2d90ed58ad01cfd68d.s3tc.ctex"
+path.etc2="res://.godot/imported/geo_Hhånd_lukket_hudtekstur.jpg-929a5883da59ce2d90ed58ad01cfd68d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/Geo/character/hands/geo_Hhånd_lukket_hudtekstur.jpg"
-dest_files=["res://.godot/imported/geo_Hhånd_lukket_hudtekstur.jpg-929a5883da59ce2d90ed58ad01cfd68d.s3tc.ctex"]
+dest_files=["res://.godot/imported/geo_Hhånd_lukket_hudtekstur.jpg-929a5883da59ce2d90ed58ad01cfd68d.s3tc.ctex", "res://.godot/imported/geo_Hhånd_lukket_hudtekstur.jpg-929a5883da59ce2d90ed58ad01cfd68d.etc2.ctex"]
 
 [params]
 

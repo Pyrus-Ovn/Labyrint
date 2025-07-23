@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://daqiad0r5lhew"
 path.s3tc="res://.godot/imported/discMan_walkman.webp-8dac9b78e84719e3c094a8798f8f4fdf.s3tc.ctex"
+path.etc2="res://.godot/imported/discMan_walkman.webp-8dac9b78e84719e3c094a8798f8f4fdf.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/Geo/discMan_walkman.webp"
-dest_files=["res://.godot/imported/discMan_walkman.webp-8dac9b78e84719e3c094a8798f8f4fdf.s3tc.ctex"]
+dest_files=["res://.godot/imported/discMan_walkman.webp-8dac9b78e84719e3c094a8798f8f4fdf.s3tc.ctex", "res://.godot/imported/discMan_walkman.webp-8dac9b78e84719e3c094a8798f8f4fdf.etc2.ctex"]
 
 [params]
 

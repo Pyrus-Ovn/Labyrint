@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvd7qor7smrtl"
 path.s3tc="res://.godot/imported/lever_lever.jpg-06d6056b533074103df5f6e00be12648.s3tc.ctex"
+path.etc2="res://.godot/imported/lever_lever.jpg-06d6056b533074103df5f6e00be12648.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/Geo/lever_lever.jpg"
-dest_files=["res://.godot/imported/lever_lever.jpg-06d6056b533074103df5f6e00be12648.s3tc.ctex"]
+dest_files=["res://.godot/imported/lever_lever.jpg-06d6056b533074103df5f6e00be12648.s3tc.ctex", "res://.godot/imported/lever_lever.jpg-06d6056b533074103df5f6e00be12648.etc2.ctex"]
 
 [params]
 

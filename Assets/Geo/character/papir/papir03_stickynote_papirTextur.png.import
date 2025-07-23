@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbsqhbj3jf7g1"
 path.s3tc="res://.godot/imported/papir03_stickynote_papirTextur.png-c33827c604a3ec6bf0044b814b14583d.s3tc.ctex"
+path.etc2="res://.godot/imported/papir03_stickynote_papirTextur.png-c33827c604a3ec6bf0044b814b14583d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/Geo/character/papir/papir03_stickynote_papirTextur.png"
-dest_files=["res://.godot/imported/papir03_stickynote_papirTextur.png-c33827c604a3ec6bf0044b814b14583d.s3tc.ctex"]
+dest_files=["res://.godot/imported/papir03_stickynote_papirTextur.png-c33827c604a3ec6bf0044b814b14583d.s3tc.ctex", "res://.godot/imported/papir03_stickynote_papirTextur.png-c33827c604a3ec6bf0044b814b14583d.etc2.ctex"]
 
 [params]
 

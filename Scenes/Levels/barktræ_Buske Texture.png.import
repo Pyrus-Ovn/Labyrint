@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjjl1by65gq4d"
 path.s3tc="res://.godot/imported/barktræ_Buske Texture.png-daf9d3604316b92b53441cc05e129414.s3tc.ctex"
+path.etc2="res://.godot/imported/barktræ_Buske Texture.png-daf9d3604316b92b53441cc05e129414.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Scenes/Levels/barktræ_Buske Texture.png"
-dest_files=["res://.godot/imported/barktræ_Buske Texture.png-daf9d3604316b92b53441cc05e129414.s3tc.ctex"]
+dest_files=["res://.godot/imported/barktræ_Buske Texture.png-daf9d3604316b92b53441cc05e129414.s3tc.ctex", "res://.godot/imported/barktræ_Buske Texture.png-daf9d3604316b92b53441cc05e129414.etc2.ctex"]
 
 [params]
 

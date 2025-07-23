@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://buofutrlfd8b"
 path.s3tc="res://.godot/imported/blueArm_blue.webp-d8d4b943e5f9ddcf5d203c4594dc09db.s3tc.ctex"
+path.etc2="res://.godot/imported/blueArm_blue.webp-d8d4b943e5f9ddcf5d203c4594dc09db.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/Geo/character/hands/blueArm_blue.webp"
-dest_files=["res://.godot/imported/blueArm_blue.webp-d8d4b943e5f9ddcf5d203c4594dc09db.s3tc.ctex"]
+dest_files=["res://.godot/imported/blueArm_blue.webp-d8d4b943e5f9ddcf5d203c4594dc09db.s3tc.ctex", "res://.godot/imported/blueArm_blue.webp-d8d4b943e5f9ddcf5d203c4594dc09db.etc2.ctex"]
 
 [params]
 

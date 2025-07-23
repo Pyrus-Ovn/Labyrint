@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://da8ulpdj5108u"
 path.s3tc="res://.godot/imported/brioklodser-col_Grus Texture.png-c5a1db70e65aa5f87c11be25708ed824.s3tc.ctex"
+path.etc2="res://.godot/imported/brioklodser-col_Grus Texture.png-c5a1db70e65aa5f87c11be25708ed824.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/MeshLibraries/brioklodser-col_Grus Texture.png"
-dest_files=["res://.godot/imported/brioklodser-col_Grus Texture.png-c5a1db70e65aa5f87c11be25708ed824.s3tc.ctex"]
+dest_files=["res://.godot/imported/brioklodser-col_Grus Texture.png-c5a1db70e65aa5f87c11be25708ed824.s3tc.ctex", "res://.godot/imported/brioklodser-col_Grus Texture.png-c5a1db70e65aa5f87c11be25708ed824.etc2.ctex"]
 
 [params]
 

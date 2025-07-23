@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bb7min62y1clg"
 path.s3tc="res://.godot/imported/træSculpture_Bark Texture.png-8bd77d7a879044e33c88ca093deb9168.s3tc.ctex"
+path.etc2="res://.godot/imported/træSculpture_Bark Texture.png-8bd77d7a879044e33c88ca093deb9168.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/Geo/setDressing/træSculpture_Bark Texture.png"
-dest_files=["res://.godot/imported/træSculpture_Bark Texture.png-8bd77d7a879044e33c88ca093deb9168.s3tc.ctex"]
+dest_files=["res://.godot/imported/træSculpture_Bark Texture.png-8bd77d7a879044e33c88ca093deb9168.s3tc.ctex", "res://.godot/imported/træSculpture_Bark Texture.png-8bd77d7a879044e33c88ca093deb9168.etc2.ctex"]
 
 [params]
 

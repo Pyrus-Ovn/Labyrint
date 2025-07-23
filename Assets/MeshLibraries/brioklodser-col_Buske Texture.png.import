@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://duwbe1d68fapd"
 path.s3tc="res://.godot/imported/brioklodser-col_Buske Texture.png-b4a3634711190b5048b487d5667fa568.s3tc.ctex"
+path.etc2="res://.godot/imported/brioklodser-col_Buske Texture.png-b4a3634711190b5048b487d5667fa568.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/MeshLibraries/brioklodser-col_Buske Texture.png"
-dest_files=["res://.godot/imported/brioklodser-col_Buske Texture.png-b4a3634711190b5048b487d5667fa568.s3tc.ctex"]
+dest_files=["res://.godot/imported/brioklodser-col_Buske Texture.png-b4a3634711190b5048b487d5667fa568.s3tc.ctex", "res://.godot/imported/brioklodser-col_Buske Texture.png-b4a3634711190b5048b487d5667fa568.etc2.ctex"]
 
 [params]
 
