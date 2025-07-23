@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://biga7nly10uw2"]
+
+[ext_resource type="Script" uid="uid://drjxlhe1g3k10" path="res://Scenes/Ui/DocumentResource.gd" id="1_v0ur5"]
+[ext_resource type="Texture2D" uid="uid://bfdogj8k3nrcr" path="res://Assets/Geo/character/papir/paperPNG/papir01_køkkenrulle.png" id="2_eumre"]
+
+[resource]
+script = ExtResource("1_v0ur5")
+texture = ExtResource("2_eumre")
+bounds = Rect2(0, 0, 800, 600)
+metadata/_custom_type_script = "uid://drjxlhe1g3k10"

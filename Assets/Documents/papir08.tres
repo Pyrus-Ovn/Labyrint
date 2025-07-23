@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://s65me4wp5n5r"]
+
+[ext_resource type="Script" uid="uid://drjxlhe1g3k10" path="res://Scenes/Ui/DocumentResource.gd" id="1_xj362"]
+[ext_resource type="Texture2D" uid="uid://b5vxxtmbsekej" path="res://Assets/Geo/character/papir/paperPNG/papir05_kaffeplet.png" id="2_2if8o"]
+
+[resource]
+script = ExtResource("1_xj362")
+texture = ExtResource("2_2if8o")
+bounds = Rect2(200, 50, 750, 850)
+metadata/_custom_type_script = "uid://drjxlhe1g3k10"
