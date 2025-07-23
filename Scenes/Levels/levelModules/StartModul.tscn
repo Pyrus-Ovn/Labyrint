@@ -1,8 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://dglybe2ik435m"]
+[gd_scene load_steps=13 format=3 uid="uid://c0j8l7oywau7y"]
 
 [ext_resource type="MeshLibrary" uid="uid://dgag75pbfkosh" path="res://Assets/MeshLibraries/Hedge.tres" id="1_6e1re"]
 [ext_resource type="PackedScene" uid="uid://borjakxyc1pnr" path="res://Scenes/Levels/Level_dressing/door.tscn" id="2_kq25i"]
-[ext_resource type="PackedScene" uid="uid://ce5tufuiou1dq" path="res://Scenes/lever.tscn" id="3_m1f4g"]
+[ext_resource type="PackedScene" uid="uid://c7h1a5noyvvqv" path="res://Scenes/lever.tscn" id="3_m1f4g"]
 [ext_resource type="PackedScene" uid="uid://dil6xp8dqtnku" path="res://Assets/Geo/setDressing/barktræ.glb" id="4_qe42x"]
 [ext_resource type="PackedScene" uid="uid://c6hhaacsqsmcl" path="res://Assets/Geo/setDressing/bush_sculpt.glb" id="5_cvk54"]
 [ext_resource type="PackedScene" uid="uid://xgn41e7ky8d8" path="res://Assets/Geo/setDressing/ItemSten.glb" id="6_r6fse"]
@@ -12,8 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://cmkh4x4a2fidu" path="res://Assets/Geo/setDressing/træSculpture.glb" id="9_ete6t"]
 [ext_resource type="PackedScene" uid="uid://cxwryo8vk0fkd" path="res://Scenes/Items/sten.tscn" id="11_r6fse"]
 [ext_resource type="PackedScene" uid="uid://bb3nhh0m67t1d" path="res://Scenes/Items/lantern.tscn" id="12_6emlh"]
-[ext_resource type="PackedScene" uid="uid://xik7cgm2mr21" path="res://Scenes/Items/coin.tscn" id="13_8gttx"]
-[ext_resource type="PackedScene" uid="uid://d2v1nj48q0rfn" path="res://Scenes/Levels/Level_dressing/Well.tscn" id="14_ete6t"]
 
 [node name="Start" type="Node3D"]
 
@@ -101,11 +99,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.418996, 1.7, -0.471176)
 
 [node name="Lantern" parent="." instance=ExtResource("12_6emlh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.65418, 1.77508, 2.12608)
-
-[node name="Coin" parent="." instance=ExtResource("13_8gttx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33115, 1.50139, -0.318011)
-
-[node name="Well" parent="." instance=ExtResource("14_ete6t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.745332, 34.5252, -1.99368)
 
 [connection signal="toggle" from="Lever" to="Door" method="_on_lever_toggle"]
