@@ -21,7 +21,7 @@ var t_bob = 0.0
 const BASE_FOV = 60.0
 const FOV_CHANGE = 1.5
 
-var crouch_scale = Vector3(1, 0.2, 1)
+var crouch_scale = Vector3( 0.5, 0.5,  0.5)
 var stand_scale = Vector3(1, 1, 1)
 var target_scale = stand_scale
 var lerp_speed = 10.0  # Adjust this value to control the speed of the transition
@@ -30,6 +30,11 @@ var lerp_speed = 10.0  # Adjust this value to control the speed of the transitio
 @onready var camera = $Head/Camera3D
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
 @onready var ray_cast_3d: RayCast3D = $Head/Camera3D/RayCast3D
+@onready var croucharea: RayCast3D = $Head/croucharea
+
+#crouch hack
+var can_uncrouch = true
+var crouch_released = true
 
 # Footstep variables
 var can_play : bool = true
@@ -127,6 +132,11 @@ func _physics_process(delta):
 	collision_shape_3d.scale = collision_shape_3d.scale.lerp(target_scale, lerp_speed * delta)
 
 
+	if croucharea.is_colliding():
+		can_uncrouch = false
+	else:
+		can_uncrouch = true
+
 	if ray_cast_3d.is_colliding():
 		var collider = ray_cast_3d.get_collider()
 		if collider is Interactable:
@@ -161,12 +171,13 @@ func _physics_process(delta):
 		velocity += get_gravity() * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor() and can_uncrouch:
 		velocity.y = JUMP_VELOCITY
 		
 	if Input.is_action_just_pressed("crouch"):
 		target_scale = crouch_scale
-	if Input.is_action_pressed("crouch"):
+		crouch_released = false
+	if Input.is_action_pressed("crouch") or ! can_uncrouch:
 		speed = CROUCH_SPEED
 	else:
 		if Input.is_action_pressed("sprint"):
@@ -175,6 +186,8 @@ func _physics_process(delta):
 		else:
 			speed = WALK_SPEED
 	if Input.is_action_just_released("crouch"):
+		crouch_released = true
+	if crouch_released and can_uncrouch:
 		target_scale = stand_scale
 
 	# Handle sprint
