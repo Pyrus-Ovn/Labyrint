@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://pspjl2w2my3u"]
+[gd_scene load_steps=8 format=3 uid="uid://pspjl2w2my3u"]
 
 [ext_resource type="PackedScene" uid="uid://bi3tivxq4s03q" path="res://Scenes/Levels/hedge_grid_map.tscn" id="1_cf7ky"]
 [ext_resource type="PackedScene" uid="uid://dfubluvtuvoji" path="res://Assets/Geo/BlockoutGeo/grotte.glb" id="2_lf7c2"]
 [ext_resource type="PackedScene" uid="uid://borjakxyc1pnr" path="res://Scenes/Levels/Level_dressing/door.tscn" id="3_4jmsj"]
 [ext_resource type="PackedScene" uid="uid://ce5tufuiou1dq" path="res://Scenes/lever.tscn" id="4_6ldik"]
+[ext_resource type="PackedScene" uid="uid://cmkh4x4a2fidu" path="res://Assets/Geo/setDressing/træSculpture.glb" id="5_20v0y"]
+[ext_resource type="PackedScene" uid="uid://dtmo474ttnbxs" path="res://Scenes/Levels/barktræ.glb" id="6_sdftx"]
+[ext_resource type="PackedScene" uid="uid://c6hhaacsqsmcl" path="res://Assets/Geo/setDressing/bush_sculpt.glb" id="7_fohqi"]
 
 [node name="Slut" type="Node3D"]
 
@@ -21,5 +24,23 @@ transform = Transform3D(5.7, 0, 0, 0, 5.7, 0, 0, 0, 5.7, -3.47789, 4.35585, -25.
 
 [node name="Lever" parent="." instance=ExtResource("4_6ldik")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 3.082, 1.48828, -22.1404)
+
+[node name="træSculpture" parent="." instance=ExtResource("5_20v0y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.55529, 1.40528, -5.30267)
+
+[node name="træSculpture2" parent="." instance=ExtResource("5_20v0y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.18409, 1.40528, -5.30267)
+
+[node name="træSculpture4" parent="." instance=ExtResource("5_20v0y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.49545, 1.40528, 2.59715)
+
+[node name="træSculpture3" parent="." instance=ExtResource("5_20v0y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.72587, 1.40528, 2.34333)
+
+[node name="barktræ" parent="." instance=ExtResource("6_sdftx")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.27744, 1.60833, -35.9976)
+
+[node name="bush_sculpt" parent="." instance=ExtResource("7_fohqi")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.538968, -7.58634, -0.784453)
 
 [connection signal="toggle" from="Lever" to="Door" method="_on_lever_toggle"]

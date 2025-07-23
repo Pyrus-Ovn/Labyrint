@@ -71,7 +71,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.01375, 1.73574, -33.2656)
 disc_number = 5
 
 [node name="CD6" parent="GridMap/CD\'ER" instance=ExtResource("18_2ffun")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.2688, 1.85999, 20.4246)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.2366, 1.85999, 19.2092)
 disc_number = 4
 
 [node name="CD7" parent="GridMap/CD\'ER" instance=ExtResource("18_2ffun")]
@@ -79,7 +79,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.7606, 1.84982, 5.40384)
 disc_number = 3
 
 [node name="CD8" parent="GridMap/CD\'ER" instance=ExtResource("18_2ffun")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.8914, 1.76599, -84.6323)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.0151, 1.76599, -84.6146)
 disc_number = 7
 
 [node name="DOOR" type="Node" parent="."]
