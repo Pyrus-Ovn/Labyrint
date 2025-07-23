@@ -1,8 +1,6 @@
-[gd_scene load_steps=33 format=3 uid="uid://ck3kdiiux8pu"]
+[gd_scene load_steps=23 format=3 uid="uid://ck3kdiiux8pu"]
 
-[ext_resource type="Texture2D" uid="uid://d306ywegf33p5" path="res://Assets/discman.png" id="1_4ssbi"]
 [ext_resource type="Script" uid="uid://n0mx7ffn08od" path="res://Scenes/Ui/ui_discman.gd" id="1_cecvb"]
-[ext_resource type="PackedScene" uid="uid://u58tom16mlbn" path="res://Assets/Geo/discMan.glb" id="3_u8kf2"]
 [ext_resource type="Texture2D" uid="uid://cdwqu0m5i7xkl" path="res://Assets/UI_assets/discman/discman.png" id="4_3alc0"]
 [ext_resource type="Texture2D" uid="uid://dcgn3s6cn0822" path="res://Assets/UI_assets/discman/_small_0004_bluebuttonUP.png" id="5_4y4jp"]
 [ext_resource type="Texture2D" uid="uid://di4x7yifehnf7" path="res://Assets/UI_assets/discman/_small_0005_bluebuttonDOWN.png" id="6_4ea70"]
@@ -13,29 +11,11 @@
 [ext_resource type="Texture2D" uid="uid://b1n11kyi3mcn3" path="res://Assets/UI_assets/discman/infoinfo.png" id="11_632op"]
 [ext_resource type="Texture2D" uid="uid://bf8tr3r58mjbh" path="res://Assets/UI_assets/discman/infoinfo_down.png" id="12_u2rcy"]
 
-[sub_resource type="InputEventAction" id="InputEventAction_jj35v"]
+[sub_resource type="InputEventAction" id="InputEventAction_0uy04"]
 action = &"hide_discman"
 
-[sub_resource type="Shortcut" id="Shortcut_ja0wl"]
-events = [SubResource("InputEventAction_jj35v")]
-
-[sub_resource type="InputEventAction" id="InputEventAction_u8kf2"]
-action = &"play_discman"
-
-[sub_resource type="Shortcut" id="Shortcut_1w6v0"]
-events = [SubResource("InputEventAction_u8kf2")]
-
-[sub_resource type="InputEventAction" id="InputEventAction_cecvb"]
-action = &"forward_discman"
-
-[sub_resource type="Shortcut" id="Shortcut_u8kf2"]
-events = [SubResource("InputEventAction_cecvb")]
-
-[sub_resource type="InputEventAction" id="InputEventAction_1w6v0"]
-action = &"back_discman"
-
-[sub_resource type="Shortcut" id="Shortcut_jj35v"]
-events = [SubResource("InputEventAction_1w6v0")]
+[sub_resource type="Shortcut" id="Shortcut_8sc1s"]
+events = [SubResource("InputEventAction_0uy04")]
 
 [sub_resource type="InputEventAction" id="InputEventAction_4ea70"]
 action = &"forward_discman"
@@ -55,17 +35,11 @@ action = &"play_discman"
 [sub_resource type="Shortcut" id="Shortcut_4ea70"]
 events = [SubResource("InputEventAction_4y4jp")]
 
-[sub_resource type="InputEventAction" id="InputEventAction_0uy04"]
-action = &"hide_discman"
-
-[sub_resource type="Shortcut" id="Shortcut_8sc1s"]
-events = [SubResource("InputEventAction_0uy04")]
-
 [sub_resource type="SystemFont" id="SystemFont_jj35v"]
 subpixel_positioning = 0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ja0wl"]
-bg_color = Color(0.462951, 0.658957, 0.465138, 1)
+bg_color = Color(0.462745, 0.658824, 0.466667, 0)
 
 [sub_resource type="Theme" id="Theme_3alc0"]
 default_font = SubResource("SystemFont_jj35v")
@@ -73,7 +47,7 @@ Label/fonts/font = SubResource("SystemFont_jj35v")
 Label/styles/normal = SubResource("StyleBoxFlat_ja0wl")
 
 [sub_resource type="LabelSettings" id="LabelSettings_ouqd1"]
-font_size = 11
+font_size = 95
 font_color = Color(0, 0, 0, 1)
 outline_color = Color(0, 0, 0, 1)
 
@@ -89,18 +63,19 @@ offset_bottom = -1.0
 grow_vertical = 0
 script = ExtResource("1_cecvb")
 
-[node name="hide_Button" type="Button" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 4.0
-offset_top = -33.0
-offset_right = 23.0
-offset_bottom = -2.0
+[node name="Hidebuttoncontroller" type="Node2D" parent="."]
+scale = Vector2(0.076, 0.076)
+
+[node name="hide_Button" type="TextureButton" parent="Hidebuttoncontroller"]
+offset_left = -26.3155
+offset_top = -513.158
+offset_right = 489.684
+offset_bottom = -12.158
 toggle_mode = true
-shortcut = SubResource("Shortcut_ja0wl")
-text = "I
-"
-clip_text = true
+shortcut = SubResource("Shortcut_8sc1s")
+texture_normal = ExtResource("11_632op")
+texture_pressed = ExtResource("12_u2rcy")
+stretch_mode = 0
 
 [node name="Discer" type="Control" parent="."]
 anchors_preset = 0
@@ -108,52 +83,11 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Discman" type="Sprite2D" parent="Discer"]
-visible = false
-position = Vector2(57, -54)
-scale = Vector2(0.183333, 0.183333)
-texture = ExtResource("1_4ssbi")
-
-[node name="play_Button" type="Button" parent="Discer"]
-visible = false
-layout_mode = 0
-offset_left = 47.0
-offset_top = -73.0
-offset_right = 66.0
-offset_bottom = -42.0
-shortcut = SubResource("Shortcut_1w6v0")
-text = "K"
-clip_text = true
-
-[node name="forward_Button" type="Button" parent="Discer"]
-visible = false
-layout_mode = 0
-offset_left = 77.0
-offset_top = -72.0
-offset_right = 95.0
-offset_bottom = -41.0
-shortcut = SubResource("Shortcut_u8kf2")
-text = "L"
-clip_text = true
-
-[node name="back_Button" type="Button" parent="Discer"]
-visible = false
-layout_mode = 0
-offset_left = 22.0
-offset_top = -72.0
-offset_right = 40.0
-offset_bottom = -41.0
-shortcut = SubResource("Shortcut_jj35v")
-text = "J"
-clip_text = true
-
-[node name="discMan2" parent="." instance=ExtResource("3_u8kf2")]
-
-[node name="Discman" type="Sprite2D" parent="."]
 position = Vector2(55, -43)
 scale = Vector2(0.07575, 0.07575)
 texture = ExtResource("4_3alc0")
 
-[node name="TextureButton3" type="TextureButton" parent="Discman"]
+[node name="forward_Button" type="TextureButton" parent="Discer/Discman"]
 offset_left = 315.271
 offset_top = -334.975
 offset_right = 590.271
@@ -165,7 +99,7 @@ texture_normal = ExtResource("5_4y4jp")
 texture_pressed = ExtResource("6_4ea70")
 stretch_mode = 0
 
-[node name="TextureButton4" type="TextureButton" parent="Discman"]
+[node name="back_Button" type="TextureButton" parent="Discer/Discman"]
 offset_left = -512.315
 offset_top = -275.862
 offset_right = -237.315
@@ -177,7 +111,7 @@ texture_pressed = ExtResource("8_4ea70")
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="TextureButton" type="TextureButton" parent="Discman"]
+[node name="play_Button" type="TextureButton" parent="Discer/Discman"]
 offset_left = -137.931
 offset_top = -108.374
 offset_right = 236.069
@@ -188,29 +122,24 @@ texture_normal = ExtResource("7_4y4jp")
 texture_pressed = ExtResource("10_632op")
 stretch_mode = 0
 
-[node name="TextureButton2" type="TextureButton" parent="Discman"]
-offset_left = -752.475
-offset_top = 52.8053
-offset_right = -236.475
-offset_bottom = 553.805
-shortcut = SubResource("Shortcut_8sc1s")
-texture_normal = ExtResource("11_632op")
-texture_pressed = ExtResource("12_u2rcy")
-stretch_mode = 0
-
-[node name="Label" type="Label" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 30.0
-offset_top = -98.0
-offset_right = 82.0
-offset_bottom = -82.0
+[node name="Label" type="Label" parent="Discer/Discman"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.333
+anchor_right = 0.5
+anchor_bottom = 0.333
+offset_left = -711.221
+offset_top = -570.624
+offset_right = -262.221
+offset_bottom = -424.624
 theme = SubResource("Theme_3alc0")
-text = "Song Title"
+text = "Hi-Fi"
 label_settings = SubResource("LabelSettings_ouqd1")
 horizontal_alignment = 1
+text_overrun_behavior = 1
 
-[connection signal="toggled" from="hide_Button" to="." method="_on_hide_button_toggled"]
-[connection signal="pressed" from="Discer/play_Button" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="Discer/forward_Button" to="." method="_on_forward_button_pressed"]
-[connection signal="pressed" from="Discer/back_Button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Hidebuttoncontroller/hide_Button" to="." method="_on_hide_button_pressed"]
+[connection signal="toggled" from="Hidebuttoncontroller/hide_Button" to="." method="_on_hide_button_toggled"]
+[connection signal="pressed" from="Discer/Discman/forward_Button" to="." method="_on_forward_button_pressed"]
+[connection signal="pressed" from="Discer/Discman/back_Button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Discer/Discman/play_Button" to="." method="_on_play_button_pressed"]
