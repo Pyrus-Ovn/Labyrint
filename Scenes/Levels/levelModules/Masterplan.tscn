@@ -247,6 +247,10 @@ disc_number = 6
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.0757, 1.84138, -64.4518)
 disc_number = 7
 
+[node name="CD3" parent="." instance=ExtResource("19_w45rw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.069, 1.74067, -35.8999)
+disc_number = 2
+
 [connection signal="toggle" from="DOOR/Lever4" to="DOOR/Door6" method="_on_lever_4_toggle"]
 [connection signal="toggle" from="DOOR/Lever4" to="DOOR/Door5" method="_on_lever_4_toggle"]
 [connection signal="toggle" from="DOOR/Lever2" to="DOOR/Door2" method="_on_lever_2_toggle"]
