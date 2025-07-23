@@ -1,10 +1,24 @@
-[gd_scene load_steps=6 format=3 uid="uid://bdo7vsrhff7mr"]
+[gd_scene load_steps=10 format=3 uid="uid://bdo7vsrhff7mr"]
 
 [ext_resource type="Script" uid="uid://bf8055pju2jor" path="res://Scenes/Ui/ui_parchment.gd" id="1_x5noe"]
 [ext_resource type="Texture2D" uid="uid://c3di5qjermg0p" path="res://Assets/UI_assets/buttonLeft_UP.png" id="2_j75di"]
 [ext_resource type="Texture2D" uid="uid://cayuaos2qd6yt" path="res://Assets/UI_assets/buttonLeft_DOWN.png" id="3_f1bqp"]
 [ext_resource type="Texture2D" uid="uid://mo814ijeq8u3" path="res://Assets/UI_assets/buttonright_UP.png" id="4_i51ae"]
 [ext_resource type="Texture2D" uid="uid://cmd77b1scn6xf" path="res://Assets/UI_assets/buttonright_DOWN.png" id="5_81i2b"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_j75di"]
+device = -1
+keycode = 4194319
+
+[sub_resource type="Shortcut" id="Shortcut_f1bqp"]
+events = [SubResource("InputEventKey_j75di")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_i51ae"]
+device = -1
+keycode = 4194321
+
+[sub_resource type="Shortcut" id="Shortcut_81i2b"]
+events = [SubResource("InputEventKey_i51ae")]
 
 [node name="Ui_Parchment" type="Control"]
 layout_mode = 3
@@ -47,6 +61,7 @@ offset_left = -1040.0
 offset_top = 900.0
 offset_right = -40.0
 offset_bottom = 1900.0
+shortcut = SubResource("Shortcut_f1bqp")
 texture_normal = ExtResource("2_j75di")
 texture_pressed = ExtResource("3_f1bqp")
 
@@ -56,6 +71,7 @@ offset_top = 880.0
 offset_right = 5360.0
 offset_bottom = 1880.0
 rotation = 6.2938
+shortcut = SubResource("Shortcut_81i2b")
 texture_normal = ExtResource("4_i51ae")
 texture_pressed = ExtResource("5_81i2b")
 

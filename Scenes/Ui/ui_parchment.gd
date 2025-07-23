@@ -38,7 +38,7 @@ func initialize_documents():
 	# Clear existing documents if any
 	
 	for child in parchment_container.get_children():
-		if child != $CanvasLayer/Parchment/ColorRect and child != left_button and child != right_button:
+		if  child != left_button and child != right_button:
 			child.queue_free()
 	
 	document_lines.clear()
@@ -214,11 +214,11 @@ func _unhandled_input(event: InputEvent) -> void:
 			hide_pause_menu()
 	
 	# Document navigation
-	if is_paused and not is_animating:
-		if event.is_action_pressed("ui_left"):
-			_on_left_button_pressed()
-		if event.is_action_pressed("ui_right"):
-			_on_right_button_pressed()
+	#if is_paused and not is_animating:
+		##if event.is_action_pressed("ui_left"):
+			##left_button.press()
+		##if event.is_action_pressed("ui_right"):
+			##right_button.press()
 
 func _input(event: InputEvent) -> void:
 	if not is_paused:
