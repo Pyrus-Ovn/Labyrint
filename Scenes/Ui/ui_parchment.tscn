@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdo7vsrhff7mr"]
+[gd_scene load_steps=6 format=3 uid="uid://bdo7vsrhff7mr"]
 
 [ext_resource type="Script" uid="uid://bf8055pju2jor" path="res://Scenes/Ui/ui_parchment.gd" id="1_x5noe"]
-[ext_resource type="Texture2D" uid="uid://cgsncaeekyyjh" path="res://Assets/arrow.png" id="4_q8c5o"]
+[ext_resource type="Texture2D" uid="uid://c3di5qjermg0p" path="res://Assets/UI_assets/buttonLeft_UP.png" id="2_j75di"]
+[ext_resource type="Texture2D" uid="uid://cayuaos2qd6yt" path="res://Assets/UI_assets/buttonLeft_DOWN.png" id="3_f1bqp"]
+[ext_resource type="Texture2D" uid="uid://mo814ijeq8u3" path="res://Assets/UI_assets/buttonright_UP.png" id="4_i51ae"]
+[ext_resource type="Texture2D" uid="uid://cmd77b1scn6xf" path="res://Assets/UI_assets/buttonright_DOWN.png" id="5_81i2b"]
 
 [node name="Ui_Parchment" type="Control"]
 layout_mode = 3
@@ -35,20 +38,26 @@ offset_right = 263.0
 offset_bottom = 193.0
 color = Color(1, 1, 1, 0)
 
-[node name="LeftButton" type="TextureButton" parent="CanvasLayer"]
-offset_left = 3.0
-offset_top = 95.0
-offset_right = 43.0
-offset_bottom = 135.0
-texture_normal = ExtResource("4_q8c5o")
+[node name="Node2D" type="Node2D" parent="CanvasLayer"]
+position = Vector2(51, 41)
+scale = Vector2(0.05, 0.05)
 
-[node name="RightButton" type="TextureButton" parent="CanvasLayer"]
-offset_left = 315.0
-offset_top = 127.0
-offset_right = 355.0
-offset_bottom = 167.0
-rotation = 3.13322
-texture_normal = ExtResource("4_q8c5o")
+[node name="LeftButton" type="TextureButton" parent="CanvasLayer/Node2D"]
+offset_left = -1040.0
+offset_top = 900.0
+offset_right = -40.0
+offset_bottom = 1900.0
+texture_normal = ExtResource("2_j75di")
+texture_pressed = ExtResource("3_f1bqp")
+
+[node name="RightButton" type="TextureButton" parent="CanvasLayer/Node2D"]
+offset_left = 4360.0
+offset_top = 880.0
+offset_right = 5360.0
+offset_bottom = 1880.0
+rotation = 6.2938
+texture_normal = ExtResource("4_i51ae")
+texture_pressed = ExtResource("5_81i2b")
 
 [connection signal="mouse_entered" from="CanvasLayer/Parchment/Line2D/ColorRect" to="." method="_on_color_rect_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Parchment/Line2D/ColorRect" to="." method="_on_color_rect_mouse_exited"]

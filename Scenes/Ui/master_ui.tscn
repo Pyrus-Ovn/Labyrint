@@ -1,8 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnorr78k0uoly"]
+[gd_scene load_steps=10 format=3 uid="uid://cnorr78k0uoly"]
 
 [ext_resource type="PackedScene" uid="uid://ck3kdiiux8pu" path="res://Scenes/Ui/ui_discman.tscn" id="1_ety00"]
 [ext_resource type="Script" uid="uid://lij4qqpb4dnn" path="res://Scenes/Ui/master_ui.gd" id="1_jfxas"]
 [ext_resource type="PackedScene" uid="uid://bdo7vsrhff7mr" path="res://Scenes/Ui/ui_parchment.tscn" id="3_6whne"]
+[ext_resource type="Script" uid="uid://drjxlhe1g3k10" path="res://Scenes/Ui/DocumentResource.gd" id="4_1rwpk"]
+[ext_resource type="Texture2D" uid="uid://dwlltmuid8tld" path="res://Assets/UI_assets/Button_TAB.png" id="4_qp3re"]
+[ext_resource type="Resource" uid="uid://c6ugk4l74aq5v" path="res://Assets/Documents/papir03.tres" id="5_1rwpk"]
+[ext_resource type="Texture2D" uid="uid://de5y2orbwv2g7" path="res://Assets/UI_assets/Button_TAB_down.png" id="5_4bij2"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_1rwpk"]
+action = &"parchment"
+
+[sub_resource type="Shortcut" id="Shortcut_04hcm"]
+events = [SubResource("InputEventAction_1rwpk")]
 
 [node name="Master_Ui" type="Control"]
 layout_mode = 3
@@ -18,3 +28,19 @@ layout_mode = 1
 
 [node name="Ui_Parchment" parent="." instance=ExtResource("3_6whne")]
 layout_mode = 1
+documents = Array[ExtResource("4_1rwpk")]([ExtResource("5_1rwpk")])
+
+[node name="Node2D" type="Node2D" parent="."]
+scale = Vector2(0.05, 0.05)
+
+[node name="TextureButton" type="TextureButton" parent="Node2D"]
+offset_left = -360.0
+offset_top = 820.0
+offset_right = 640.0
+offset_bottom = 1820.0
+shortcut = SubResource("Shortcut_04hcm")
+texture_normal = ExtResource("4_qp3re")
+texture_pressed = ExtResource("5_4bij2")
+
+[connection signal="pressed" from="Node2D/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Node2D/TextureButton" to="Ui_Parchment" method="_on_texture_button_pressed"]
