@@ -160,10 +160,12 @@ transform = Transform3D(1, 5.36442e-07, 4.06057e-07, 5.96046e-08, 1, -7.45058e-0
 shape = SubResource("SphereShape3D_mlfll")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.0122172, -0.999925, 0, 0.999925, 0.0122172, -0.112954, -0.881718, -0.373616)
+transform = Transform3D(1, 0, 0, 0, 0.0122172, -0.999925, 0, 0.999925, 0.0122172, -0.0961205, -1.24603, -0.354579)
 light_color = Color(0.694886, 0.622264, 0.982012, 1)
-light_energy = 50.0
+light_energy = 80.0
+light_bake_mode = 1
 spot_range = 15.0
-spot_angle = 8.91475
+spot_attenuation = 2.77
+spot_angle = 10.0
 
 [connection signal="body_entered" from="StaticBody3D/Area3D" to="." method="_on_area_3d_body_entered"]
