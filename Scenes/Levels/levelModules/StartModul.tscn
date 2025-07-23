@@ -112,7 +112,7 @@ transform = Transform3D(1.01539, -0.354581, 0.0366778, 0.188926, 1.88825, -0.233
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.418996, 1.52602, -0.471176)
 
 [node name="Lantern" parent="." instance=ExtResource("12_6emlh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.65418, 1.77508, 2.12608)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.56703, 1.77508, 13.3074)
 
 [node name="CD" parent="." instance=ExtResource("13_8gttx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.11977, 1.75173, -4.21877)
@@ -128,7 +128,7 @@ transform = Transform3D(-0.0329284, 0, -0.999458, 0, 1, 0, 0.999458, 0, -0.03292
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.293, 1.56776, 3.37669)
 
 [node name="Dynamit2" parent="." instance=ExtResource("15_ruakt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.20867, 1.56776, 3.37669)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3888, 1.56776, 3.37669)
 
 [node name="Paper" parent="." instance=ExtResource("16_ruakt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.56236, 1.97125, -1.01028)
