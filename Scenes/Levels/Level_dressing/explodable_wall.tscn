@@ -43,9 +43,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_v3lbb")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_r6cyb"]
-size = Vector3(3, 5, 2)
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_4mydp"]
 _surfaces = [{
 "aabb": AABB(-1.59061, -1.1391, -1.13236, 3.3046, 1.17944, 2.35126),
@@ -80,7 +77,10 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_4mydp")
 
-[node name="Explodable_wall" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_r6cyb"]
+size = Vector3(0.757812, 5, 2)
+
+[node name="Explodable_wall" type="StaticBody3D"]
 script = ExtResource("1_cixjn")
 
 [node name="rockwall" type="MeshInstance3D" parent="."]
@@ -88,14 +88,12 @@ transform = Transform3D(0.408315, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.936258, 0)
 mesh = SubResource("ArrayMesh_2n5hf")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="rockwall"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="rockwall/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.854985, 0.0570236)
-shape = SubResource("BoxShape3D_r6cyb")
-
 [node name="rockwall_destroy" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.408315, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.936258, 0)
 visible = false
 mesh = SubResource("ArrayMesh_bpdgg")
 skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00976562, 1.79124, 0.0570236)
+shape = SubResource("BoxShape3D_r6cyb")
