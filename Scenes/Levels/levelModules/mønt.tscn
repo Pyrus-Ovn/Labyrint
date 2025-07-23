@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://fv7espny3fl6"]
+[gd_scene load_steps=9 format=3 uid="uid://fv7espny3fl6"]
 
 [ext_resource type="PackedScene" uid="uid://bi3tivxq4s03q" path="res://Scenes/Levels/hedge_grid_map.tscn" id="1_qnevg"]
-[ext_resource type="PackedScene" uid="uid://cxwryo8vk0fkd" path="res://Scenes/Items/sten.tscn" id="2_crs0t"]
+[ext_resource type="PackedScene" path="res://Scenes/Items/sten.tscn" id="2_crs0t"]
 [ext_resource type="PackedScene" uid="uid://c3jnvcf0r48qj" path="res://Scenes/Levels/levelModules/mønt.glb" id="3_iaw23"]
 [ext_resource type="PackedScene" uid="uid://cmkh4x4a2fidu" path="res://Assets/Geo/setDressing/træSculpture.glb" id="4_iaw23"]
 [ext_resource type="PackedScene" uid="uid://borjakxyc1pnr" path="res://Scenes/Levels/Level_dressing/door.tscn" id="6_6cn8a"]
 [ext_resource type="PackedScene" uid="uid://dtmo474ttnbxs" path="res://Scenes/Levels/barktræ.glb" id="7_110xf"]
 [ext_resource type="PackedScene" uid="uid://dma6kfnkwoxcx" path="res://Scenes/Levels/japanskTræ.glb" id="8_5otny"]
+[ext_resource type="PackedScene" uid="uid://dk2500jb0eebu" path="res://Scenes/Levels/Level_dressing/cd.tscn" id="8_110xf"]
 
 [node name="Node3D2" type="Node3D"]
 
@@ -104,3 +105,7 @@ transform = Transform3D(-0.619207, 0, 0.326471, 0, 0.7, 0, -0.326471, 0, -0.6192
 
 [node name="japanskTræ2" parent="." instance=ExtResource("8_5otny")]
 transform = Transform3D(0.630934, 0, -0.901067, 0, 1.1, 0, 0.901067, 0, 0.630934, 5.59101, 1.53312, -23.9558)
+
+[node name="CD" parent="." instance=ExtResource("8_110xf")]
+transform = Transform3D(1, 0, 0, 0, 0.989298, -0.14591, 0, 0.14591, 0.989298, 4.63645, 1.90671, -26.4085)
+disc_number = 4

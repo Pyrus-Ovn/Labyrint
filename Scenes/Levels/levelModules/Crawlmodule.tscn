@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bre0nly3ctqh7"]
+[gd_scene load_steps=5 format=3 uid="uid://bre0nly3ctqh7"]
 
 [ext_resource type="PackedScene" uid="uid://bi3tivxq4s03q" path="res://Scenes/Levels/hedge_grid_map.tscn" id="1_klsf8"]
 [ext_resource type="PackedScene" uid="uid://dma6kfnkwoxcx" path="res://Scenes/Levels/japanskTræ.glb" id="2_5c4mp"]
 [ext_resource type="PackedScene" uid="uid://dtmo474ttnbxs" path="res://Scenes/Levels/barktræ.glb" id="3_jy2a2"]
+[ext_resource type="PackedScene" uid="uid://dk2500jb0eebu" path="res://Scenes/Levels/Level_dressing/cd.tscn" id="4_klsf8"]
 
 [node name="Kravlemodul" type="Node3D"]
 
@@ -104,3 +105,7 @@ transform = Transform3D(-0.334679, 0, -0.942332, 0, 1, 0, 0.942332, 0, -0.334679
 
 [node name="barktræ2" parent="." instance=ExtResource("3_jy2a2")]
 transform = Transform3D(-0.893238, 0, 0.449584, 0, 1, 0, -0.449584, 0, -0.893238, 8.4731, 1.5, -0.555618)
+
+[node name="CD" parent="." instance=ExtResource("4_klsf8")]
+transform = Transform3D(0.968813, -0.247794, 0, 0.247794, 0.968813, 0, 0, 0, 1, 8.03042, 1.76524, 1.45246)
+disc_number = 3

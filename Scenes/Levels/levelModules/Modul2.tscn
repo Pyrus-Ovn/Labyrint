@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://l3nn8hnh0u4m"]
+[gd_scene load_steps=10 format=3 uid="uid://l3nn8hnh0u4m"]
 
 [ext_resource type="MeshLibrary" uid="uid://dgag75pbfkosh" path="res://Assets/MeshLibraries/Hedge.tres" id="1_uf5pa"]
 [ext_resource type="PackedScene" uid="uid://borjakxyc1pnr" path="res://Scenes/Levels/Level_dressing/door.tscn" id="2_iksir"]
-[ext_resource type="PackedScene" uid="uid://ce5tufuiou1dq" path="res://Scenes/lever.tscn" id="3_o2pev"]
+[ext_resource type="PackedScene" uid="uid://c7h1a5noyvvqv" path="res://Scenes/lever.tscn" id="3_o2pev"]
 [ext_resource type="PackedScene" uid="uid://ce331l8yj7rht" path="res://Assets/Geo/setDressing/skelet.glb" id="4_kmh2r"]
 [ext_resource type="PackedScene" uid="uid://dma6kfnkwoxcx" path="res://Scenes/Levels/japanskTræ.glb" id="5_7k204"]
 [ext_resource type="PackedScene" uid="uid://dtmo474ttnbxs" path="res://Scenes/Levels/barktræ.glb" id="6_vjuka"]
 [ext_resource type="PackedScene" path="res://Scenes/Items/lantern.tscn" id="7_i5s4o"]
 [ext_resource type="PackedScene" path="res://Scenes/Items/sten.tscn" id="8_n355u"]
+[ext_resource type="PackedScene" uid="uid://dk2500jb0eebu" path="res://Scenes/Levels/Level_dressing/cd.tscn" id="9_7k204"]
 
 [node name="DØR_LABYRINT" type="Node3D"]
 
@@ -259,6 +260,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0877836, 1.55, 10.5624)
 
 [node name="Sten8" parent="." instance=ExtResource("8_n355u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.48597, 1.55, 8.39017)
+
+[node name="CD" parent="." instance=ExtResource("9_7k204")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05449, 1.75463, -3.46589)
+disc_number = 5
 
 [connection signal="toggle" from="Lever" to="Door" method="_on_lever_toggle"]
 [connection signal="toggle" from="Lever" to="Door2" method="_on_lever_toggle"]

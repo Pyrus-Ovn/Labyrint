@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bi3tivxq4s03q" path="res://Scenes/Levels/hedge_grid_map.tscn" id="1_cf7ky"]
 [ext_resource type="PackedScene" uid="uid://dfubluvtuvoji" path="res://Assets/Geo/BlockoutGeo/grotte.glb" id="2_lf7c2"]
 [ext_resource type="PackedScene" uid="uid://borjakxyc1pnr" path="res://Scenes/Levels/Level_dressing/door.tscn" id="3_4jmsj"]
-[ext_resource type="PackedScene" uid="uid://ce5tufuiou1dq" path="res://Scenes/lever.tscn" id="4_6ldik"]
+[ext_resource type="PackedScene" uid="uid://c7h1a5noyvvqv" path="res://Scenes/lever.tscn" id="4_6ldik"]
 [ext_resource type="PackedScene" uid="uid://cmkh4x4a2fidu" path="res://Assets/Geo/setDressing/træSculpture.glb" id="5_20v0y"]
 [ext_resource type="PackedScene" uid="uid://dtmo474ttnbxs" path="res://Scenes/Levels/barktræ.glb" id="6_sdftx"]
 [ext_resource type="PackedScene" uid="uid://c6hhaacsqsmcl" path="res://Assets/Geo/setDressing/bush_sculpt.glb" id="7_fohqi"]
