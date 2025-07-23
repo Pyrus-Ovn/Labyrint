@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://by6ovyfiawmkd" path="res://Scenes/Items/dynamit.gd" id="1_tepqi"]
 [ext_resource type="PackedScene" uid="uid://dfy23eehdcol4" path="res://Scenes/Items/item.tscn" id="2_csh2a"]
 [ext_resource type="PackedScene" uid="uid://cig3fto3wmomo" path="res://Scenes/Items/explosion_spawner.tscn" id="4_ikx1g"]
-[ext_resource type="AudioStream" uid="uid://bfua4aso6aqnr" path="res://Audio/Fire Crackling.wav" id="5_ikx1g"]
+[ext_resource type="AudioStream" uid="uid://ho5wdgfdmnpo" path="res://Audio/SFX/Fuse.wav" id="5_ikx1g"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ikx1g"]
 size = Vector3(0.0815353, 0.149666, 0.0739441)
@@ -71,6 +71,7 @@ skeleton = NodePath("")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Item_body"]
 stream = ExtResource("5_ikx1g")
+volume_db = 12.19
 
 [connection signal="body_entered" from="Item_body" to="." method="_on_item_body_body_entered"]
 [connection signal="body_shape_entered" from="Item_body" to="." method="_on_item_body_body_shape_entered"]

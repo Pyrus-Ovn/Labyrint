@@ -19,8 +19,11 @@ extends Node3D
 func _on_item_body_used() -> void:
 	audio_stream_player_3d.play()
 	await get_tree().create_timer(3.0).timeout
+	
 	explosion_spawner.explode()
-	await get_tree().create_timer(0.2).timeout
+	audio_stream_player_3d.stop()
+	dynamit.visible = false
+	await get_tree().create_timer(0.8).timeout
 	print("hej hej")
 	dynamit.queue_free()
 	item_body.queue_free() # Replace with function body.

@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://cig3fto3wmomo"]
+[gd_scene load_steps=17 format=3 uid="uid://cig3fto3wmomo"]
 
 [ext_resource type="Script" uid="uid://dq008tc30uqc5" path="res://Scenes/Items/explosion_spawner.gd" id="1_yf1m1"]
+[ext_resource type="AudioStream" uid="uid://dvja2l5vui4mk" path="res://Audio/SFX/Explosion.wav" id="2_5jokq"]
 
 [sub_resource type="Animation" id="Animation_ycc27"]
 resource_name = "Explode"
@@ -241,5 +242,8 @@ amount = 120
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_xj4ab")
 draw_pass_1 = SubResource("CylinderMesh_jnu5n")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_5jokq")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
