@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c0j8l7oywau7y"]
+[gd_scene load_steps=16 format=3 uid="uid://c0j8l7oywau7y"]
 
 [ext_resource type="MeshLibrary" uid="uid://dgag75pbfkosh" path="res://Assets/MeshLibraries/Hedge.tres" id="1_6e1re"]
 [ext_resource type="PackedScene" uid="uid://borjakxyc1pnr" path="res://Scenes/Levels/Level_dressing/door.tscn" id="2_kq25i"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://cxwryo8vk0fkd" path="res://Scenes/Items/sten.tscn" id="11_r6fse"]
 [ext_resource type="PackedScene" uid="uid://bb3nhh0m67t1d" path="res://Scenes/Items/lantern.tscn" id="12_6emlh"]
 [ext_resource type="PackedScene" uid="uid://dk2500jb0eebu" path="res://Scenes/Levels/Level_dressing/cd.tscn" id="13_8gttx"]
+[ext_resource type="PackedScene" uid="uid://csugo80tusbm4" path="res://Scenes/Levels/Level_dressing/explodable_wall.tscn" id="14_g58x2"]
+[ext_resource type="PackedScene" uid="uid://br1uq4vvl1wln" path="res://Scenes/Items/dynamit.tscn" id="15_ruakt"]
 
 [node name="Start" type="Node3D"]
 
@@ -116,5 +118,14 @@ disc_number = 1
 
 [node name="CD2" parent="." instance=ExtResource("13_8gttx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3039, 1.7939, -12.6652)
+
+[node name="Explodable_wall" parent="." instance=ExtResource("14_g58x2")]
+transform = Transform3D(-0.0329284, 0, -0.999458, 0, 1, 0, 0.999458, 0, -0.0329284, 4.5048, 1.5406, 6.11374)
+
+[node name="Dynamit" parent="." instance=ExtResource("15_ruakt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.90758, 2.41251, 2.23913)
+
+[node name="Explodable_wall2" parent="." instance=ExtResource("14_g58x2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4895, 2.01481, 4.78055)
 
 [connection signal="toggle" from="Lever" to="Door" method="_on_lever_toggle"]

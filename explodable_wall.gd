@@ -1,13 +1,13 @@
 extends Node3D
 
 
-@onready var rockwall: MeshInstance3D = $rockwall
-@onready var rockwall_destroy: MeshInstance3D = $rockwall_destroy
+@onready var boulder: MeshInstance3D = $Boulder
+@onready var boulder_destroy: MeshInstance3D = $BoulderDestroy
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,6 +19,8 @@ func be_exploded(explosion):
 	explode()
 
 func explode():
-	rockwall_destroy.visible=true
-	rockwall.visible = false
 	collision_shape_3d.disabled = true
+	collision_shape_3d.scale = Vector3(0.1,0.1,0.1)
+	print(collision_shape_3d.disabled)
+	boulder_destroy.visible = true
+	boulder.visible = false
