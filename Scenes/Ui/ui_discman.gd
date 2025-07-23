@@ -3,6 +3,9 @@ extends Control
 #@onready var song_label: Label = $Label
 @onready var song_label: Label = $Discer/Discman/Label
 @onready var hide_button: TextureButton = $Hidebuttoncontroller/hide_Button
+@onready var click: AudioStreamPlayer2D = $Discer/Discman/click
+@onready var up: AudioStreamPlayer2D = $Discer/Discman/up
+@onready var down: AudioStreamPlayer2D = $Discer/Discman/down
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,16 +24,23 @@ func _on_song_changed(song_name: String, _song_index: int):
 
 
 func _on_hide_button_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		up.play()
+	else:
+		down.play()
 	discer.visible = toggled_on
 
 
 func _on_play_button_pressed() -> void:
+	click.play()
 	Globaldiscman.play() # Replace with function body.
 
 
 func _on_forward_button_pressed() -> void:
+	click.play()
 	Globaldiscman.play_next()
 
 
 func _on_back_button_pressed() -> void:
+	click.play()
 	Globaldiscman.play_previous()
