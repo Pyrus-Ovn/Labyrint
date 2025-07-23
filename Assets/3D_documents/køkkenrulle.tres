@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SuperDocumentResource" load_steps=3 format=3 uid="uid://cks1oqutujr3g"]
+
+[ext_resource type="Resource" uid="uid://cvp3sypyqvw5k" path="res://Assets/Documents/parchment.tres" id="1_snx0f"]
+[ext_resource type="Script" uid="uid://dtf0rb25v4wpf" path="res://Scenes/Ui/3dDocumentResource.gd" id="1_tn47x"]
+
+[resource]
+script = ExtResource("1_tn47x")
+document = ExtResource("1_snx0f")
+model_path = "res://Assets/Geo/character/papir/papir01_køkkenrulle.glb"
+metadata/_custom_type_script = "uid://dtf0rb25v4wpf"

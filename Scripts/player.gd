@@ -40,6 +40,8 @@ var crouch_released = true
 var can_play : bool = true
 signal step
 
+signal document_collected(DocumentResource)
+
 func _ready():
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -99,6 +101,8 @@ func _input(event):
 			#if result and result.has("position") and result.has("normal"):
 			#	GraffitiSpawner.spawn_graffiti_at(result.position, result.normal)
 
+func collect_document(document):
+	emit_signal("document_collected",document)
 
 func interact():
 	
