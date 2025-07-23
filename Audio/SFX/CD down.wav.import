@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b2bi7gjiig8p5"
+path="res://.godot/imported/CD down.wav-f016e6c97d7b3d5d83a97d584d7e66c1.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/CD down.wav"
+dest_files=["res://.godot/imported/CD down.wav-f016e6c97d7b3d5d83a97d584d7e66c1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
