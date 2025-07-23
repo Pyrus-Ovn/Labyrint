@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cn0ywt7rwmga6"]
+[gd_scene load_steps=21 format=3 uid="uid://cn0ywt7rwmga6"]
 
 [ext_resource type="PackedScene" uid="uid://c0j8l7oywau7y" path="res://Scenes/Levels/levelModules/StartModul.tscn" id="1_tmk3f"]
 [ext_resource type="PackedScene" uid="uid://cevtr124k7tdx" path="res://Scenes/Levels/levelModules/Brondmodul.tscn" id="2_6umiu"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://dma6kfnkwoxcx" path="res://Scenes/Levels/japanskTræ.glb" id="17_w45rw"]
 [ext_resource type="PackedScene" uid="uid://dtmo474ttnbxs" path="res://Scenes/Levels/barktræ.glb" id="18_2ffun"]
 [ext_resource type="PackedScene" uid="uid://dk2500jb0eebu" path="res://Scenes/Levels/Level_dressing/cd.tscn" id="19_w45rw"]
+[ext_resource type="PackedScene" path="res://Scenes/Items/lantern.tscn" id="20_gmr8u"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -250,6 +251,9 @@ disc_number = 7
 [node name="CD3" parent="." instance=ExtResource("19_w45rw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.069, 1.74067, -35.8999)
 disc_number = 2
+
+[node name="Lantern" parent="." instance=ExtResource("20_gmr8u")]
+transform = Transform3D(0.992165, 0, -0.124935, 0, 1, 0, 0.124935, 0, 0.992165, 64.6315, 1.73588, 13.8497)
 
 [connection signal="toggle" from="DOOR/Lever4" to="DOOR/Door6" method="_on_lever_4_toggle"]
 [connection signal="toggle" from="DOOR/Lever4" to="DOOR/Door5" method="_on_lever_4_toggle"]
