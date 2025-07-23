@@ -59,31 +59,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98186, 2, 6.22939)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98186, 2, 6.16666)
 
 [node name="Lever2" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.456, 2, -0.864)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.456, 1.5, -0.864)
 
 [node name="Lever3" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.689, 2, -0.932)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.689, 1.5, -0.932)
 
 [node name="Lever4" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.755, 2, -0.946)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.755, 1.5, -0.946)
 
 [node name="Lever5" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.493, 2, 1.506)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.493, 1.5, 1.506)
 
 [node name="Lever6" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.454, 2, 1.921)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.454, 1.5, 1.921)
 
 [node name="Lever7" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.515, 2, 1.8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.515, 1.5, 1.8)
 
 [node name="Lever8" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.494, 2, 4.726)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.494, 1.5, 4.726)
 
 [node name="Lever9" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.501, 2, 5.372)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.501, 1.5, 5.372)
 
 [node name="Lever10" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.844, 2, 4.905)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.844, 1.5, 4.905)
 
 [node name="Door12" parent="." instance=ExtResource("2_di7dl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9677, 2, 12.2855)
@@ -156,58 +156,58 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.42903, 1.51242, 10.9241)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14731, 1.51242, 10.9241)
 
 [node name="Lever19" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.86512, 1.51242, 10.9241)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.86512, 1.5, 10.9241)
 
 [node name="Lever23" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.07832, 1.51242, 10.9241)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.07832, 1.5, 10.9241)
 
 [node name="Lever27" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.57309, 1.51242, 10.6599)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.57309, 1.5, 10.6599)
 
 [node name="Lever28" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.57309, 1.51242, 14.4108)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.57309, 1.5, 14.4108)
 
 [node name="Lever29" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.57309, 1.51242, 19.5059)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.57309, 1.5, 19.5059)
 
 [node name="Lever30" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.57309, 1.51242, 25.3097)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.57309, 1.5, 25.3097)
 
 [node name="Lever24" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.61663, 1.51242, 14.6423)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.61663, 1.5, 14.6423)
 
 [node name="Lever25" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.78526, 1.51242, 19.8369)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.78526, 1.5, 19.8369)
 
 [node name="Lever26" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.67675, 1.51242, 25.1835)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.67675, 1.5, 25.1835)
 
 [node name="Lever20" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.86512, 1.51242, 14.9048)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.86512, 1.5, 14.9048)
 
 [node name="Lever21" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.86512, 1.51242, 20.143)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.86512, 1.5, 20.143)
 
 [node name="Lever22" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.86512, 1.51242, 24.9686)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.86512, 1.5, 24.9686)
 
 [node name="Lever16" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14731, 1.51242, 15.008)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14731, 1.5, 15.008)
 
 [node name="Lever17" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14731, 1.51242, 19.9478)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14731, 1.5, 19.9478)
 
 [node name="Lever18" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14731, 1.51242, 25.1292)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14731, 1.5, 25.1292)
 
 [node name="Lever12" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.42903, 1.51242, 15.3656)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.42903, 1.5, 15.3656)
 
 [node name="Lever13" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.42903, 1.51242, 20.1318)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.42903, 1.5, 20.1318)
 
 [node name="Lever14" parent="." instance=ExtResource("3_7r10x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.42903, 1.51242, 25.286)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.42903, 1.5, 25.286)
 
 [node name="skelet2" parent="." instance=ExtResource("4_nwtta")]
 transform = Transform3D(0.198645, 0.0232211, -0.00103091, -0.023244, 0.198449, -0.00881023, 6.50628e-10, 0.00887034, 0.199803, 1.571, 1.56562, 19.4765)
