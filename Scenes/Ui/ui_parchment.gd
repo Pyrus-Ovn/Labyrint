@@ -38,7 +38,7 @@ func initialize_documents():
 	# Clear existing documents if any
 	
 	for child in parchment_container.get_children():
-		if child != $CanvasLayer/Parchment/ColorRect and child != left_button and child != right_button:
+		if  child != left_button and child != right_button:
 			child.queue_free()
 	
 	document_lines.clear()
@@ -206,21 +206,26 @@ func _on_right_button_pressed():
 		return
 	show_document(current_document_index + 1, 1)
 
-func _unhandled_input(event: InputEvent) -> void:
+#func _unhandled_input(event: InputEvent) -> void:
+	#if event.is_action_pressed("parchment") || event.is_action_pressed("ui_cancel"):
+		#if is_paused == false:
+			#show_pause_menu()
+		#else:
+			#hide_pause_menu()
+	
+	# Document navigation
+	#if is_paused and not is_animating:
+		##if event.is_action_pressed("ui_left"):
+			##left_button.press()
+		##if event.is_action_pressed("ui_right"):
+			##right_button.press()
+
+func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("parchment") || event.is_action_pressed("ui_cancel"):
 		if is_paused == false:
 			show_pause_menu()
 		else:
 			hide_pause_menu()
-	
-	# Document navigation
-	if is_paused and not is_animating:
-		if event.is_action_pressed("ui_left"):
-			_on_left_button_pressed()
-		if event.is_action_pressed("ui_right"):
-			_on_right_button_pressed()
-
-func _input(event: InputEvent) -> void:
 	if not is_paused:
 		return
 		
@@ -274,10 +279,3 @@ func _on_color_rect_mouse_entered() -> void:
 func _on_color_rect_mouse_exited() -> void:
 	_current_line = null
 	_within_bounds = false
-
-
-func _on_texture_button_pressed() -> void:
-	if is_paused == false:
-		show_pause_menu()
-	else:
-		hide_pause_menu()

@@ -35,9 +35,9 @@ scale = Vector2(0.05, 0.05)
 
 [node name="TextureButton" type="TextureButton" parent="Node2D"]
 offset_left = -360.0
-offset_top = 820.0
+offset_top = 3100.0
 offset_right = 640.0
-offset_bottom = 1820.0
+offset_bottom = 4100.0
 shortcut = SubResource("Shortcut_04hcm")
 texture_normal = ExtResource("4_qp3re")
 texture_pressed = ExtResource("5_4bij2")

@@ -1,9 +1,11 @@
 extends Node3D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
 
 # Called when the node enters the scene tree for the first time.
 func explode() -> void:
 	print("trying to explode")
+	audio_stream_player_3d.play()
 	animation_player.play("Explode") # Replace with function body.
 
 

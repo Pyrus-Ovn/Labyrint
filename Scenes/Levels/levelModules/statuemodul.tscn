@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dma6kfnkwoxcx" path="res://Scenes/Levels/japanskTræ.glb" id="3_68yi6"]
 [ext_resource type="PackedScene" uid="uid://dtmo474ttnbxs" path="res://Scenes/Levels/barktræ.glb" id="4_1krb3"]
 [ext_resource type="PackedScene" uid="uid://dil6xp8dqtnku" path="res://Assets/Geo/setDressing/barktræ.glb" id="5_nchiy"]
-[ext_resource type="PackedScene" path="res://Scenes/Items/sten.tscn" id="6_v8khi"]
+[ext_resource type="PackedScene" uid="uid://cxwryo8vk0fkd" path="res://Scenes/Items/sten.tscn" id="6_v8khi"]
 [ext_resource type="PackedScene" uid="uid://c6hhaacsqsmcl" path="res://Assets/Geo/setDressing/bush_sculpt.glb" id="7_8ps6c"]
 [ext_resource type="PackedScene" uid="uid://cxs2erbybn64q" path="res://Assets/Geo/setDressing/ItemTræ.glb" id="8_mcstj"]
 [ext_resource type="PackedScene" uid="uid://cc6fnj7yxbkua" path="res://Assets/Geo/setDressing/japanskTræ.glb" id="9_8ps6c"]
