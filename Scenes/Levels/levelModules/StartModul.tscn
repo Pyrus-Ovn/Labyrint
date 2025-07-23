@@ -8,10 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://xgn41e7ky8d8" path="res://Assets/Geo/setDressing/ItemSten.glb" id="6_r6fse"]
 [ext_resource type="PackedScene" uid="uid://cc6fnj7yxbkua" path="res://Assets/Geo/setDressing/japanskTræ.glb" id="7_6emlh"]
 [ext_resource type="PackedScene" uid="uid://cxs2erbybn64q" path="res://Assets/Geo/setDressing/ItemTræ.glb" id="7_r6fse"]
-[ext_resource type="PackedScene" uid="uid://ce331l8yj7rht" path="res://Assets/Geo/setDressing/skelet.glb" id="8_8gttx"]
+[ext_resource type="PackedScene" uid="uid://ce331l8yj7rht" path="res://Scenes/Levels/levelModules/skelet.glb" id="8_8gttx"]
 [ext_resource type="PackedScene" uid="uid://cmkh4x4a2fidu" path="res://Assets/Geo/setDressing/træSculpture.glb" id="9_ete6t"]
-[ext_resource type="PackedScene" path="res://Scenes/Items/sten.tscn" id="11_r6fse"]
-[ext_resource type="PackedScene" path="res://Scenes/Items/lantern.tscn" id="12_6emlh"]
+[ext_resource type="PackedScene" uid="uid://cxwryo8vk0fkd" path="res://Scenes/Items/sten.tscn" id="11_r6fse"]
+[ext_resource type="PackedScene" uid="uid://bb3nhh0m67t1d" path="res://Scenes/Items/lantern.tscn" id="12_6emlh"]
 [ext_resource type="PackedScene" uid="uid://dk2500jb0eebu" path="res://Scenes/Levels/Level_dressing/cd.tscn" id="13_8gttx"]
 
 [node name="Start" type="Node3D"]
