@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c0j8l7oywau7y"]
+[gd_scene load_steps=14 format=3 uid="uid://c0j8l7oywau7y"]
 
 [ext_resource type="MeshLibrary" uid="uid://dgag75pbfkosh" path="res://Assets/MeshLibraries/Hedge.tres" id="1_6e1re"]
 [ext_resource type="PackedScene" uid="uid://borjakxyc1pnr" path="res://Scenes/Levels/Level_dressing/door.tscn" id="2_kq25i"]
@@ -10,8 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://cxs2erbybn64q" path="res://Assets/Geo/setDressing/ItemTræ.glb" id="7_r6fse"]
 [ext_resource type="PackedScene" uid="uid://ce331l8yj7rht" path="res://Assets/Geo/setDressing/skelet.glb" id="8_8gttx"]
 [ext_resource type="PackedScene" uid="uid://cmkh4x4a2fidu" path="res://Assets/Geo/setDressing/træSculpture.glb" id="9_ete6t"]
-[ext_resource type="PackedScene" uid="uid://cxwryo8vk0fkd" path="res://Scenes/Items/sten.tscn" id="11_r6fse"]
-[ext_resource type="PackedScene" uid="uid://bb3nhh0m67t1d" path="res://Scenes/Items/lantern.tscn" id="12_6emlh"]
+[ext_resource type="PackedScene" path="res://Scenes/Items/sten.tscn" id="11_r6fse"]
+[ext_resource type="PackedScene" path="res://Scenes/Items/lantern.tscn" id="12_6emlh"]
+[ext_resource type="PackedScene" uid="uid://dk2500jb0eebu" path="res://Scenes/Levels/Level_dressing/cd.tscn" id="13_8gttx"]
 
 [node name="Start" type="Node3D"]
 
@@ -79,6 +80,15 @@ transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 9.31323e-10, 0, 9.31323e-10, 1,
 [node name="japanskTræ" parent="SetDress" instance=ExtResource("7_6emlh")]
 transform = Transform3D(1, 7.45058e-09, 0, -1.11759e-08, 1, 0, 0, 0, 1, 4.63597, -0.180915, -13.7192)
 
+[node name="japanskTræ3" parent="SetDress" instance=ExtResource("7_6emlh")]
+transform = Transform3D(0.756932, 0.00948558, 0.653425, 0.00948555, 0.99963, -0.0254995, -0.653425, 0.0254995, 0.756562, 0.72348, -0.0282328, -7.05587)
+
+[node name="japanskTræ4" parent="SetDress" instance=ExtResource("7_6emlh")]
+transform = Transform3D(0.791094, 0.00425001, -0.42913, 0.00424996, 0.899834, 0.0167465, 0.42913, -0.0167465, 0.790928, 8.60958, -0.377446, -3.18206)
+
+[node name="japanskTræ5" parent="SetDress" instance=ExtResource("7_6emlh")]
+transform = Transform3D(-0.72329, 0.0750551, -0.954577, 0.075055, 1.19707, 0.0372517, 0.954577, -0.0372517, -0.726219, 8.60958, -0.377446, -6.58151)
+
 [node name="japanskTræ2" parent="SetDress" instance=ExtResource("7_6emlh")]
 transform = Transform3D(0.405313, 0.0232073, -0.913883, 0.0232072, 0.999094, 0.0356636, 0.913883, -0.0356636, 0.404407, 13.7085, -0.534965, 6.22457)
 
@@ -95,9 +105,16 @@ transform = Transform3D(0.2, 9.31323e-10, 0, -1.39698e-09, 0.2, 0, 0, 0, 0.2, 4.
 transform = Transform3D(1.01539, -0.354581, 0.0366778, 0.188926, 1.88825, -0.233449, 0.00706231, 0.467043, 0.971677, 14.1377, 0.360038, -13.8256)
 
 [node name="Sten" parent="." instance=ExtResource("11_r6fse")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.418996, 1.7, -0.471176)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.418996, 1.52602, -0.471176)
 
 [node name="Lantern" parent="." instance=ExtResource("12_6emlh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.65418, 1.77508, 2.12608)
+
+[node name="CD" parent="." instance=ExtResource("13_8gttx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.11977, 1.75173, -4.21877)
+disc_number = 1
+
+[node name="CD2" parent="." instance=ExtResource("13_8gttx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3039, 1.7939, -12.6652)
 
 [connection signal="toggle" from="Lever" to="Door" method="_on_lever_toggle"]

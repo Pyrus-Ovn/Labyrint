@@ -200,6 +200,7 @@ stretch_mode = 0
 
 [node name="Label" type="Label" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 30.0
 offset_top = -98.0
 offset_right = 82.0

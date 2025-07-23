@@ -1,15 +1,19 @@
-[gd_scene load_steps=15 format=3 uid="uid://de75r7nowaybb"]
+[gd_scene load_steps=19 format=3 uid="uid://de75r7nowaybb"]
 
 [ext_resource type="Script" uid="uid://82nbde26me3j" path="res://Scripts/player.gd" id="1_sqbf5"]
 [ext_resource type="PackedScene" uid="uid://dd8hu15op3nti" path="res://Scenes/Player/right_hand.tscn" id="2_6t5aa"]
 [ext_resource type="PackedScene" uid="uid://bwbfk5sryyvmy" path="res://Scenes/Ui/ui_eyes.tscn" id="2_tx1dd"]
 [ext_resource type="PackedScene" uid="uid://p7uftg6pda05" path="res://Scenes/Player/left_hand.tscn" id="3_vgqql"]
 [ext_resource type="Script" uid="uid://4bgspn6d8l6b" path="res://Scenes/footstep_manager.gd" id="4_f1ek2"]
+[ext_resource type="AudioStream" uid="uid://x1fd0un111lg" path="res://Audio/SFX/HandMove2.wav" id="4_gymyn"]
 [ext_resource type="AudioStream" uid="uid://dqgitwbd5aiqu" path="res://Audio/Fodskridt 01.wav" id="5_tx1dd"]
 [ext_resource type="AudioStream" uid="uid://ctrboxwfust3t" path="res://Audio/Fodskridt 02.wav" id="6_gymyn"]
+[ext_resource type="AudioStream" uid="uid://cdlt26rodxhr3" path="res://Audio/SFX/HandMove1.wav" id="6_pu2lt"]
 [ext_resource type="AudioStream" uid="uid://ivofs28qxr61" path="res://Audio/Fodskridt 03.wav" id="7_pu2lt"]
+[ext_resource type="AudioStream" uid="uid://cs7goq7rvhlp5" path="res://Audio/SFX/Throw.wav" id="7_ukyrk"]
 [ext_resource type="AudioStream" uid="uid://bg3j7w3qgjnk6" path="res://Audio/Fodskridt 04.wav" id="8_ukyrk"]
 [ext_resource type="AudioStream" uid="uid://cv2oos6rn6321" path="res://Audio/Fodskridt 05.wav" id="9_7dp3o"]
+[ext_resource type="AudioStream" uid="uid://dgf6iqxw0uece" path="res://Audio/SFX/Klik.wav" id="14_7dp3o"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_60x0a"]
 
@@ -57,10 +61,31 @@ surface_material_override/0 = SubResource("StandardMaterial3D_tx1dd")
 [node name="Right_Hand" parent="Head" instance=ExtResource("2_6t5aa")]
 transform = Transform3D(0.0100656, 0.0647186, 0.271371, 0.0723063, 0.201086, -0.0799441, -0.176502, 0.0860693, -0.0172754, 0.337378, -0.547648, -0.158015)
 
+[node name="move" type="AudioStreamPlayer3D" parent="Head/Right_Hand"]
+stream = ExtResource("4_gymyn")
+volume_db = -50.0
+unit_size = 0.5
+
+[node name="throw" type="AudioStreamPlayer3D" parent="Head/Right_Hand"]
+stream = ExtResource("7_ukyrk")
+volume_db = -35.0
+unit_size = 0.5
+
 [node name="Left_Hand" parent="Head" instance=ExtResource("3_vgqql")]
 transform = Transform3D(-0.0092033, -0.0535977, 0.235909, 0.0506411, 0.238447, 0.0526074, -0.248749, 0.0505258, 0.00198216, -0.405382, -0.478796, 0.00696655)
 
+[node name="move" type="AudioStreamPlayer3D" parent="Head/Left_Hand"]
+stream = ExtResource("6_pu2lt")
+volume_db = -50.0
+unit_size = 0.5
+
+[node name="throw" type="AudioStreamPlayer3D" parent="Head/Left_Hand"]
+stream = ExtResource("7_ukyrk")
+volume_db = -35.0
+unit_size = 0.5
+
 [node name="SpotLight3D" type="SpotLight3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.50787e-08, -0.689355, -0.51564)
 light_color = Color(0.720467, 0.720468, 0.720467, 1)
 light_energy = 1.038
 light_indirect_energy = 0.543
@@ -74,3 +99,7 @@ footstep_sounds = Array[AudioStreamWAV]([ExtResource("5_tx1dd"), ExtResource("6_
 ground_pos = NodePath("../Marker3D")
 
 [node name="Marker3D" type="Marker3D" parent="."]
+
+[node name="clicksfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_7dp3o")
+volume_db = -5.0
