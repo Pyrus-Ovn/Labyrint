@@ -1,7 +1,8 @@
 extends Control
 @onready var discer: Control = $Discer
-# dårligt dårligt @onready var song_label: Label = $Discer/Label
-@onready var song_label: Label = $Label
+@onready var song_label: Label = $Discer/Label
+@onready var clicksfx: AudioStreamPlayer = $clicksfx
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,7 +13,6 @@ func _ready() -> void:
 		_on_song_changed(Globaldiscman.get_current_song_name(), Globaldiscman.current_song_index)
 
 func _on_song_changed(song_name: String, _song_index: int):
-	
 	song_label.text = song_name
 
 
@@ -22,12 +22,15 @@ func _on_hide_button_toggled(toggled_on: bool) -> void:
 
 
 func _on_play_button_pressed() -> void:
+	clicksfx.play()
 	Globaldiscman.play() # Replace with function body.
 
 
 func _on_forward_button_pressed() -> void:
+	clicksfx.play()
 	Globaldiscman.play_next()
 
 
 func _on_back_button_pressed() -> void:
+	clicksfx.play()
 	Globaldiscman.play_previous()
