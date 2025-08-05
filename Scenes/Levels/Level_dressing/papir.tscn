@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=4 uid="uid://df3l3psfld3jm"]
 
-[ext_resource type="Script" path="res://Scenes/Levels/Level_dressing/papir.gd" id="1_kfvt6"]
+[ext_resource type="Script" uid="uid://d1sm4s55kxq4w" path="res://Scenes/Levels/Level_dressing/papir.gd" id="1_kfvt6"]
 [ext_resource type="Texture2D" uid="uid://ddlq6fnr3oug1" path="res://Assets/Geo/character/papir/papir10_rough_papirTextur.png" id="2_h6y78"]
 [ext_resource type="AudioStream" uid="uid://6c1pxqbxlimq" path="res://Audio/SFX/CD Spin.wav" id="3_t0t6n"]
 [ext_resource type="AudioStream" uid="uid://cu2tg5lc0f7xo" path="res://Audio/SFX/Pickup Item.wav" id="4_owq1y"]

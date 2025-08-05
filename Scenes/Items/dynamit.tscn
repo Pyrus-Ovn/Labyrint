@@ -52,11 +52,12 @@ shadow_mesh = SubResource("ArrayMesh_dfhi8")
 [node name="Dynamit" type="Node3D"]
 script = ExtResource("1_tepqi")
 
-[node name="Item_body" parent="." instance=ExtResource("2_csh2a")]
+[node name="Item_body" parent="." node_paths=PackedStringArray("mesh") instance=ExtResource("2_csh2a")]
 contact_monitor = true
 max_contacts_reported = 1
 angular_damp = 3.0
 useable = true
+mesh = NodePath("dynamit")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Item_body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00372815, 0.0241404, -0.00443172)

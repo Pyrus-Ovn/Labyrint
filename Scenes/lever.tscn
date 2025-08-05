@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://c7h1a5noyvvqv"]
+[gd_scene load_steps=11 format=4 uid="uid://c7h1a5noyvvqv"]
 
 [ext_resource type="Script" uid="uid://cic47w3r7ll2a" path="res://lever.gd" id="1_wv1st"]
 [ext_resource type="PackedScene" uid="uid://d23lwktidcmj4" path="res://Scenes/HelperNodes/InteractionArea.tscn" id="2_6kuia"]
@@ -79,13 +79,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_je0rq")
 
-[sub_resource type="BoxMesh" id="BoxMesh_6kuia"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fhlr4"]
-albedo_color = Color(1, 0, 0, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_fhlr4"]
-
 [sub_resource type="SphereShape3D" id="SphereShape3D_4t0nc"]
 radius = 1.08818
 
@@ -105,24 +98,11 @@ transform = Transform3D(0.0963993, 0, 0, 0, 1.37486, -0.136043, 0, 1.52693, 0.12
 mesh = SubResource("ArrayMesh_vorua")
 skeleton = NodePath("")
 
-[node name="lever_handle" type="MeshInstance3D" parent="Scaler"]
-transform = Transform3D(0.02, 0, 0, 0, 0.183133, 0.00803896, 0, -0.0803896, 0.0183133, 0, 0.0388888, 0.0122515)
-visible = false
-mesh = SubResource("BoxMesh_6kuia")
-skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_fhlr4")
-
-[node name="lever_base" type="MeshInstance3D" parent="Scaler"]
-transform = Transform3D(0.06, 0, 0, 0, 0.08, 0, 0, 0, 0.1, 0, 0.000344697, 0.0123468)
-visible = false
-mesh = SubResource("BoxMesh_fhlr4")
-skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_fhlr4")
-
-[node name="InteractionArea" parent="." groups=["Interactable"] instance=ExtResource("2_6kuia")]
+[node name="InteractionArea" parent="." node_paths=PackedStringArray("mesh") groups=["Interactable"] instance=ExtResource("2_6kuia")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 collision_layer = 2
 collision_mask = 2
+mesh = NodePath("../Scaler/lever")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
 transform = Transform3D(1.89603, 0, 0, 0, 1.89603, 0, 0, 0, 1.89603, 0.128214, 1.03281, -0.0260682)

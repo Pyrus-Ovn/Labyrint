@@ -18,7 +18,9 @@ extends Node3D
 
 func _on_item_body_used() -> void:
 	audio_stream_player_3d.play()
-	await get_tree().create_timer(3.0).timeout
+	
+	var time = randf_range(2.0, 4.5)
+	await get_tree().create_timer(time).timeout
 	
 	explosion_spawner.explode()
 	audio_stream_player_3d.stop()

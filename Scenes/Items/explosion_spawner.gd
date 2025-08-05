@@ -1,6 +1,10 @@
 extends Node3D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
+@onready var collision_shape_3d: CollisionShape3D = $Area3D/CollisionShape3D
+
+func _ready() -> void:
+	collision_shape_3d.disabled = true
 
 # Called when the node enters the scene tree for the first time.
 func explode() -> void:

@@ -15,11 +15,10 @@ func _process(delta: float) -> void:
 	pass
 
 func be_exploded(explosion):
-	print("am exploded")
 	explode()
 
 func explode():
-	collision_shape_3d.disabled = true
+	#collision_shape_3d.disabled = true
 	collision_shape_3d.scale = Vector3(0.1,0.1,0.1)
 	print(collision_shape_3d.disabled)
 	boulder_destroy.visible = true

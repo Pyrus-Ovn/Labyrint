@@ -38,6 +38,7 @@ func _process(delta: float) -> void:
 		else:
 			lever_handle.rotation_degrees = open_position.lerp(closed_position, lerp_amount)
 
+
 func interact():
 	toggled = !toggled
 	animation_progress = 1.0 - animation_progress

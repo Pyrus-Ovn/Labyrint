@@ -2,6 +2,8 @@ class_name Item extends RigidBody3D
 
 @export var useable = false
 
+@export var mesh: MeshInstance3D
+const outline_material = preload("res://Assets/simple_outline/perfect_OUTLINE_SHADER.tres")
 signal used()
 func throw():
 	
@@ -21,8 +23,8 @@ func interact():
 
 func highlight():
 	# Add visual feedback
-	pass
+	mesh.material_overlay = outline_material
 
 func unhighlight():
 	# Remove visual feedback
-	pass
+	mesh.material_overlay = null

@@ -131,6 +131,7 @@ func be_exploded(explosion):
 	velocity.y = JUMP_VELOCITY*0.155
 	velocity.z = JUMP_VELOCITY*0.2
 
+
 func _physics_process(delta):
 	
 	collision_shape_3d.scale = collision_shape_3d.scale.lerp(target_scale, lerp_speed * delta)
@@ -149,27 +150,41 @@ func _physics_process(delta):
 			if new_interactable != current_interactable:
 				# Unregister previous interactable if different
 				if current_interactable:
+					current_interactable.unhighlight()
 					current_interactable = null
 					
 					# Register new interactable
 				current_interactable = new_interactable
+				collider.highlight()
 				print(current_interactable)
 		elif collider is Item:
 			var new_interactable = collider
 			if new_interactable != current_interactable:
 				# Unregister previous interactable if different
 				if current_interactable:
-					current_interactable = null
+					if current_interactable is Item:
+		#current_interactable.interact()
+						current_interactable.unhighlight()
+						current_interactable = null
+					else:
+						current_interactable.interaction_area.unhighlight()
+						current_interactable = null
 					
 					# Register new interactable
 				current_interactable = new_interactable
+				new_interactable.highlight()
 				#print(current_interactable)
 				#snyd
 				#grab_leftHand()
 				#current_interactable.interact()
 	elif current_interactable:
+		if current_interactable is Item:
 		#current_interactable.interact()
-		current_interactable = null
+			current_interactable.unhighlight()
+			current_interactable = null
+		else:
+			current_interactable.interaction_area.unhighlight()
+			current_interactable = null
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta

@@ -279,3 +279,7 @@ func _on_color_rect_mouse_entered() -> void:
 func _on_color_rect_mouse_exited() -> void:
 	_current_line = null
 	_within_bounds = false
+
+
+func _on_exit_pressed() -> void:
+	get_tree().quit()

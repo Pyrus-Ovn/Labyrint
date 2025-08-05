@@ -49,10 +49,11 @@ points = PackedVector3Array(-0.595596, -0.762673, 0.137193, 1.10681, 0.207555, -
 
 [node name="stub" type="Node3D"]
 
-[node name="Item_body" parent="." instance=ExtResource("1_ajj5n")]
+[node name="Item_body" parent="." node_paths=PackedStringArray("mesh") instance=ExtResource("1_ajj5n")]
 contact_monitor = true
 max_contacts_reported = 1
 angular_damp = 3.0
+mesh = NodePath("item_rock")
 
 [node name="ItemTræ" parent="Item_body" instance=ExtResource("2_40w7b")]
 transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.099602, 0, -0.0140697, -0.0331939)

@@ -3,12 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://bi3tivxq4s03q" path="res://Scenes/Levels/hedge_grid_map.tscn" id="1_33mst"]
 [ext_resource type="PackedScene" uid="uid://dil6xp8dqtnku" path="res://Assets/Geo/setDressing/barktræ.glb" id="2_csxjo"]
 [ext_resource type="PackedScene" uid="uid://bpswbly1i8mwg" path="res://Scenes/Levels/Level_dressing/Well.tscn" id="3_csxjo"]
-[ext_resource type="PackedScene" path="res://Scenes/Items/sten.tscn" id="4_jh8t6"]
+[ext_resource type="PackedScene" uid="uid://cxwryo8vk0fkd" path="res://Scenes/Items/sten.tscn" id="4_jh8t6"]
 [ext_resource type="PackedScene" uid="uid://cxs2erbybn64q" path="res://Assets/Geo/setDressing/ItemTræ.glb" id="5_nr6wm"]
 [ext_resource type="PackedScene" uid="uid://csugo80tusbm4" path="res://Scenes/Levels/Level_dressing/explodable_wall.tscn" id="6_nr6wm"]
 [ext_resource type="PackedScene" uid="uid://df3l3psfld3jm" path="res://Scenes/Levels/Level_dressing/papir.tscn" id="7_rorfu"]
-[ext_resource type="Resource" uid="uid://dd2w7dnq3s40x" path="res://Assets/Documents/papir11.tres" id="8_028tl"]
-[ext_resource type="Resource" uid="uid://c5s3yngf3s0sq" path="res://Assets/Documents/papir12.tres" id="9_35ja4"]
+[ext_resource type="Resource" path="res://Assets/Documents/papir11.tres" id="8_028tl"]
+[ext_resource type="Resource" path="res://Assets/Documents/papir12.tres" id="9_35ja4"]
 
 [sub_resource type="FogMaterial" id="FogMaterial_33mst"]
 density = 0.7
@@ -38,7 +38,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.61308, 2.60593, -1.7684)
 size = Vector3(38.412, 4.23944, 38.8051)
 material = SubResource("FogMaterial_33mst")
 
-[node name="Well" parent="." instance=ExtResource("3_csxjo")]
+[node name="Well" parent="." groups=["Interactable"] instance=ExtResource("3_csxjo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.61573, 2.30104, -1.248)
 
 [node name="Setdress" type="Node3D" parent="."]

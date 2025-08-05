@@ -48,10 +48,12 @@ radius = 0.05
 
 [node name="Coin" type="Node3D"]
 
-[node name="Item_body" parent="." groups=["coin"] instance=ExtResource("1_6ldys")]
+[node name="Item_body" parent="." node_paths=PackedStringArray("mesh") groups=["coin"] instance=ExtResource("1_6ldys")]
+collision_mask = 1
 contact_monitor = true
 max_contacts_reported = 1
 angular_damp = 3.0
+mesh = NodePath("Mønt")
 
 [node name="Mønt" type="MeshInstance3D" parent="Item_body"]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
