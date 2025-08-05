@@ -21,6 +21,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.04185, -0.0733493, 0.219447
 [node name="blueArm" parent="right_hand_anim/bone_001/geo_Hhånd_åben" index="2" instance=ExtResource("3_y40qg")]
 transform = Transform3D(1.00376, -0.167277, 0.0126033, 0.154234, 1.08878, -5.19408e-10, -0.0113352, 0.00188902, 1.11605, 0, -0.0374458, 0.0225939)
 
+[node name="geo_Hhånd_åben" parent="right_hand_anim/bone_001/Skeleton3D" index="0"]
+cast_shadow = 0
+gi_mode = 0
+
 [node name="AnimationPlayer" parent="right_hand_anim" index="1"]
 autoplay = "IDLE_hand"
 

@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cxs2erbybn64q" path="res://Assets/Geo/setDressing/ItemTræ.glb" id="5_nr6wm"]
 [ext_resource type="PackedScene" uid="uid://csugo80tusbm4" path="res://Scenes/Levels/Level_dressing/explodable_wall.tscn" id="6_nr6wm"]
 [ext_resource type="PackedScene" uid="uid://df3l3psfld3jm" path="res://Scenes/Levels/Level_dressing/papir.tscn" id="7_rorfu"]
-[ext_resource type="Resource" path="res://Assets/Documents/papir11.tres" id="8_028tl"]
-[ext_resource type="Resource" path="res://Assets/Documents/papir12.tres" id="9_35ja4"]
+[ext_resource type="Resource" uid="uid://omk2h0wpew51" path="res://Assets/Documents/papir11.tres" id="8_028tl"]
+[ext_resource type="Resource" uid="uid://bd0gus4pm68qw" path="res://Assets/Documents/papir12.tres" id="9_35ja4"]
 
 [sub_resource type="FogMaterial" id="FogMaterial_33mst"]
 density = 0.7

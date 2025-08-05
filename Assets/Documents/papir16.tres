@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://3mfdg7k4ta0c"]
+[gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://bmaouw0cxh12t"]
 
 [ext_resource type="Script" uid="uid://drjxlhe1g3k10" path="res://Scenes/Ui/DocumentResource.gd" id="1_dhbrw"]
 [ext_resource type="Texture2D" uid="uid://dquocb2bpwf6b" path="res://Assets/Geo/character/papir/paperPNG/papir15_klud.png" id="2_18evs"]
@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_dhbrw")
 texture = ExtResource("2_18evs")
-bounds = Rect2(400, 50, 750, 750)
+bounds = Rect2(50, 50, 200, 200)
 metadata/_custom_type_script = "uid://drjxlhe1g3k10"

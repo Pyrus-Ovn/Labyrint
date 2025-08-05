@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://cswi23xykx0ci"]
+[gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://dg8a8j0dq7vbv"]
 
 [ext_resource type="Script" uid="uid://drjxlhe1g3k10" path="res://Scenes/Ui/DocumentResource.gd" id="1_fo3lm"]
 [ext_resource type="Texture2D" uid="uid://cletmjlkn6i2x" path="res://Assets/Geo/character/papir/paperPNG/papir18_email.png" id="2_fo3lm"]
@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_fo3lm")
 texture = ExtResource("2_fo3lm")
-bounds = Rect2(300, 25, 750, 950)
+bounds = Rect2(50, 60, 200, 200)
 metadata/_custom_type_script = "uid://drjxlhe1g3k10"

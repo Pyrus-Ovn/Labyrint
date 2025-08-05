@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://c5s3yngf3s0sq"]
+[gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://bd0gus4pm68qw"]
 
 [ext_resource type="Script" uid="uid://drjxlhe1g3k10" path="res://Scenes/Ui/DocumentResource.gd" id="1_7h3f5"]
 [ext_resource type="Texture2D" uid="uid://binjtjva01cjq" path="res://Assets/Geo/character/papir/paperPNG/papir11_bon.png" id="2_vwwc8"]
@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_7h3f5")
 texture = ExtResource("2_vwwc8")
-bounds = Rect2(80, 400, 750, 550)
+bounds = Rect2(50, 50, 200, 200)
 metadata/_custom_type_script = "uid://drjxlhe1g3k10"

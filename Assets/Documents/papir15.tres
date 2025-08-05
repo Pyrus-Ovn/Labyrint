@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://d3mowi5pr6geq"]
+[gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://daobysafe7uq0"]
 
 [ext_resource type="Script" uid="uid://drjxlhe1g3k10" path="res://Scenes/Ui/DocumentResource.gd" id="1_hxn2v"]
 [ext_resource type="Texture2D" uid="uid://bnn3dq4g3sgyv" path="res://Assets/Geo/character/papir/paperPNG/papir14_omvendtBon.png" id="2_1wr76"]
@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_hxn2v")
 texture = ExtResource("2_1wr76")
-bounds = Rect2(80, 400, 750, 550)
+bounds = Rect2(50, 60, 200, 200)
 metadata/_custom_type_script = "uid://drjxlhe1g3k10"

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://c1w2bqr88chhg"]
+[gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://kgoktvy8dyf0"]
 
 [ext_resource type="Script" uid="uid://drjxlhe1g3k10" path="res://Scenes/Ui/DocumentResource.gd" id="1_ka2aw"]
 [ext_resource type="Texture2D" uid="uid://cgqxtng7dexf1" path="res://Assets/Geo/character/papir/paperPNG/papir09_happyLabyrinth.png" id="2_lehqt"]
@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_ka2aw")
 texture = ExtResource("2_lehqt")
-bounds = Rect2(200, 100, 850, 800)
+bounds = Rect2(50, 50, 200, 200)
 metadata/_custom_type_script = "uid://drjxlhe1g3k10"

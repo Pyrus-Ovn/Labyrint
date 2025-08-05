@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://6mttc3cs8aem"]
+[gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://l8f3on8igsel"]
 
 [ext_resource type="Script" uid="uid://drjxlhe1g3k10" path="res://Scenes/Ui/DocumentResource.gd" id="1_vpxax"]
 [ext_resource type="Texture2D" uid="uid://4h8ban4en7o5" path="res://Assets/Geo/character/papir/paperPNG/papir06_yellowDevil.png" id="2_vpxax"]
@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_vpxax")
 texture = ExtResource("2_vpxax")
-bounds = Rect2(200, 50, 750, 850)
+bounds = Rect2(100, 0, 125, 210)
 metadata/_custom_type_script = "uid://drjxlhe1g3k10"

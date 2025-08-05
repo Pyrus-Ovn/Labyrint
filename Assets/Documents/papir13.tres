@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://bahkwex68c5v"]
+[gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://dbgph2er3ketw"]
 
 [ext_resource type="Script" uid="uid://drjxlhe1g3k10" path="res://Scenes/Ui/DocumentResource.gd" id="1_oc3rg"]
 [ext_resource type="Texture2D" uid="uid://bp2y65mlnd6th" path="res://Assets/Geo/character/papir/paperPNG/papir12_paintedFaces.png" id="2_upxu0"]
@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_oc3rg")
 texture = ExtResource("2_upxu0")
-bounds = Rect2(300, 300, 600, 650)
+bounds = Rect2(50, 50, 200, 200)
 metadata/_custom_type_script = "uid://drjxlhe1g3k10"

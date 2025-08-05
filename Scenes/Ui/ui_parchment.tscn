@@ -1,11 +1,17 @@
-[gd_scene load_steps=12 format=3 uid="uid://bdo7vsrhff7mr"]
+[gd_scene load_steps=18 format=3 uid="uid://bdo7vsrhff7mr"]
 
 [ext_resource type="Script" uid="uid://bf8055pju2jor" path="res://Scenes/Ui/ui_parchment.gd" id="1_x5noe"]
 [ext_resource type="Texture2D" uid="uid://c3di5qjermg0p" path="res://Assets/UI_assets/buttonLeft_UP.png" id="2_j75di"]
+[ext_resource type="Script" uid="uid://drjxlhe1g3k10" path="res://Scenes/Ui/DocumentResource.gd" id="2_qd022"]
 [ext_resource type="Texture2D" uid="uid://cayuaos2qd6yt" path="res://Assets/UI_assets/buttonLeft_DOWN.png" id="3_f1bqp"]
+[ext_resource type="Resource" uid="uid://c3kpwpqat8g06" path="res://Assets/Documents/papir01.tres" id="3_ww5j8"]
+[ext_resource type="Resource" uid="uid://biga7nly10uw2" path="res://Assets/Documents/papir02.tres" id="4_3teqa"]
 [ext_resource type="Texture2D" uid="uid://mo814ijeq8u3" path="res://Assets/UI_assets/buttonright_UP.png" id="4_i51ae"]
+[ext_resource type="Resource" uid="uid://dblkb6y52stx8" path="res://Assets/Documents/papir03.tres" id="5_2rg0k"]
 [ext_resource type="Texture2D" uid="uid://cmd77b1scn6xf" path="res://Assets/UI_assets/buttonright_DOWN.png" id="5_81i2b"]
 [ext_resource type="Texture2D" uid="uid://dnbwo7hmbwip0" path="res://Scenes/Ui/smaller_0004_exit_up.png" id="6_i51ae"]
+[ext_resource type="Resource" uid="uid://d1cic0gvtqop8" path="res://Assets/Documents/papir04.tres" id="6_nqj7e"]
+[ext_resource type="Resource" uid="uid://dsc57fb0l6jb3" path="res://Assets/Documents/papir05.tres" id="7_8lwpl"]
 [ext_resource type="Texture2D" uid="uid://dbp0rejj2cjn7" path="res://Scenes/Ui/smaller_0005_exit_down.png" id="7_81i2b"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_j75di"]
@@ -30,6 +36,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_x5noe")
+documents = Array[ExtResource("2_qd022")]([ExtResource("3_ww5j8"), ExtResource("4_3teqa"), ExtResource("5_2rg0k"), ExtResource("6_nqj7e"), ExtResource("7_8lwpl")])
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

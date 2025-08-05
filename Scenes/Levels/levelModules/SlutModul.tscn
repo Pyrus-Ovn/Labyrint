@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://pspjl2w2my3u"]
+[gd_scene load_steps=10 format=3 uid="uid://pspjl2w2my3u"]
 
 [ext_resource type="PackedScene" uid="uid://bi3tivxq4s03q" path="res://Scenes/Levels/hedge_grid_map.tscn" id="1_cf7ky"]
+[ext_resource type="Script" uid="uid://ctpcao4uap38d" path="res://Scenes/Levels/levelModules/slut_modul.gd" id="1_sdftx"]
 [ext_resource type="PackedScene" uid="uid://dfubluvtuvoji" path="res://Assets/Geo/BlockoutGeo/grotte.glb" id="2_lf7c2"]
 [ext_resource type="PackedScene" uid="uid://borjakxyc1pnr" path="res://Scenes/Levels/Level_dressing/door.tscn" id="3_4jmsj"]
 [ext_resource type="PackedScene" uid="uid://c7h1a5noyvvqv" path="res://Scenes/lever.tscn" id="4_6ldik"]
@@ -8,7 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://dtmo474ttnbxs" path="res://Scenes/Levels/barktræ.glb" id="6_sdftx"]
 [ext_resource type="PackedScene" uid="uid://c6hhaacsqsmcl" path="res://Assets/Geo/setDressing/bush_sculpt.glb" id="7_fohqi"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_fohqi"]
+size = Vector3(100, 1, 100)
+
 [node name="Slut" type="Node3D"]
+script = ExtResource("1_sdftx")
 
 [node name="GridMap" parent="." instance=ExtResource("1_cf7ky")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.509115, 0, 0.571608)
@@ -43,4 +48,11 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.27744, 1.60833, -35.9
 [node name="bush_sculpt" parent="." instance=ExtResource("7_fohqi")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.538968, -7.58634, -0.784453)
 
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.43752, -15.9181, -66.0014)
+shape = SubResource("BoxShape3D_fohqi")
+
 [connection signal="toggle" from="Lever" to="Door" method="_on_lever_toggle"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

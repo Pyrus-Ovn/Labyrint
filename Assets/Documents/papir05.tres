@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://y7b8oftn8o1u"]
+[gd_resource type="Resource" script_class="DocumentResource" load_steps=3 format=3 uid="uid://dsc57fb0l6jb3"]
 
 [ext_resource type="Script" uid="uid://drjxlhe1g3k10" path="res://Scenes/Ui/DocumentResource.gd" id="1_smgyy"]
 [ext_resource type="Texture2D" uid="uid://b5vxxtmbsekej" path="res://Assets/Geo/character/papir/paperPNG/papir05_kaffeplet.png" id="2_smgyy"]
@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_smgyy")
 texture = ExtResource("2_smgyy")
-bounds = Rect2(250, 50, 750, 850)
+bounds = Rect2(90, 50, 150, 200)
 metadata/_custom_type_script = "uid://drjxlhe1g3k10"

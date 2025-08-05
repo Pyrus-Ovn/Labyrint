@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_4euyk")
 texture = ExtResource("2_i26t1")
-bounds = Rect2(250, 50, 750, 750)
+bounds = Rect2(85, 45, 130, 190)
 metadata/_custom_type_script = "uid://drjxlhe1g3k10"

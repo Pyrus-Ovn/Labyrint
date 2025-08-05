@@ -48,6 +48,7 @@ func initialize_documents():
 	for doc in documents:
 		if not doc or not doc.texture:
 			continue
+		
 			
 		# Create document display
 		var texture_rect = TextureRect.new()
