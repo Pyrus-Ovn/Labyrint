@@ -31,8 +31,8 @@ func _ready() -> void:
 	# Connect button signals
 	left_button.pressed.connect(_on_left_button_pressed)
 	right_button.pressed.connect(_on_right_button_pressed)
-	var emitter = get_node("/root/World/Player")
-	emitter.connect("document_collected", _on_document_collected)
+	#var emitter = get_node("/root/World/Player")
+	#emitter.connect("document_collected", _on_document_collected)
 
 func initialize_documents():
 	# Clear existing documents if any

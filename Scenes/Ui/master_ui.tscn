@@ -15,6 +15,7 @@ action = &"parchment"
 events = [SubResource("InputEventAction_1rwpk")]
 
 [node name="Master_Ui" type="Control"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
